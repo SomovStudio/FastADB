@@ -247,6 +247,8 @@ namespace FastADB
 			Directory.CreateDirectory(textBoxFolderJython.Text);
 			textBoxFolderBuilds.Text = folderResource + "builds\\";
 			Directory.CreateDirectory(textBoxFolderBuilds.Text);
+			textBoxFolderTouch.Text = folderResource + "touches\\";
+			Directory.CreateDirectory(textBoxFolderTouch.Text);
 			
 			initScreenshot();
 			initLog();
@@ -321,7 +323,11 @@ namespace FastADB
 		void Button20Click(object sender, EventArgs e)
 		{
 			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderBuilds.Text = folderBrowserDialog1.SelectedPath + "\\";
-		}	
+		}
+		void Button49Click(object sender, EventArgs e)
+		{
+			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderTouch.Text = folderBrowserDialog1.SelectedPath + "\\";
+		}
 		void Button12Click(object sender, EventArgs e)
 		{
 			applyConcole();
@@ -593,6 +599,7 @@ namespace FastADB
 				textBox14.Text = readFile(openFileDialogPy.FileName);
 			}
 		}
+		
 		
 		
 	}
