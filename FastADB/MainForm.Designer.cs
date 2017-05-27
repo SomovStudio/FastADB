@@ -534,7 +534,7 @@ namespace FastADB
 			// 
 			// linkLabel3
 			// 
-			this.linkLabel3.Location = new System.Drawing.Point(6, 375);
+			this.linkLabel3.Location = new System.Drawing.Point(6, 402);
 			this.linkLabel3.Name = "linkLabel3";
 			this.linkLabel3.Size = new System.Drawing.Size(128, 23);
 			this.linkLabel3.TabIndex = 14;
@@ -544,15 +544,15 @@ namespace FastADB
 			// 
 			// label13
 			// 
-			this.label13.Location = new System.Drawing.Point(6, 353);
+			this.label13.Location = new System.Drawing.Point(6, 380);
 			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(517, 32);
+			this.label13.Size = new System.Drawing.Size(748, 32);
 			this.label13.TabIndex = 13;
 			this.label13.Text = "Для работы с Monkey и MonkeyRunner в ADB нужно скачать и установить Jython";
 			// 
 			// label12
 			// 
-			this.label12.Location = new System.Drawing.Point(27, 330);
+			this.label12.Location = new System.Drawing.Point(27, 357);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(496, 23);
 			this.label12.TabIndex = 12;
@@ -563,10 +563,9 @@ namespace FastADB
 			this.label11.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label11.Location = new System.Drawing.Point(51, 307);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(520, 23);
+			this.label11.Size = new System.Drawing.Size(703, 50);
 			this.label11.TabIndex = 11;
-			this.label11.Text = ";C:\\Program Files (x86)\\Android\\android-sdk\\tools;C:\\Program Files (x86)\\Android\\" +
-	"android-sdk\\platform-tools;";
+			this.label11.Text = resources.GetString("label11.Text");
 			// 
 			// label10
 			// 
@@ -606,7 +605,7 @@ namespace FastADB
 			// 
 			this.label6.Location = new System.Drawing.Point(6, 175);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(517, 31);
+			this.label6.Size = new System.Drawing.Size(748, 31);
 			this.label6.TabIndex = 6;
 			this.label6.Text = "Чтобы использование ADB было комфортным необходимо прописать адреса в системной п" +
 	"еременной Path.";
@@ -615,7 +614,7 @@ namespace FastADB
 			// 
 			this.label5.Location = new System.Drawing.Point(6, 144);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(517, 31);
+			this.label5.Size = new System.Drawing.Size(748, 31);
 			this.label5.TabIndex = 5;
 			this.label5.Text = "Далее необходимо установить Android SDK Tools, Android SDK Platform-tools и Andro" +
 	"id SDK Build-tools и установить Android Support Library и ";
@@ -624,7 +623,7 @@ namespace FastADB
 			// 
 			this.label4.Location = new System.Drawing.Point(6, 113);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(469, 31);
+			this.label4.Size = new System.Drawing.Size(748, 31);
 			this.label4.TabIndex = 4;
 			this.label4.Text = "После того как SDK будет установлено нужно запустить Android SDK Manager по адрес" +
 	"у: C:\\Program Files (x86)\\Android\\android-sdk";

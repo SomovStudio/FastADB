@@ -196,6 +196,9 @@
         qw4AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>;C:\Users\Cartish\AppData\Local\Android\sdk;C:\Users\Cartish\AppData\Local\Android\sdk\build-tools\24.0.1;C:\Users\Cartish\AppData\Local\Android\sdk\platform-tools;C:\Users\Cartish\AppData\Local\Android\sdk\tools;</value>
+  </data>
   <data name="button22.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
