@@ -154,6 +154,23 @@ namespace FastADB
 			textBox12.Text = pyScript;
 		}
 		
+		void initStartActivity()
+		{
+			String batCommand = "adb devices" + Environment.NewLine + 
+				"monkeyrunner " + textBoxFolderBuilds.Text + "script.py";
+			textBox13.Text = batCommand;
+			
+			String pyScript = "from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine + 
+				"device = MonkeyRunner.waitForConnection();" + Environment.NewLine +
+				"package = 'com.package.name';"+ Environment.NewLine +
+				"activity = 'com.activity.package.name';"+ Environment.NewLine +
+				"runComponent = package + '/' + activity;"+ Environment.NewLine +
+				"device.startActivity(component=runComponent);"+ Environment.NewLine +
+				"print(\"START - COMPLETE!\");" + Environment.NewLine + 
+				"MonkeyRunner.sleep(5.0);";
+			textBox14.Text = pyScript;
+		}
+		
 		void saveFile(String fileName, String text)
 		{
 			if(!File.Exists(fileName)){ 
@@ -235,6 +252,7 @@ namespace FastADB
 			initLog();
 			initInstallBuild();
 			initRemoveBuild();
+			initStartActivity();
 		}
 		void ToolStripStatusLabel1Click(object sender, EventArgs e)
 		{
@@ -543,6 +561,36 @@ namespace FastADB
 			openFileDialogPy.InitialDirectory = textBoxFolderBuilds.Text;
 			if(openFileDialogPy.ShowDialog() == DialogResult.OK){
 				textBox12.Text = readFile(openFileDialogPy.FileName);
+			}
+		}
+		void Button41Click(object sender, EventArgs e)
+		{
+			openFileDialogApk.InitialDirectory = textBoxFolderBuilds.Text;
+			if(openFileDialogApk.ShowDialog() == DialogResult.OK){
+				getPackageName(openFileDialogApk.FileName);
+			}
+		}
+		void Button44Click(object sender, EventArgs e)
+		{
+			TestingAndroid.ExecuteBatAndPy(textBoxFolderBuilds.Text,
+			                               textBoxFolderBuilds.Text + "start.bat",
+			                               textBox13.Text,
+			                               textBoxFolderBuilds.Text + "script.py",
+			                               textBox14.Text);
+		}
+		void Button43Click(object sender, EventArgs e)
+		{
+			saveFileDialogPy.InitialDirectory = textBoxFolderBuilds.Text;
+			saveFileDialogPy.FileName = "script.py";
+			if(saveFileDialogPy.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogPy.FileName, textBox14.Text);
+			}
+		}
+		void Button42Click(object sender, EventArgs e)
+		{
+			openFileDialogPy.InitialDirectory = textBoxFolderBuilds.Text;
+			if(openFileDialogPy.ShowDialog() == DialogResult.OK){
+				textBox14.Text = readFile(openFileDialogPy.FileName);
 			}
 		}
 		
