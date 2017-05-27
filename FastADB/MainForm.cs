@@ -212,6 +212,18 @@ namespace FastADB
 			richTextBox1.Text = "print(\"hello world!!!\");";
 		}
 		
+		void initCopyFiles()
+		{
+			String batCommand = 
+				"adb devices" + Environment.NewLine +
+				"adb shell ls /sdcard/Android/data/com.package.name/files/" + Environment.NewLine +
+				"adb pull /sdcard/Android/data/com.package.name/files/sdk_log.txt " + textBoxFolderOtherFiles.Text + "sdk_log.txt" + Environment.NewLine +
+				"@echo" + Environment.NewLine +
+				"@echo PRESS ANY KEY TO FINISH!" + Environment.NewLine +
+				"@pause";
+			textBox18.Text = batCommand;
+		}
+		
 		void saveFile(String fileName, String text)
 		{
 			if(!File.Exists(fileName)){ 
@@ -302,6 +314,7 @@ namespace FastADB
 			initStartActivity();
 			initTouche();
 			initJython();
+			initCopyFiles();
 		}
 		void ToolStripStatusLabel1Click(object sender, EventArgs e)
 		{
@@ -738,6 +751,32 @@ namespace FastADB
 		void Button54Click(object sender, EventArgs e)
 		{
 			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderOtherFiles.Text = folderBrowserDialog1.SelectedPath + "\\";
+		}
+		void Button59Click(object sender, EventArgs e)
+		{
+			openFileDialogApk.InitialDirectory = textBoxFolderBuilds.Text;
+			if(openFileDialogApk.ShowDialog() == DialogResult.OK){
+				getPackageName(openFileDialogApk.FileName);
+			}
+		}
+		void Button57Click(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderOtherFiles.Text;
+			saveFileDialogBat.FileName = "copy.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, textBox18.Text);
+			}
+		}
+		void Button56Click(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderOtherFiles.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBox18.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
+		void Button58Click(object sender, EventArgs e)
+		{
+			TestingAndroid.ExecuteBat(textBoxFolderOtherFiles.Text, textBoxFolderOtherFiles.Text + "copy.bat", textBox18.Text);
 		}
 		
 		

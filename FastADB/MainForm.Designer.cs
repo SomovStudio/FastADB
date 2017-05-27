@@ -224,6 +224,15 @@ namespace FastADB
 		private System.Windows.Forms.Label label37;
 		private System.Windows.Forms.Label label38;
 		private System.Windows.Forms.Label label39;
+		private System.Windows.Forms.Label label40;
+		private System.Windows.Forms.Label label41;
+		private System.Windows.Forms.Panel panel15;
+		private System.Windows.Forms.Button button56;
+		private System.Windows.Forms.Button button57;
+		private System.Windows.Forms.Button button58;
+		private System.Windows.Forms.GroupBox groupBox22;
+		private System.Windows.Forms.TextBox textBox18;
+		private System.Windows.Forms.Button button59;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -274,6 +283,7 @@ namespace FastADB
 			this.tabPage7 = new System.Windows.Forms.TabPage();
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
 			this.textBox9 = new System.Windows.Forms.TextBox();
+			this.label30 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
 			this.button22 = new System.Windows.Forms.Button();
 			this.button21 = new System.Windows.Forms.Button();
@@ -291,6 +301,7 @@ namespace FastADB
 			this.textBoxScreenshotFile = new System.Windows.Forms.TextBox();
 			this.label15 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
+			this.label31 = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.button23 = new System.Windows.Forms.Button();
 			this.button24 = new System.Windows.Forms.Button();
@@ -300,6 +311,7 @@ namespace FastADB
 			this.tabPage16 = new System.Windows.Forms.TabPage();
 			this.groupBox23 = new System.Windows.Forms.GroupBox();
 			this.textBox20 = new System.Windows.Forms.TextBox();
+			this.label32 = new System.Windows.Forms.Label();
 			this.panel14 = new System.Windows.Forms.Panel();
 			this.button51 = new System.Windows.Forms.Button();
 			this.button52 = new System.Windows.Forms.Button();
@@ -307,6 +319,7 @@ namespace FastADB
 			this.tabPage6 = new System.Windows.Forms.TabPage();
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
 			this.textBox8 = new System.Windows.Forms.TextBox();
+			this.label33 = new System.Windows.Forms.Label();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.button25 = new System.Windows.Forms.Button();
 			this.button26 = new System.Windows.Forms.Button();
@@ -318,14 +331,26 @@ namespace FastADB
 			this.textBox15 = new System.Windows.Forms.TextBox();
 			this.groupBox18 = new System.Windows.Forms.GroupBox();
 			this.textBox16 = new System.Windows.Forms.TextBox();
+			this.label34 = new System.Windows.Forms.Label();
 			this.panel13 = new System.Windows.Forms.Panel();
 			this.button46 = new System.Windows.Forms.Button();
 			this.button47 = new System.Windows.Forms.Button();
 			this.button48 = new System.Windows.Forms.Button();
 			this.tabPage15 = new System.Windows.Forms.TabPage();
+			this.label40 = new System.Windows.Forms.Label();
+			this.tabPage17 = new System.Windows.Forms.TabPage();
+			this.groupBox22 = new System.Windows.Forms.GroupBox();
+			this.textBox18 = new System.Windows.Forms.TextBox();
+			this.panel15 = new System.Windows.Forms.Panel();
+			this.button59 = new System.Windows.Forms.Button();
+			this.button56 = new System.Windows.Forms.Button();
+			this.button57 = new System.Windows.Forms.Button();
+			this.button58 = new System.Windows.Forms.Button();
+			this.label41 = new System.Windows.Forms.Label();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.label35 = new System.Windows.Forms.Label();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.button27 = new System.Windows.Forms.Button();
 			this.button28 = new System.Windows.Forms.Button();
@@ -334,6 +359,7 @@ namespace FastADB
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.label36 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.button29 = new System.Windows.Forms.Button();
 			this.button30 = new System.Windows.Forms.Button();
@@ -348,6 +374,7 @@ namespace FastADB
 			this.button35 = new System.Windows.Forms.Button();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.label25 = new System.Windows.Forms.Label();
+			this.label37 = new System.Windows.Forms.Label();
 			this.panel10 = new System.Windows.Forms.Panel();
 			this.button33 = new System.Windows.Forms.Button();
 			this.button34 = new System.Windows.Forms.Button();
@@ -358,6 +385,7 @@ namespace FastADB
 			this.textBox11 = new System.Windows.Forms.TextBox();
 			this.groupBox14 = new System.Windows.Forms.GroupBox();
 			this.textBox12 = new System.Windows.Forms.TextBox();
+			this.label38 = new System.Windows.Forms.Label();
 			this.panel11 = new System.Windows.Forms.Panel();
 			this.button40 = new System.Windows.Forms.Button();
 			this.button36 = new System.Windows.Forms.Button();
@@ -369,6 +397,7 @@ namespace FastADB
 			this.textBox13 = new System.Windows.Forms.TextBox();
 			this.groupBox16 = new System.Windows.Forms.GroupBox();
 			this.textBox14 = new System.Windows.Forms.TextBox();
+			this.label39 = new System.Windows.Forms.Label();
 			this.panel12 = new System.Windows.Forms.Panel();
 			this.button41 = new System.Windows.Forms.Button();
 			this.button42 = new System.Windows.Forms.Button();
@@ -447,17 +476,6 @@ namespace FastADB
 			this.openFileDialogPy = new System.Windows.Forms.OpenFileDialog();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.openFileDialogJython = new System.Windows.Forms.OpenFileDialog();
-			this.tabPage17 = new System.Windows.Forms.TabPage();
-			this.label30 = new System.Windows.Forms.Label();
-			this.label31 = new System.Windows.Forms.Label();
-			this.label32 = new System.Windows.Forms.Label();
-			this.label33 = new System.Windows.Forms.Label();
-			this.label34 = new System.Windows.Forms.Label();
-			this.label35 = new System.Windows.Forms.Label();
-			this.label36 = new System.Windows.Forms.Label();
-			this.label37 = new System.Windows.Forms.Label();
-			this.label38 = new System.Windows.Forms.Label();
-			this.label39 = new System.Windows.Forms.Label();
 			this.statusStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -487,6 +505,10 @@ namespace FastADB
 			this.groupBox17.SuspendLayout();
 			this.groupBox18.SuspendLayout();
 			this.panel13.SuspendLayout();
+			this.tabPage15.SuspendLayout();
+			this.tabPage17.SuspendLayout();
+			this.groupBox22.SuspendLayout();
+			this.panel15.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.groupBox5.SuspendLayout();
 			this.panel6.SuspendLayout();
@@ -819,6 +841,18 @@ namespace FastADB
 	"se";
 			this.textBox9.WordWrap = false;
 			// 
+			// label30
+			// 
+			this.label30.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label30.ForeColor = System.Drawing.Color.Green;
+			this.label30.Location = new System.Drawing.Point(3, 3);
+			this.label30.Name = "label30";
+			this.label30.Size = new System.Drawing.Size(770, 23);
+			this.label30.TabIndex = 1;
+			this.label30.Text = "Позволяет снять системный лог с устройства.";
+			this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
 			// panel8
 			// 
 			this.panel8.Controls.Add(this.button22);
@@ -1027,6 +1061,18 @@ namespace FastADB
 			this.label14.TabIndex = 0;
 			this.label14.Text = "Имя файла:";
 			// 
+			// label31
+			// 
+			this.label31.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label31.ForeColor = System.Drawing.Color.Green;
+			this.label31.Location = new System.Drawing.Point(3, 3);
+			this.label31.Name = "label31";
+			this.label31.Size = new System.Drawing.Size(770, 23);
+			this.label31.TabIndex = 10;
+			this.label31.Text = "Позволяет снять скриншот с устройства.";
+			this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
 			// panel5
 			// 
 			this.panel5.Controls.Add(this.button23);
@@ -1143,6 +1189,18 @@ namespace FastADB
 	"TO FINISH!\r\n@pause";
 			this.textBox20.WordWrap = false;
 			// 
+			// label32
+			// 
+			this.label32.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label32.ForeColor = System.Drawing.Color.Green;
+			this.label32.Location = new System.Drawing.Point(0, 0);
+			this.label32.Name = "label32";
+			this.label32.Size = new System.Drawing.Size(776, 23);
+			this.label32.TabIndex = 12;
+			this.label32.Text = "Позволяет записать видео с устройства.";
+			this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
 			// panel14
 			// 
 			this.panel14.Controls.Add(this.button51);
@@ -1230,6 +1288,18 @@ namespace FastADB
 			this.textBox8.TabIndex = 0;
 			this.textBox8.Text = resources.GetString("textBox8.Text");
 			this.textBox8.WordWrap = false;
+			// 
+			// label33
+			// 
+			this.label33.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label33.ForeColor = System.Drawing.Color.Green;
+			this.label33.Location = new System.Drawing.Point(3, 3);
+			this.label33.Name = "label33";
+			this.label33.Size = new System.Drawing.Size(770, 23);
+			this.label33.TabIndex = 13;
+			this.label33.Text = "Выполняет стресс-тестирование выбранного приложения.";
+			this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel7
 			// 
@@ -1373,6 +1443,18 @@ namespace FastADB
 			this.textBox16.Text = resources.GetString("textBox16.Text");
 			this.textBox16.WordWrap = false;
 			// 
+			// label34
+			// 
+			this.label34.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label34.ForeColor = System.Drawing.Color.Green;
+			this.label34.Location = new System.Drawing.Point(0, 0);
+			this.label34.Name = "label34";
+			this.label34.Size = new System.Drawing.Size(776, 23);
+			this.label34.TabIndex = 14;
+			this.label34.Text = "Выполняет последовательное нажатие на экран устройства.";
+			this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
 			// panel13
 			// 
 			this.panel13.Controls.Add(this.button46);
@@ -1426,12 +1508,138 @@ namespace FastADB
 			// 
 			// tabPage15
 			// 
+			this.tabPage15.Controls.Add(this.label40);
 			this.tabPage15.Location = new System.Drawing.Point(4, 25);
 			this.tabPage15.Name = "tabPage15";
 			this.tabPage15.Size = new System.Drawing.Size(776, 461);
 			this.tabPage15.TabIndex = 14;
-			this.tabPage15.Text = "ADB: GetEvent";
+			this.tabPage15.Text = "ADB: Get Event";
 			this.tabPage15.UseVisualStyleBackColor = true;
+			// 
+			// label40
+			// 
+			this.label40.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label40.ForeColor = System.Drawing.Color.Green;
+			this.label40.Location = new System.Drawing.Point(0, 0);
+			this.label40.Name = "label40";
+			this.label40.Size = new System.Drawing.Size(776, 23);
+			this.label40.TabIndex = 15;
+			this.label40.Text = "Записать и воспроизведение событий, генерируемых пользователем.";
+			this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// tabPage17
+			// 
+			this.tabPage17.Controls.Add(this.groupBox22);
+			this.tabPage17.Controls.Add(this.panel15);
+			this.tabPage17.Controls.Add(this.label41);
+			this.tabPage17.Location = new System.Drawing.Point(4, 25);
+			this.tabPage17.Name = "tabPage17";
+			this.tabPage17.Size = new System.Drawing.Size(776, 461);
+			this.tabPage17.TabIndex = 16;
+			this.tabPage17.Text = "ADB: Copy Files";
+			this.tabPage17.UseVisualStyleBackColor = true;
+			// 
+			// groupBox22
+			// 
+			this.groupBox22.Controls.Add(this.textBox18);
+			this.groupBox22.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBox22.Location = new System.Drawing.Point(0, 23);
+			this.groupBox22.Name = "groupBox22";
+			this.groupBox22.Size = new System.Drawing.Size(776, 408);
+			this.groupBox22.TabIndex = 18;
+			this.groupBox22.TabStop = false;
+			this.groupBox22.Text = "Файл: copy.bat";
+			// 
+			// textBox18
+			// 
+			this.textBox18.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.textBox18.Font = new System.Drawing.Font("Consolas", 9.75F);
+			this.textBox18.Location = new System.Drawing.Point(3, 16);
+			this.textBox18.Multiline = true;
+			this.textBox18.Name = "textBox18";
+			this.textBox18.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBox18.Size = new System.Drawing.Size(770, 389);
+			this.textBox18.TabIndex = 0;
+			this.textBox18.Text = resources.GetString("textBox18.Text");
+			this.textBox18.WordWrap = false;
+			// 
+			// panel15
+			// 
+			this.panel15.Controls.Add(this.button59);
+			this.panel15.Controls.Add(this.button56);
+			this.panel15.Controls.Add(this.button57);
+			this.panel15.Controls.Add(this.button58);
+			this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panel15.Location = new System.Drawing.Point(0, 431);
+			this.panel15.Name = "panel15";
+			this.panel15.Size = new System.Drawing.Size(776, 30);
+			this.panel15.TabIndex = 17;
+			// 
+			// button59
+			// 
+			this.button59.Image = ((System.Drawing.Image)(resources.GetObject("button59.Image")));
+			this.button59.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button59.Location = new System.Drawing.Point(8, 4);
+			this.button59.Name = "button59";
+			this.button59.Size = new System.Drawing.Size(147, 23);
+			this.button59.TabIndex = 9;
+			this.button59.Text = "Узнать Package Name";
+			this.button59.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button59.UseVisualStyleBackColor = true;
+			this.button59.Click += new System.EventHandler(this.Button59Click);
+			// 
+			// button56
+			// 
+			this.button56.Image = ((System.Drawing.Image)(resources.GetObject("button56.Image")));
+			this.button56.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button56.Location = new System.Drawing.Point(314, 4);
+			this.button56.Name = "button56";
+			this.button56.Size = new System.Drawing.Size(111, 23);
+			this.button56.TabIndex = 8;
+			this.button56.Text = "Открыть файл";
+			this.button56.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button56.UseVisualStyleBackColor = true;
+			this.button56.Click += new System.EventHandler(this.Button56Click);
+			// 
+			// button57
+			// 
+			this.button57.Image = ((System.Drawing.Image)(resources.GetObject("button57.Image")));
+			this.button57.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button57.Location = new System.Drawing.Point(161, 4);
+			this.button57.Name = "button57";
+			this.button57.Size = new System.Drawing.Size(147, 23);
+			this.button57.TabIndex = 7;
+			this.button57.Text = "Сохранить файл как...";
+			this.button57.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button57.UseVisualStyleBackColor = true;
+			this.button57.Click += new System.EventHandler(this.Button57Click);
+			// 
+			// button58
+			// 
+			this.button58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.button58.Image = ((System.Drawing.Image)(resources.GetObject("button58.Image")));
+			this.button58.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button58.Location = new System.Drawing.Point(683, 4);
+			this.button58.Name = "button58";
+			this.button58.Size = new System.Drawing.Size(90, 23);
+			this.button58.TabIndex = 0;
+			this.button58.Text = "Выполнить";
+			this.button58.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button58.UseVisualStyleBackColor = true;
+			this.button58.Click += new System.EventHandler(this.Button58Click);
+			// 
+			// label41
+			// 
+			this.label41.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label41.ForeColor = System.Drawing.Color.Green;
+			this.label41.Location = new System.Drawing.Point(0, 0);
+			this.label41.Name = "label41";
+			this.label41.Size = new System.Drawing.Size(776, 23);
+			this.label41.TabIndex = 16;
+			this.label41.Text = "Скопировать файлы с устройства на компьютер.";
+			this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tabPage5
 			// 
@@ -1469,6 +1677,18 @@ namespace FastADB
 			this.textBox7.TabIndex = 0;
 			this.textBox7.Text = "adb devices\r\nadb shell\r\n@echo Process - complete!\r\n@pause";
 			this.textBox7.WordWrap = false;
+			// 
+			// label35
+			// 
+			this.label35.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label35.ForeColor = System.Drawing.Color.Green;
+			this.label35.Location = new System.Drawing.Point(3, 3);
+			this.label35.Name = "label35";
+			this.label35.Size = new System.Drawing.Size(770, 23);
+			this.label35.TabIndex = 14;
+			this.label35.Text = "Выполнение команд в shell режиме.";
+			this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel6
 			// 
@@ -1568,6 +1788,18 @@ namespace FastADB
 	"ause";
 			this.textBox2.WordWrap = false;
 			// 
+			// label36
+			// 
+			this.label36.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label36.ForeColor = System.Drawing.Color.Green;
+			this.label36.Location = new System.Drawing.Point(0, 0);
+			this.label36.Name = "label36";
+			this.label36.Size = new System.Drawing.Size(770, 23);
+			this.label36.TabIndex = 15;
+			this.label36.Text = "Запускает Dalvik Debug Monitor Server";
+			this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
 			// panel3
 			// 
 			this.panel3.Controls.Add(this.button29);
@@ -1629,7 +1861,7 @@ namespace FastADB
 			this.tabPage11.Name = "tabPage11";
 			this.tabPage11.Size = new System.Drawing.Size(776, 461);
 			this.tabPage11.TabIndex = 10;
-			this.tabPage11.Text = "ADB: InstallPackage";
+			this.tabPage11.Text = "ADB: Install Package";
 			this.tabPage11.UseVisualStyleBackColor = true;
 			// 
 			// splitContainer2
@@ -1740,6 +1972,18 @@ namespace FastADB
 			this.label25.TabIndex = 1;
 			this.label25.Text = "Имя файла:";
 			// 
+			// label37
+			// 
+			this.label37.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label37.ForeColor = System.Drawing.Color.Green;
+			this.label37.Location = new System.Drawing.Point(0, 0);
+			this.label37.Name = "label37";
+			this.label37.Size = new System.Drawing.Size(776, 23);
+			this.label37.TabIndex = 16;
+			this.label37.Text = "Устанавливает apk приложение на устройство.";
+			this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
 			// panel10
 			// 
 			this.panel10.Controls.Add(this.button33);
@@ -1800,7 +2044,7 @@ namespace FastADB
 			this.tabPage12.Name = "tabPage12";
 			this.tabPage12.Size = new System.Drawing.Size(776, 461);
 			this.tabPage12.TabIndex = 11;
-			this.tabPage12.Text = "ADB: RemovePackage";
+			this.tabPage12.Text = "ADB: Remove Package";
 			this.tabPage12.UseVisualStyleBackColor = true;
 			// 
 			// splitContainer3
@@ -1868,6 +2112,18 @@ namespace FastADB
 			this.textBox12.Text = "from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice\r\ndevice = MonkeyR" +
 	"unner.waitForConnection()\r\ndevice.removePackage \'com.package.name\'";
 			this.textBox12.WordWrap = false;
+			// 
+			// label38
+			// 
+			this.label38.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label38.ForeColor = System.Drawing.Color.Green;
+			this.label38.Location = new System.Drawing.Point(0, 0);
+			this.label38.Name = "label38";
+			this.label38.Size = new System.Drawing.Size(776, 23);
+			this.label38.TabIndex = 17;
+			this.label38.Text = "Удаляет ранее установленное apk приложение с устройства.";
+			this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel11
 			// 
@@ -1943,7 +2199,7 @@ namespace FastADB
 			this.tabPage13.Name = "tabPage13";
 			this.tabPage13.Size = new System.Drawing.Size(776, 461);
 			this.tabPage13.TabIndex = 12;
-			this.tabPage13.Text = "ADB: StartActivity";
+			this.tabPage13.Text = "ADB: Start Activity";
 			this.tabPage13.UseVisualStyleBackColor = true;
 			// 
 			// splitContainer4
@@ -2010,6 +2266,18 @@ namespace FastADB
 			this.textBox14.TabIndex = 2;
 			this.textBox14.Text = resources.GetString("textBox14.Text");
 			this.textBox14.WordWrap = false;
+			// 
+			// label39
+			// 
+			this.label39.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label39.ForeColor = System.Drawing.Color.Green;
+			this.label39.Location = new System.Drawing.Point(0, 0);
+			this.label39.Name = "label39";
+			this.label39.Size = new System.Drawing.Size(776, 23);
+			this.label39.TabIndex = 17;
+			this.label39.Text = "Запускает ранее установленное apk приложение на устройстве.";
+			this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel12
 			// 
@@ -2818,115 +3086,6 @@ namespace FastADB
 			this.openFileDialogJython.Filter = "*.exe|*.exe";
 			this.openFileDialogJython.InitialDirectory = "C:\\jython2.7.0\\bin\\";
 			// 
-			// tabPage17
-			// 
-			this.tabPage17.Location = new System.Drawing.Point(4, 25);
-			this.tabPage17.Name = "tabPage17";
-			this.tabPage17.Size = new System.Drawing.Size(776, 461);
-			this.tabPage17.TabIndex = 16;
-			this.tabPage17.Text = "ADB: Copy Files";
-			this.tabPage17.UseVisualStyleBackColor = true;
-			// 
-			// label30
-			// 
-			this.label30.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label30.Location = new System.Drawing.Point(3, 3);
-			this.label30.Name = "label30";
-			this.label30.Size = new System.Drawing.Size(770, 23);
-			this.label30.TabIndex = 1;
-			this.label30.Text = "Описание: позволяет снять системный лог с устройства.";
-			this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label31
-			// 
-			this.label31.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label31.Location = new System.Drawing.Point(3, 3);
-			this.label31.Name = "label31";
-			this.label31.Size = new System.Drawing.Size(770, 23);
-			this.label31.TabIndex = 10;
-			this.label31.Text = "Описание: позволяет снять скриншот с устройства.";
-			this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label32
-			// 
-			this.label32.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label32.Location = new System.Drawing.Point(0, 0);
-			this.label32.Name = "label32";
-			this.label32.Size = new System.Drawing.Size(776, 23);
-			this.label32.TabIndex = 12;
-			this.label32.Text = "Описание: позволяет записать видео с устройства.";
-			this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label33
-			// 
-			this.label33.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label33.Location = new System.Drawing.Point(3, 3);
-			this.label33.Name = "label33";
-			this.label33.Size = new System.Drawing.Size(770, 23);
-			this.label33.TabIndex = 13;
-			this.label33.Text = "Описание: выполняет стресс-тестирование выбранного приложения.";
-			this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label34
-			// 
-			this.label34.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label34.Location = new System.Drawing.Point(0, 0);
-			this.label34.Name = "label34";
-			this.label34.Size = new System.Drawing.Size(776, 23);
-			this.label34.TabIndex = 14;
-			this.label34.Text = "Описание: выполняет последовательное нажатие на экран устройства.";
-			this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label35
-			// 
-			this.label35.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label35.Location = new System.Drawing.Point(3, 3);
-			this.label35.Name = "label35";
-			this.label35.Size = new System.Drawing.Size(770, 23);
-			this.label35.TabIndex = 14;
-			this.label35.Text = "Описание: выполнение команд в shell режиме.";
-			this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label36
-			// 
-			this.label36.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label36.Location = new System.Drawing.Point(0, 0);
-			this.label36.Name = "label36";
-			this.label36.Size = new System.Drawing.Size(770, 23);
-			this.label36.TabIndex = 15;
-			this.label36.Text = "Описание: запускает Dalvik Debug Monitor Server";
-			this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label37
-			// 
-			this.label37.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label37.Location = new System.Drawing.Point(0, 0);
-			this.label37.Name = "label37";
-			this.label37.Size = new System.Drawing.Size(776, 23);
-			this.label37.TabIndex = 16;
-			this.label37.Text = "Описание: устанавливает apk приложение на устройство.";
-			this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label38
-			// 
-			this.label38.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label38.Location = new System.Drawing.Point(0, 0);
-			this.label38.Name = "label38";
-			this.label38.Size = new System.Drawing.Size(776, 23);
-			this.label38.TabIndex = 17;
-			this.label38.Text = "Описание: удаляет ранее установленное apk приложение с устройства.";
-			this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// label39
-			// 
-			this.label39.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label39.Location = new System.Drawing.Point(0, 0);
-			this.label39.Name = "label39";
-			this.label39.Size = new System.Drawing.Size(776, 23);
-			this.label39.TabIndex = 17;
-			this.label39.Text = "Описание: запускает ранее установленное apk приложение на устройстве.";
-			this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2978,6 +3137,11 @@ namespace FastADB
 			this.groupBox18.ResumeLayout(false);
 			this.groupBox18.PerformLayout();
 			this.panel13.ResumeLayout(false);
+			this.tabPage15.ResumeLayout(false);
+			this.tabPage17.ResumeLayout(false);
+			this.groupBox22.ResumeLayout(false);
+			this.groupBox22.PerformLayout();
+			this.panel15.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.groupBox5.ResumeLayout(false);
 			this.groupBox5.PerformLayout();
