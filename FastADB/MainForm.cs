@@ -39,27 +39,55 @@ namespace FastADB
 		
 		void applyConcole()
 		{
-			if(!Directory.Exists(folderResource)){
-				Directory.CreateDirectory(folderResource);
+			if(!Directory.Exists(textBoxFolderConsole.Text)){
+				Directory.CreateDirectory(textBoxFolderConsole.Text);
 			}
 			
-			if(!File.Exists(folderResource + "\\console.bat")){ 
-				File.Create(folderResource + "\\console.bat").Close();
-				FileStream fs = File.OpenWrite(folderResource + "\\console.bat");
+			if(!File.Exists(textBoxFolderConsole.Text + "\\console.bat")){ 
+				File.Create(textBoxFolderConsole.Text + "\\console.bat").Close();
+				FileStream fs = File.OpenWrite(textBoxFolderConsole.Text + "\\console.bat");
 				Byte[] info = new UTF8Encoding(true).GetBytes(textBoxConsole.Text);
                 fs.Write(info, 0, info.Length);
                 fs.Close();
 			}else{
-				File.Delete(folderResource + "\\console.bat");
-				File.Create(folderResource + "\\console.bat").Close();
-				FileStream fs = File.OpenWrite(folderResource + "\\console.bat");
+				File.Delete(textBoxFolderConsole.Text + "\\console.bat");
+				File.Create(textBoxFolderConsole.Text + "\\console.bat").Close();
+				FileStream fs = File.OpenWrite(textBoxFolderConsole.Text + "\\console.bat");
 				Byte[] info = new UTF8Encoding(true).GetBytes(textBoxConsole.Text);
                 fs.Write(info, 0, info.Length);
                 fs.Close();
 			}
 			
 			try{
-				Process.Start(folderResource + "\\console.bat");
+				Process.Start(textBoxFolderConsole.Text + "\\console.bat");
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		
+		void getPackageName(String fileName)
+		{
+			if(!Directory.Exists(textBoxFolderBuilds.Text)){
+				Directory.CreateDirectory(textBoxFolderBuilds.Text);
+			}
+			
+			if(!File.Exists(textBoxFolderBuilds.Text + "\\package_name.bat")){ 
+				File.Create(textBoxFolderBuilds.Text + "\\package_name.bat").Close();
+				FileStream fs = File.OpenWrite(textBoxFolderBuilds.Text + "\\package_name.bat");
+				Byte[] info = new UTF8Encoding(true).GetBytes("aapt dump badging " + fileName + Environment.NewLine + "@pause");
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}else{
+				File.Delete(textBoxFolderBuilds.Text + "\\package_name.bat");
+				File.Create(textBoxFolderBuilds.Text + "\\package_name.bat").Close();
+				FileStream fs = File.OpenWrite(textBoxFolderBuilds.Text + "\\package_name.bat");
+				Byte[] info = new UTF8Encoding(true).GetBytes("aapt dump badging " + fileName + Environment.NewLine + "@pause");
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}
+			
+			try{
+				Process.Start(textBoxFolderBuilds.Text + "\\package_name.bat");
 			}catch(Exception ex){
 				MessageBox.Show(ex.Message, "Ошибка");
 			}
@@ -94,6 +122,47 @@ namespace FastADB
 			textBox9.Text = batCommand;
 		}
 		
+		void saveFile(String fileName, String text)
+		{
+			if(!File.Exists(fileName)){ 
+				File.Create(fileName).Close();
+				FileStream fs = File.OpenWrite(fileName);
+				Byte[] info = new UTF8Encoding(true).GetBytes(text);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}else{
+				File.Delete(fileName);
+				File.Create(fileName).Close();
+				FileStream fs = File.OpenWrite(fileName);
+				Byte[] info = new UTF8Encoding(true).GetBytes(text);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}
+		}
+		
+		String readFile(String fileName)
+		{
+			if(!File.Exists(fileName)){ 
+				MessageBox.Show("Файл " + fileName + " не существует", "Сообщение");
+				return null;
+			}else{
+				
+				byte[] b = new byte[1024];
+            	UTF8Encoding temp = new UTF8Encoding(true);
+                
+                String text = "";
+                FileStream fs = File.OpenRead(@fileName);
+                while (fs.Read(b,0,b.Length) > 0) 
+	            {
+	                text += temp.GetString(b) + Environment.NewLine;
+	            }
+                
+                fs.Close();
+                
+                return text;
+			}
+		}
+		
 		/* =================================================================================================
 		 * РАЗДЕЛ: СОБЫТИЙ
 		 * =================================================================================================
@@ -123,6 +192,12 @@ namespace FastADB
 			Directory.CreateDirectory(textBoxFolderShell.Text);
 			textBoxFolderStress.Text = folderResource + "stress\\";
 			Directory.CreateDirectory(textBoxFolderStress.Text);
+			textBoxFolderConsole.Text = folderResource + "console\\";
+			Directory.CreateDirectory(textBoxFolderConsole.Text);
+			textBoxFolderJython.Text = folderResource + "jython\\";
+			Directory.CreateDirectory(textBoxFolderJython.Text);
+			textBoxFolderBuilds.Text = folderResource + "builds\\";
+			Directory.CreateDirectory(textBoxFolderBuilds.Text);
 			
 			initScreenshot();
 			initLog();
@@ -183,6 +258,18 @@ namespace FastADB
 		{
 			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderStress.Text = folderBrowserDialog1.SelectedPath + "\\";
 		}
+		void Button17Click(object sender, EventArgs e)
+		{
+			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderConsole.Text = folderBrowserDialog1.SelectedPath + "\\";
+		}
+		void Button18Click(object sender, EventArgs e)
+		{
+			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderJython.Text = folderBrowserDialog1.SelectedPath + "\\";
+		}
+		void Button20Click(object sender, EventArgs e)
+		{
+			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderBuilds.Text = folderBrowserDialog1.SelectedPath + "\\";
+		}	
 		void Button12Click(object sender, EventArgs e)
 		{
 			applyConcole();
@@ -238,6 +325,21 @@ namespace FastADB
 				MessageBox.Show(ex.Message, "Ошибка");
 			}
 		}
+		void Button24Click(object sender, EventArgs e)
+		{
+			saveFileDialogPy.InitialDirectory = textBoxFolderScreenshots.Text;
+			saveFileDialogPy.FileName = "script.py";
+			if(saveFileDialogPy.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogPy.FileName, textBox6.Text);
+			}
+		}
+		void Button23Click(object sender, EventArgs e)
+		{
+			openFileDialogPy.InitialDirectory = textBoxFolderScreenshots.Text;
+			if(openFileDialogPy.ShowDialog() == DialogResult.OK){
+				textBox6.Text = readFile(openFileDialogPy.FileName);
+			}
+		}
 		void Button6Click(object sender, EventArgs e)
 		{
 			TestingAndroid.AdbLog(textBoxFolderLog.Text, textBoxFolderLog.Text + "log.bat", textBox9.Text);
@@ -250,6 +352,21 @@ namespace FastADB
 				MessageBox.Show(ex.Message, "Ошибка");
 			}
 		}
+		void Button21Click(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderLog.Text;
+			saveFileDialogBat.FileName = "log.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, textBox9.Text);
+			}
+		}
+		void Button22Click(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderLog.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBox9.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
 		void TextBoxFolderLogTextChanged(object sender, EventArgs e)
 		{
 			initLog();
@@ -258,5 +375,38 @@ namespace FastADB
 		{
 			TestingAndroid.AdbDDMS(textBoxFolderDDMS.Text, textBoxFolderDDMS.Text + "ddms.bat", textBox2.Text);
 		}
+		void Button19Click(object sender, EventArgs e)
+		{
+			openFileDialogApk.InitialDirectory = textBoxFolderBuilds.Text;
+			if(openFileDialogApk.ShowDialog() == DialogResult.OK){
+				getPackageName(openFileDialogApk.FileName);
+			}
+		}
+		void Button26Click(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderStress.Text;
+			saveFileDialogBat.FileName = "stress.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, textBox8.Text);
+			}
+		}
+		void Button25Click(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderStress.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBox8.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
+		
+		void Button5Click(object sender, EventArgs e)
+		{
+			TestingAndroid.AdbStress(textBoxFolderStress.Text, textBoxFolderStress.Text + "stress.bat", textBox8.Text);
+		}
+		
+		
+			
+		
+		
+		
 	}
 }
