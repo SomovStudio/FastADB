@@ -375,6 +375,21 @@ namespace FastADB
 		{
 			TestingAndroid.AdbDDMS(textBoxFolderDDMS.Text, textBoxFolderDDMS.Text + "ddms.bat", textBox2.Text);
 		}
+		void Button30Click(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderDDMS.Text;
+			saveFileDialogBat.FileName = "ddms.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, textBox2.Text);
+			}
+		}
+		void Button29Click(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderDDMS.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBox2.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
 		void Button19Click(object sender, EventArgs e)
 		{
 			openFileDialogApk.InitialDirectory = textBoxFolderBuilds.Text;
@@ -397,12 +412,30 @@ namespace FastADB
 				textBox8.Text = readFile(openFileDialogBat.FileName);
 			}
 		}
-		
 		void Button5Click(object sender, EventArgs e)
 		{
 			TestingAndroid.AdbStress(textBoxFolderStress.Text, textBoxFolderStress.Text + "stress.bat", textBox8.Text);
 		}
-		
+		void Button4Click(object sender, EventArgs e)
+		{
+			TestingAndroid.AdbShell(textBoxFolderShell.Text, textBoxFolderShell.Text + "shell.bat", textBox7.Text);
+		}
+		void Button28Click(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderShell.Text;
+			saveFileDialogBat.FileName = "shell.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, textBox7.Text);
+			}
+		}
+		void Button27Click(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderShell.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBox7.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
+			
 		
 			
 		

@@ -147,5 +147,33 @@ namespace SomovStudio.QA
 			}
 		}
 		
+		public static void AdbShell(String folderName, String batFile, String batCommand)
+		{
+			if(!Directory.Exists(folderName)){
+				Directory.CreateDirectory(folderName);
+			}
+			
+			if(!File.Exists(batFile)){ 
+				File.Create(batFile).Close();
+				FileStream fs = File.OpenWrite(batFile);
+				Byte[] info = new UTF8Encoding(true).GetBytes(batCommand);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}else{
+				File.Delete(batFile);
+				File.Create(batFile).Close();
+				FileStream fs = File.OpenWrite(batFile);
+				Byte[] info = new UTF8Encoding(true).GetBytes(batCommand);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}
+			
+			try{
+				Process.Start(batFile);
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		
 	}
 }

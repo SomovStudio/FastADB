@@ -125,6 +125,10 @@ namespace FastADB
 		private System.Windows.Forms.Button button24;
 		private System.Windows.Forms.Button button25;
 		private System.Windows.Forms.Button button26;
+		private System.Windows.Forms.Button button27;
+		private System.Windows.Forms.Button button28;
+		private System.Windows.Forms.Button button29;
+		private System.Windows.Forms.Button button30;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -208,12 +212,16 @@ namespace FastADB
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.textBox7 = new System.Windows.Forms.TextBox();
 			this.panel6 = new System.Windows.Forms.Panel();
+			this.button27 = new System.Windows.Forms.Button();
+			this.button28 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.button29 = new System.Windows.Forms.Button();
+			this.button30 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.tabPage9 = new System.Windows.Forms.TabPage();
 			this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -984,12 +992,40 @@ namespace FastADB
 			// 
 			// panel6
 			// 
+			this.panel6.Controls.Add(this.button27);
+			this.panel6.Controls.Add(this.button28);
 			this.panel6.Controls.Add(this.button4);
 			this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel6.Location = new System.Drawing.Point(3, 428);
 			this.panel6.Name = "panel6";
 			this.panel6.Size = new System.Drawing.Size(770, 30);
 			this.panel6.TabIndex = 7;
+			// 
+			// button27
+			// 
+			this.button27.Image = ((System.Drawing.Image)(resources.GetObject("button27.Image")));
+			this.button27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button27.Location = new System.Drawing.Point(158, 4);
+			this.button27.Name = "button27";
+			this.button27.Size = new System.Drawing.Size(111, 23);
+			this.button27.TabIndex = 8;
+			this.button27.Text = "Открыть файл";
+			this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button27.UseVisualStyleBackColor = true;
+			this.button27.Click += new System.EventHandler(this.Button27Click);
+			// 
+			// button28
+			// 
+			this.button28.Image = ((System.Drawing.Image)(resources.GetObject("button28.Image")));
+			this.button28.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button28.Location = new System.Drawing.Point(5, 4);
+			this.button28.Name = "button28";
+			this.button28.Size = new System.Drawing.Size(147, 23);
+			this.button28.TabIndex = 7;
+			this.button28.Text = "Сохранить файл как...";
+			this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button28.UseVisualStyleBackColor = true;
+			this.button28.Click += new System.EventHandler(this.Button28Click);
 			// 
 			// button4
 			// 
@@ -1003,6 +1039,7 @@ namespace FastADB
 			this.button4.Text = "Выполнить";
 			this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.Button4Click);
 			// 
 			// tabPage3
 			// 
@@ -1052,12 +1089,40 @@ namespace FastADB
 			// 
 			// panel3
 			// 
+			this.panel3.Controls.Add(this.button29);
+			this.panel3.Controls.Add(this.button30);
 			this.panel3.Controls.Add(this.button1);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel3.Location = new System.Drawing.Point(3, 428);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(770, 30);
 			this.panel3.TabIndex = 6;
+			// 
+			// button29
+			// 
+			this.button29.Image = ((System.Drawing.Image)(resources.GetObject("button29.Image")));
+			this.button29.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button29.Location = new System.Drawing.Point(158, 4);
+			this.button29.Name = "button29";
+			this.button29.Size = new System.Drawing.Size(111, 23);
+			this.button29.TabIndex = 10;
+			this.button29.Text = "Открыть файл";
+			this.button29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button29.UseVisualStyleBackColor = true;
+			this.button29.Click += new System.EventHandler(this.Button29Click);
+			// 
+			// button30
+			// 
+			this.button30.Image = ((System.Drawing.Image)(resources.GetObject("button30.Image")));
+			this.button30.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button30.Location = new System.Drawing.Point(5, 4);
+			this.button30.Name = "button30";
+			this.button30.Size = new System.Drawing.Size(147, 23);
+			this.button30.TabIndex = 9;
+			this.button30.Text = "Сохранить файл как...";
+			this.button30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button30.UseVisualStyleBackColor = true;
+			this.button30.Click += new System.EventHandler(this.Button30Click);
 			// 
 			// button1
 			// 
