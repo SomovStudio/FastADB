@@ -290,6 +290,10 @@ namespace FastADB
 			Directory.CreateDirectory(textBoxFolderBuilds.Text);
 			textBoxFolderTouch.Text = folderResource + "touches\\";
 			Directory.CreateDirectory(textBoxFolderTouch.Text);
+			textBoxFolderScreenrecord.Text = folderResource + "screenrecord\\";
+			Directory.CreateDirectory(textBoxFolderScreenrecord.Text);
+			textBoxFolderOtherFiles.Text = folderResource + "other\\";
+			Directory.CreateDirectory(textBoxFolderOtherFiles.Text);
 			
 			initScreenshot();
 			initLog();
@@ -707,6 +711,33 @@ namespace FastADB
 		void Button50Click(object sender, EventArgs e)
 		{
 			if(openFileDialogJython.ShowDialog() == DialogResult.OK) textBoxJython.Text = openFileDialogJython.FileName;
+		}
+		void Button53Click(object sender, EventArgs e)
+		{
+			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderScreenrecord.Text = folderBrowserDialog1.SelectedPath + "\\";
+		}
+		void Button55Click(object sender, EventArgs e)
+		{
+			TestingAndroid.ExecuteBat(textBoxFolderScreenrecord.Text, textBoxFolderScreenrecord.Text + "screenrecord.bat", textBox20.Text);
+		}
+		void Button52Click(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderScreenrecord.Text;
+			saveFileDialogBat.FileName = "screenrecord.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, textBox20.Text);
+			}
+		}
+		void Button51Click(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderScreenrecord.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBox20.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
+		void Button54Click(object sender, EventArgs e)
+		{
+			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderOtherFiles.Text = folderBrowserDialog1.SelectedPath + "\\";
 		}
 		
 		
