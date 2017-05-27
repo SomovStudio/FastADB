@@ -174,7 +174,6 @@ namespace FastADB
 		private System.Windows.Forms.GroupBox groupBox18;
 		private System.Windows.Forms.TextBox textBox16;
 		private System.Windows.Forms.Panel panel13;
-		private System.Windows.Forms.Button button45;
 		private System.Windows.Forms.Button button46;
 		private System.Windows.Forms.Button button47;
 		private System.Windows.Forms.Button button48;
@@ -267,7 +266,6 @@ namespace FastADB
 			this.groupBox18 = new System.Windows.Forms.GroupBox();
 			this.textBox16 = new System.Windows.Forms.TextBox();
 			this.panel13 = new System.Windows.Forms.Panel();
-			this.button45 = new System.Windows.Forms.Button();
 			this.button46 = new System.Windows.Forms.Button();
 			this.button47 = new System.Windows.Forms.Button();
 			this.button48 = new System.Windows.Forms.Button();
@@ -1168,7 +1166,6 @@ namespace FastADB
 			// 
 			// panel13
 			// 
-			this.panel13.Controls.Add(this.button45);
 			this.panel13.Controls.Add(this.button46);
 			this.panel13.Controls.Add(this.button47);
 			this.panel13.Controls.Add(this.button48);
@@ -1178,41 +1175,31 @@ namespace FastADB
 			this.panel13.Size = new System.Drawing.Size(776, 30);
 			this.panel13.TabIndex = 10;
 			// 
-			// button45
-			// 
-			this.button45.Image = ((System.Drawing.Image)(resources.GetObject("button45.Image")));
-			this.button45.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button45.Location = new System.Drawing.Point(8, 4);
-			this.button45.Name = "button45";
-			this.button45.Size = new System.Drawing.Size(147, 23);
-			this.button45.TabIndex = 9;
-			this.button45.Text = "Узнать Package Name";
-			this.button45.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.button45.UseVisualStyleBackColor = true;
-			// 
 			// button46
 			// 
 			this.button46.Image = ((System.Drawing.Image)(resources.GetObject("button46.Image")));
 			this.button46.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button46.Location = new System.Drawing.Point(314, 4);
+			this.button46.Location = new System.Drawing.Point(161, 4);
 			this.button46.Name = "button46";
 			this.button46.Size = new System.Drawing.Size(111, 23);
 			this.button46.TabIndex = 8;
 			this.button46.Text = "Открыть файл";
 			this.button46.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button46.UseVisualStyleBackColor = true;
+			this.button46.Click += new System.EventHandler(this.Button46Click);
 			// 
 			// button47
 			// 
 			this.button47.Image = ((System.Drawing.Image)(resources.GetObject("button47.Image")));
 			this.button47.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button47.Location = new System.Drawing.Point(161, 4);
+			this.button47.Location = new System.Drawing.Point(8, 4);
 			this.button47.Name = "button47";
 			this.button47.Size = new System.Drawing.Size(147, 23);
 			this.button47.TabIndex = 7;
 			this.button47.Text = "Сохранить файл как...";
 			this.button47.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button47.UseVisualStyleBackColor = true;
+			this.button47.Click += new System.EventHandler(this.Button47Click);
 			// 
 			// button48
 			// 
@@ -1226,6 +1213,7 @@ namespace FastADB
 			this.button48.Text = "Выполнить";
 			this.button48.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button48.UseVisualStyleBackColor = true;
+			this.button48.Click += new System.EventHandler(this.Button48Click);
 			// 
 			// tabPage5
 			// 

@@ -442,19 +442,6 @@ print("CLICK - 3");
 print("TOUCHES - END!");
 MonkeyRunner.sleep(5.0);</value>
   </data>
-  <data name="button45.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmklEQVQ4T6WUS0sCURiGz0+K
-        rLQrtQrddLGiiAxb1SqK1kEQtElNDSKoZQppEl0oCCrIWuVoUdAFRImkRW1E6Ea9fe8ZhVYZJTzMN+c8
-        zxkYVAVA/Qd1Nl+vSQXrVDJQGxWQEnhN+ot8XxOHbqkz40CdMuZs4dyaA+mQHceeRqRXWvF84NRw1muy
-        R4cuG7b6yQmfNfyw0YaX+ABehbcTF7KRduxN2zScucY9OnTZsFWG3xZ92u3FR2JEk4l04mi2EdlYFz5O
-        hzWcuca9ksdG2kt5ejVwNYG79W7EPU243+wDLseBizHgfNSEs6xxjw5dNmxVwluJ91wchaQfhVRQkzcC
-        RfxyJeZ9aZ8uG7bmAdktPEYb8BRrxmOs5Ue0Iy6b4gEWvKdDyG87kN9pE9rLII64bBJeC5ThrQJul/G5
-        3w8cuoWhMrhNVxq2coC8xNsF2BcVOpYUnGWgQ5cNWzmgRm586FlVcEUVBstAhy4btsrwWYHMDHA9CdxM
-        /Q660rDlVzjPwfBakfwldHUjrZJPhWD5IxX/+inzb+ALI3eeYl18t2sAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="button46.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

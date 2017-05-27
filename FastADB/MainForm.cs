@@ -95,14 +95,16 @@ namespace FastADB
 		
 		void initScreenshot()
 		{
-			String batCommand = "adb devices" + Environment.NewLine + 
+			String batCommand = 
+				"adb devices" + Environment.NewLine +
 				"monkeyrunner " + textBoxFolderScreenshots.Text + "script.py";
 			textBox5.Text = batCommand;
 			
 			String screenshotPath = textBoxFolderScreenshots2.Text + textBoxScreenshotFile.Text;
 			screenshotPath = screenshotPath.Replace("\\","/");
 			
-			String pyScript = "from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine + 
+			String pyScript = 
+				"from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine +
 				"device = MonkeyRunner.waitForConnection();" + Environment.NewLine + Environment.NewLine + 
 				"# SAVE - SCREENSHOT" + Environment.NewLine + 
 				"result = device.takeSnapshot();" + Environment.NewLine + 
@@ -114,7 +116,8 @@ namespace FastADB
 		
 		void initLog()
 		{
-			String batCommand = "adb devices" + Environment.NewLine + 
+			String batCommand = 
+				"adb devices" + Environment.NewLine +
 				"adb logcat -d > " + textBoxFolderLog.Text + "log.txt" + Environment.NewLine +
 				"@echo"+ Environment.NewLine +
 				"@echo PRESS ANY KEY TO FINISH!"+ Environment.NewLine +
@@ -124,7 +127,8 @@ namespace FastADB
 		
 		void initInstallBuild()
 		{
-			String batCommand = "adb devices" + Environment.NewLine + 
+			String batCommand = 
+				"adb devices" + Environment.NewLine +
 				"monkeyrunner " + textBoxFolderBuilds.Text + "script.py";
 			textBox4.Text = batCommand;
 			
@@ -132,7 +136,8 @@ namespace FastADB
 			String buildPath = textBox3.Text;
 			buildPath = buildPath.Replace("\\","/");
 			
-			String pyScript = "from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine + 
+			String pyScript = 
+				"from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine +
 				"device = MonkeyRunner.waitForConnection();" + Environment.NewLine +
 				"device.installPackage('" + buildPath + "');"+ Environment.NewLine +
 				"print(\"INSTALL - COMPLETE!\");" + Environment.NewLine + 
@@ -142,11 +147,13 @@ namespace FastADB
 		
 		void initRemoveBuild()
 		{
-			String batCommand = "adb devices" + Environment.NewLine + 
+			String batCommand = 
+				"adb devices" + Environment.NewLine +
 				"monkeyrunner " + textBoxFolderBuilds.Text + "script.py";
 			textBox11.Text = batCommand;
 			
-			String pyScript = "from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine + 
+			String pyScript = 
+				"from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine +
 				"device = MonkeyRunner.waitForConnection();" + Environment.NewLine +
 				"device.removePackage('com.package.name');"+ Environment.NewLine +
 				"print(\"REMOVE - COMPLETE!\");" + Environment.NewLine + 
@@ -156,11 +163,13 @@ namespace FastADB
 		
 		void initStartActivity()
 		{
-			String batCommand = "adb devices" + Environment.NewLine + 
+			String batCommand = 
+				"adb devices" + Environment.NewLine +
 				"monkeyrunner " + textBoxFolderBuilds.Text + "script.py";
 			textBox13.Text = batCommand;
 			
-			String pyScript = "from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine + 
+			String pyScript = 
+				"from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine +
 				"device = MonkeyRunner.waitForConnection();" + Environment.NewLine +
 				"package = 'com.package.name';"+ Environment.NewLine +
 				"activity = 'com.activity.package.name';"+ Environment.NewLine +
@@ -169,6 +178,30 @@ namespace FastADB
 				"print(\"START - COMPLETE!\");" + Environment.NewLine + 
 				"MonkeyRunner.sleep(5.0);";
 			textBox14.Text = pyScript;
+		}
+		
+		void initTouche()
+		{
+			String batCommand = 
+				"adb devices" + Environment.NewLine +
+				"monkeyrunner " + textBoxFolderTouch.Text + "script.py";
+			textBox15.Text = batCommand;
+			
+			String pyScript = 
+				"from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice" + Environment.NewLine +
+				"device = MonkeyRunner.waitForConnection();" + Environment.NewLine +
+				"device.touch(640, 650, 'DOWN_AND_UP');"+ Environment.NewLine +
+				"print(\"TOUCH - 1\");"+ Environment.NewLine +
+				"MonkeyRunner.sleep(5.0);"+ Environment.NewLine +
+				"device.touch(250, 350, 'DOWN_AND_UP');"+ Environment.NewLine +
+				"print(\"TOUCH - 2\");"+ Environment.NewLine +
+				"MonkeyRunner.sleep(5.0);"+ Environment.NewLine +
+				"device.touch(50, 150, 'DOWN_AND_UP');"+ Environment.NewLine +
+				"print(\"TOUCH - 3\");"+ Environment.NewLine +
+				"MonkeyRunner.sleep(5.0);"+ Environment.NewLine +
+				"print(\"TOUCHES - END!\");" + Environment.NewLine + 
+				"MonkeyRunner.sleep(5.0);";
+			textBox16.Text = pyScript;
 		}
 		
 		void saveFile(String fileName, String text)
@@ -255,6 +288,7 @@ namespace FastADB
 			initInstallBuild();
 			initRemoveBuild();
 			initStartActivity();
+			initTouche();
 		}
 		void ToolStripStatusLabel1Click(object sender, EventArgs e)
 		{
@@ -599,6 +633,30 @@ namespace FastADB
 				textBox14.Text = readFile(openFileDialogPy.FileName);
 			}
 		}
+		void Button48Click(object sender, EventArgs e)
+		{
+			TestingAndroid.ExecuteBatAndPy(textBoxFolderTouch.Text,
+			                               textBoxFolderTouch.Text + "touches.bat",
+			                               textBox15.Text,
+			                               textBoxFolderTouch.Text + "script.py",
+			                               textBox16.Text);
+		}
+		void Button47Click(object sender, EventArgs e)
+		{
+			saveFileDialogPy.InitialDirectory = textBoxFolderTouch.Text;
+			saveFileDialogPy.FileName = "script.py";
+			if(saveFileDialogPy.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogPy.FileName, textBox16.Text);
+			}
+		}
+		void Button46Click(object sender, EventArgs e)
+		{
+			openFileDialogPy.InitialDirectory = textBoxFolderTouch.Text;
+			if(openFileDialogPy.ShowDialog() == DialogResult.OK){
+				textBox16.Text = readFile(openFileDialogPy.FileName);
+			}
+		}
+		
 		
 		
 		
