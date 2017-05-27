@@ -1,6 +1,6 @@
 ﻿/*
  * Создано в SharpDevelop.
- * Пользователь: Cartish
+ * Пользователь: Somov Studio
  * Дата: 25.05.2017
  * Время: 9:14
  * 
@@ -19,6 +19,79 @@ namespace SomovStudio.QA
 	/// </summary>
 	public static class TestingAndroid
 	{
+		public static void ExecuteBat(String folderName, String batFile, String batCommand)
+		{
+			if(!Directory.Exists(folderName)){
+				Directory.CreateDirectory(folderName);
+			}
+									
+			if(!File.Exists(batFile)){ 
+				File.Create(batFile).Close();
+				FileStream fs = File.OpenWrite(batFile);
+				Byte[] info = new UTF8Encoding(true).GetBytes(batCommand);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}else{
+				File.Delete(batFile);
+				File.Create(batFile).Close();
+				FileStream fs = File.OpenWrite(batFile);
+				Byte[] info = new UTF8Encoding(true).GetBytes(batCommand);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}
+			
+			try{
+				Process.Start(batFile);
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		
+		public static void ExecuteBatAndPy(String folderName, String batFile, String batCommand, String pyFile, String pyCommand)
+		{
+			if(!Directory.Exists(folderName)){
+				Directory.CreateDirectory(folderName);
+			}
+			FileStream fs;
+			if(!File.Exists(batFile)){ 
+				File.Create(batFile).Close();
+				fs = File.OpenWrite(batFile);
+				Byte[] info = new UTF8Encoding(true).GetBytes(batCommand);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}else{
+				File.Delete(batFile);
+				File.Create(batFile).Close();
+				fs = File.OpenWrite(batFile);
+				Byte[] info = new UTF8Encoding(true).GetBytes(batCommand);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}
+			
+			if(!File.Exists(pyFile)){
+				File.Create(pyFile).Close();
+				fs = File.OpenWrite(pyFile);
+				Byte[] info = new UTF8Encoding(true).GetBytes(pyCommand);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}else{
+				File.Delete(pyFile);
+				File.Create(pyFile).Close();
+				fs = File.OpenWrite(pyFile);
+				Byte[] info = new UTF8Encoding(true).GetBytes(pyCommand);
+                fs.Write(info, 0, info.Length);
+                fs.Close();
+			}
+			
+			try{
+				Process.Start(batFile);
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		
+		
+		/*
 		public static void AdbDDMS(String folderName, String batFile, String batCommand)
 		{
 			if(!Directory.Exists(folderName)){
@@ -174,6 +247,6 @@ namespace SomovStudio.QA
 				MessageBox.Show(ex.Message, "Ошибка");
 			}
 		}
-		
+		*/
 	}
 }
