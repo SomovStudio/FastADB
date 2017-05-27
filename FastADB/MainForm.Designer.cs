@@ -180,6 +180,26 @@ namespace FastADB
 		private System.Windows.Forms.Button button49;
 		private System.Windows.Forms.TextBox textBoxFolderTouch;
 		private System.Windows.Forms.Label label26;
+		private System.Windows.Forms.Button button45;
+		private System.Windows.Forms.ToolStrip toolStrip1;
+		private System.Windows.Forms.ToolStripButton toolStripButton1;
+		private System.Windows.Forms.ToolStripButton toolStripButton2;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripButton toolStripButton3;
+		private System.Windows.Forms.SplitContainer splitContainer6;
+		private System.Windows.Forms.GroupBox groupBox19;
+		private System.Windows.Forms.TextBox textBox17;
+		private System.Windows.Forms.GroupBox groupBox20;
+		private System.Windows.Forms.RichTextBox richTextBox1;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripButton toolStripButton4;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.GroupBox groupBox21;
+		private System.Windows.Forms.Button button50;
+		private System.Windows.Forms.TextBox textBoxJython;
+		private System.Windows.Forms.Label label27;
+		private System.Windows.Forms.OpenFileDialog openFileDialogJython;
+		private System.Windows.Forms.TabPage tabPage15;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -202,6 +222,7 @@ namespace FastADB
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -210,6 +231,7 @@ namespace FastADB
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.button45 = new System.Windows.Forms.Button();
 			this.linkLabel3 = new System.Windows.Forms.LinkLabel();
 			this.label13 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
@@ -329,7 +351,23 @@ namespace FastADB
 			this.button13 = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
 			this.tabPage10 = new System.Windows.Forms.TabPage();
+			this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+			this.groupBox19 = new System.Windows.Forms.GroupBox();
+			this.textBox17 = new System.Windows.Forms.TextBox();
+			this.groupBox20 = new System.Windows.Forms.GroupBox();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
 			this.tabPage8 = new System.Windows.Forms.TabPage();
+			this.groupBox21 = new System.Windows.Forms.GroupBox();
+			this.button50 = new System.Windows.Forms.Button();
+			this.textBoxJython = new System.Windows.Forms.TextBox();
+			this.label27 = new System.Windows.Forms.Label();
 			this.groupBox9 = new System.Windows.Forms.GroupBox();
 			this.button49 = new System.Windows.Forms.Button();
 			this.textBoxFolderTouch = new System.Windows.Forms.TextBox();
@@ -369,6 +407,9 @@ namespace FastADB
 			this.saveFileDialogPy = new System.Windows.Forms.SaveFileDialog();
 			this.openFileDialogBat = new System.Windows.Forms.OpenFileDialog();
 			this.openFileDialogPy = new System.Windows.Forms.OpenFileDialog();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.openFileDialogJython = new System.Windows.Forms.OpenFileDialog();
+			this.tabPage15 = new System.Windows.Forms.TabPage();
 			this.statusStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -427,7 +468,15 @@ namespace FastADB
 			this.tabPage9.SuspendLayout();
 			this.groupBox8.SuspendLayout();
 			this.panel9.SuspendLayout();
+			this.tabPage10.SuspendLayout();
+			this.splitContainer6.Panel1.SuspendLayout();
+			this.splitContainer6.Panel2.SuspendLayout();
+			this.splitContainer6.SuspendLayout();
+			this.groupBox19.SuspendLayout();
+			this.groupBox20.SuspendLayout();
+			this.toolStrip1.SuspendLayout();
 			this.tabPage8.SuspendLayout();
+			this.groupBox21.SuspendLayout();
 			this.groupBox9.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
@@ -489,6 +538,7 @@ namespace FastADB
 			this.tabControl1.Controls.Add(this.tabPage4);
 			this.tabControl1.Controls.Add(this.tabPage6);
 			this.tabControl1.Controls.Add(this.tabPage14);
+			this.tabControl1.Controls.Add(this.tabPage15);
 			this.tabControl1.Controls.Add(this.tabPage5);
 			this.tabControl1.Controls.Add(this.tabPage3);
 			this.tabControl1.Controls.Add(this.tabPage11);
@@ -507,6 +557,7 @@ namespace FastADB
 			// 
 			// tabPage1
 			// 
+			this.tabPage1.Controls.Add(this.button45);
 			this.tabPage1.Controls.Add(this.linkLabel3);
 			this.tabPage1.Controls.Add(this.label13);
 			this.tabPage1.Controls.Add(this.label12);
@@ -529,6 +580,17 @@ namespace FastADB
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Инструкция";
 			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// button45
+			// 
+			this.button45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.button45.Location = new System.Drawing.Point(664, 432);
+			this.button45.Name = "button45";
+			this.button45.Size = new System.Drawing.Size(104, 23);
+			this.button45.TabIndex = 15;
+			this.button45.Text = "О программе";
+			this.button45.UseVisualStyleBackColor = true;
+			this.button45.Click += new System.EventHandler(this.Button45Click);
 			// 
 			// linkLabel3
 			// 
@@ -1956,6 +2018,8 @@ namespace FastADB
 			// 
 			// tabPage10
 			// 
+			this.tabPage10.Controls.Add(this.splitContainer6);
+			this.tabPage10.Controls.Add(this.toolStrip1);
 			this.tabPage10.Location = new System.Drawing.Point(4, 25);
 			this.tabPage10.Name = "tabPage10";
 			this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
@@ -1964,8 +2028,137 @@ namespace FastADB
 			this.tabPage10.Text = "Редактор Jython";
 			this.tabPage10.UseVisualStyleBackColor = true;
 			// 
+			// splitContainer6
+			// 
+			this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer6.Location = new System.Drawing.Point(3, 28);
+			this.splitContainer6.Name = "splitContainer6";
+			// 
+			// splitContainer6.Panel1
+			// 
+			this.splitContainer6.Panel1.Controls.Add(this.groupBox19);
+			// 
+			// splitContainer6.Panel2
+			// 
+			this.splitContainer6.Panel2.Controls.Add(this.groupBox20);
+			this.splitContainer6.Size = new System.Drawing.Size(770, 430);
+			this.splitContainer6.SplitterDistance = 385;
+			this.splitContainer6.TabIndex = 12;
+			// 
+			// groupBox19
+			// 
+			this.groupBox19.Controls.Add(this.textBox17);
+			this.groupBox19.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBox19.Location = new System.Drawing.Point(0, 0);
+			this.groupBox19.Name = "groupBox19";
+			this.groupBox19.Size = new System.Drawing.Size(385, 430);
+			this.groupBox19.TabIndex = 0;
+			this.groupBox19.TabStop = false;
+			this.groupBox19.Text = "Файл: run.bat";
+			// 
+			// textBox17
+			// 
+			this.textBox17.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.textBox17.Font = new System.Drawing.Font("Consolas", 9.75F);
+			this.textBox17.Location = new System.Drawing.Point(3, 16);
+			this.textBox17.Multiline = true;
+			this.textBox17.Name = "textBox17";
+			this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBox17.Size = new System.Drawing.Size(379, 411);
+			this.textBox17.TabIndex = 1;
+			this.textBox17.Text = "C:\\jython2.7.0\\bin\\jython";
+			this.textBox17.WordWrap = false;
+			// 
+			// groupBox20
+			// 
+			this.groupBox20.Controls.Add(this.richTextBox1);
+			this.groupBox20.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBox20.Location = new System.Drawing.Point(0, 0);
+			this.groupBox20.Name = "groupBox20";
+			this.groupBox20.Size = new System.Drawing.Size(381, 430);
+			this.groupBox20.TabIndex = 1;
+			this.groupBox20.TabStop = false;
+			this.groupBox20.Text = "Файл: script.py";
+			// 
+			// richTextBox1
+			// 
+			this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.richTextBox1.Font = new System.Drawing.Font("Consolas", 9.75F);
+			this.richTextBox1.Location = new System.Drawing.Point(3, 16);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.Size = new System.Drawing.Size(375, 411);
+			this.richTextBox1.TabIndex = 0;
+			this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+			this.richTextBox1.WordWrap = false;
+			// 
+			// toolStrip1
+			// 
+			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.toolStripButton1,
+			this.toolStripButton2,
+			this.toolStripSeparator1,
+			this.toolStripButton3,
+			this.toolStripSeparator2,
+			this.toolStripButton4});
+			this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.Size = new System.Drawing.Size(770, 25);
+			this.toolStrip1.TabIndex = 0;
+			this.toolStrip1.Text = "toolStrip1";
+			// 
+			// toolStripButton1
+			// 
+			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton1.Text = "Открыть *.py файл";
+			this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1Click);
+			// 
+			// toolStripButton2
+			// 
+			this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+			this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton2.Name = "toolStripButton2";
+			this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton2.Text = "Сохранить как *.py файл";
+			this.toolStripButton2.Click += new System.EventHandler(this.ToolStripButton2Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+			// 
+			// toolStripButton3
+			// 
+			this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+			this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton3.Name = "toolStripButton3";
+			this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton3.Text = "Выполнить";
+			this.toolStripButton3.Click += new System.EventHandler(this.ToolStripButton3Click);
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+			// 
+			// toolStripButton4
+			// 
+			this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+			this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton4.Name = "toolStripButton4";
+			this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton4.Text = "Открыть Jython";
+			this.toolStripButton4.Click += new System.EventHandler(this.ToolStripButton4Click);
+			// 
 			// tabPage8
 			// 
+			this.tabPage8.Controls.Add(this.groupBox21);
 			this.tabPage8.Controls.Add(this.groupBox9);
 			this.tabPage8.Location = new System.Drawing.Point(4, 25);
 			this.tabPage8.Name = "tabPage8";
@@ -1974,6 +2167,50 @@ namespace FastADB
 			this.tabPage8.TabIndex = 7;
 			this.tabPage8.Text = "Настройки";
 			this.tabPage8.UseVisualStyleBackColor = true;
+			// 
+			// groupBox21
+			// 
+			this.groupBox21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox21.Controls.Add(this.button50);
+			this.groupBox21.Controls.Add(this.textBoxJython);
+			this.groupBox21.Controls.Add(this.label27);
+			this.groupBox21.Location = new System.Drawing.Point(8, 336);
+			this.groupBox21.Name = "groupBox21";
+			this.groupBox21.Size = new System.Drawing.Size(760, 64);
+			this.groupBox21.TabIndex = 1;
+			this.groupBox21.TabStop = false;
+			this.groupBox21.Text = "Jython";
+			// 
+			// button50
+			// 
+			this.button50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.button50.Location = new System.Drawing.Point(724, 23);
+			this.button50.Name = "button50";
+			this.button50.Size = new System.Drawing.Size(30, 23);
+			this.button50.TabIndex = 35;
+			this.button50.Text = "...";
+			this.button50.UseVisualStyleBackColor = true;
+			this.button50.Click += new System.EventHandler(this.Button50Click);
+			// 
+			// textBoxJython
+			// 
+			this.textBoxJython.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxJython.Location = new System.Drawing.Point(155, 25);
+			this.textBoxJython.Name = "textBoxJython";
+			this.textBoxJython.ReadOnly = true;
+			this.textBoxJython.Size = new System.Drawing.Size(568, 20);
+			this.textBoxJython.TabIndex = 34;
+			this.textBoxJython.Text = "C:\\jython2.7.0\\bin\\jython.exe";
+			// 
+			// label27
+			// 
+			this.label27.Location = new System.Drawing.Point(6, 28);
+			this.label27.Name = "label27";
+			this.label27.Size = new System.Drawing.Size(155, 23);
+			this.label27.TabIndex = 33;
+			this.label27.Text = "Путь к программе:";
 			// 
 			// groupBox9
 			// 
@@ -2011,7 +2248,7 @@ namespace FastADB
 			this.groupBox9.Controls.Add(this.label16);
 			this.groupBox9.Location = new System.Drawing.Point(8, 6);
 			this.groupBox9.Name = "groupBox9";
-			this.groupBox9.Size = new System.Drawing.Size(760, 336);
+			this.groupBox9.Size = new System.Drawing.Size(760, 324);
 			this.groupBox9.TabIndex = 0;
 			this.groupBox9.TabStop = false;
 			this.groupBox9.Text = "Ресурсы:";
@@ -2350,6 +2587,21 @@ namespace FastADB
 			// 
 			this.openFileDialogPy.Filter = "*.py|*.py|*.txt|*.txt";
 			// 
+			// openFileDialogJython
+			// 
+			this.openFileDialogJython.FileName = "jython.exe";
+			this.openFileDialogJython.Filter = "*.exe|*.exe";
+			this.openFileDialogJython.InitialDirectory = "C:\\jython2.7.0\\bin\\";
+			// 
+			// tabPage15
+			// 
+			this.tabPage15.Location = new System.Drawing.Point(4, 25);
+			this.tabPage15.Name = "tabPage15";
+			this.tabPage15.Size = new System.Drawing.Size(776, 461);
+			this.tabPage15.TabIndex = 14;
+			this.tabPage15.Text = "ADB: GetEvent";
+			this.tabPage15.UseVisualStyleBackColor = true;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2439,7 +2691,19 @@ namespace FastADB
 			this.groupBox8.ResumeLayout(false);
 			this.groupBox8.PerformLayout();
 			this.panel9.ResumeLayout(false);
+			this.tabPage10.ResumeLayout(false);
+			this.tabPage10.PerformLayout();
+			this.splitContainer6.Panel1.ResumeLayout(false);
+			this.splitContainer6.Panel2.ResumeLayout(false);
+			this.splitContainer6.ResumeLayout(false);
+			this.groupBox19.ResumeLayout(false);
+			this.groupBox19.PerformLayout();
+			this.groupBox20.ResumeLayout(false);
+			this.toolStrip1.ResumeLayout(false);
+			this.toolStrip1.PerformLayout();
 			this.tabPage8.ResumeLayout(false);
+			this.groupBox21.ResumeLayout(false);
+			this.groupBox21.PerformLayout();
 			this.groupBox9.ResumeLayout(false);
 			this.groupBox9.PerformLayout();
 			this.tabPage2.ResumeLayout(false);

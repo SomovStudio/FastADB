@@ -204,6 +204,14 @@ namespace FastADB
 			textBox16.Text = pyScript;
 		}
 		
+		void initJython()
+		{
+			String batCommand = 
+				textBoxJython.Text + " " + textBoxFolderJython.Text + "script.py" + Environment.NewLine + "@pause";
+			textBox17.Text = batCommand;
+			richTextBox1.Text = "print(\"hello world!!!\");";
+		}
+		
 		void saveFile(String fileName, String text)
 		{
 			if(!File.Exists(fileName)){ 
@@ -289,8 +297,14 @@ namespace FastADB
 			initRemoveBuild();
 			initStartActivity();
 			initTouche();
+			initJython();
 		}
 		void ToolStripStatusLabel1Click(object sender, EventArgs e)
+		{
+			FormAbout FAbout = new FormAbout();
+			FAbout.ShowDialog();
+		}
+		void Button45Click(object sender, EventArgs e)
 		{
 			FormAbout FAbout = new FormAbout();
 			FAbout.ShowDialog();
@@ -656,6 +670,45 @@ namespace FastADB
 				textBox16.Text = readFile(openFileDialogPy.FileName);
 			}
 		}
+		void ToolStripButton2Click(object sender, EventArgs e)
+		{
+			saveFileDialogPy.InitialDirectory = textBoxFolderJython.Text;
+			saveFileDialogPy.FileName = "script.py";
+			if(saveFileDialogPy.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogPy.FileName, richTextBox1.Text);
+			}
+		}
+		void ToolStripButton1Click(object sender, EventArgs e)
+		{
+			openFileDialogPy.InitialDirectory = textBoxFolderJython.Text;
+			if(openFileDialogPy.ShowDialog() == DialogResult.OK){
+				richTextBox1.Text = readFile(openFileDialogPy.FileName);
+			}
+		}
+		void ToolStripButton3Click(object sender, EventArgs e)
+		{
+			if(!File.Exists(textBoxJython.Text)){
+				MessageBox.Show("Программа Jython не найдена." + Environment.NewLine + "Пожалуйста укажите пусть к программе Jython", "Сообщение");
+				if(openFileDialogJython.ShowDialog() == DialogResult.OK) textBoxJython.Text = openFileDialogJython.FileName;
+			}TestingAndroid.ExecuteBatAndPy(textBoxFolderJython.Text,
+			                               textBoxFolderJython.Text + "run.bat",
+			                               textBox17.Text,
+			                               textBoxFolderJython.Text + "script.py",
+			                               richTextBox1.Text);
+		}
+		void ToolStripButton4Click(object sender, EventArgs e)
+		{
+			try{
+				Process.Start(textBoxJython.Text);
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		void Button50Click(object sender, EventArgs e)
+		{
+			if(openFileDialogJython.ShowDialog() == DialogResult.OK) textBoxJython.Text = openFileDialogJython.FileName;
+		}
+		
 		
 		
 		
