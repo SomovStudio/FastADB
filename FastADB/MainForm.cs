@@ -274,6 +274,21 @@ namespace FastADB
 		{
 			applyConcole();
 		}
+		void Button32Click(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderConsole.Text;
+			saveFileDialogBat.FileName = "console.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, textBoxConsole.Text);
+			}
+		}
+		void Button31Click(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderConsole.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBoxConsole.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
 		void Button13Click(object sender, EventArgs e)
 		{
 			try{
@@ -435,10 +450,6 @@ namespace FastADB
 				textBox7.Text = readFile(openFileDialogBat.FileName);
 			}
 		}
-			
-		
-			
-		
 		
 		
 	}

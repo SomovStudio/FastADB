@@ -129,6 +129,8 @@ namespace FastADB
 		private System.Windows.Forms.Button button28;
 		private System.Windows.Forms.Button button29;
 		private System.Windows.Forms.Button button30;
+		private System.Windows.Forms.Button button31;
+		private System.Windows.Forms.Button button32;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -227,6 +229,8 @@ namespace FastADB
 			this.groupBox8 = new System.Windows.Forms.GroupBox();
 			this.textBoxConsole = new System.Windows.Forms.TextBox();
 			this.panel9 = new System.Windows.Forms.Panel();
+			this.button31 = new System.Windows.Forms.Button();
+			this.button32 = new System.Windows.Forms.Button();
 			this.button13 = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -1147,7 +1151,7 @@ namespace FastADB
 			this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage9.Size = new System.Drawing.Size(776, 461);
 			this.tabPage9.TabIndex = 8;
-			this.tabPage9.Text = "Console";
+			this.tabPage9.Text = "Консоль";
 			this.tabPage9.UseVisualStyleBackColor = true;
 			// 
 			// groupBox8
@@ -1176,6 +1180,8 @@ namespace FastADB
 			// 
 			// panel9
 			// 
+			this.panel9.Controls.Add(this.button31);
+			this.panel9.Controls.Add(this.button32);
 			this.panel9.Controls.Add(this.button13);
 			this.panel9.Controls.Add(this.button12);
 			this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1183,6 +1189,32 @@ namespace FastADB
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new System.Drawing.Size(770, 30);
 			this.panel9.TabIndex = 12;
+			// 
+			// button31
+			// 
+			this.button31.Image = ((System.Drawing.Image)(resources.GetObject("button31.Image")));
+			this.button31.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button31.Location = new System.Drawing.Point(346, 4);
+			this.button31.Name = "button31";
+			this.button31.Size = new System.Drawing.Size(111, 23);
+			this.button31.TabIndex = 12;
+			this.button31.Text = "Открыть файл";
+			this.button31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button31.UseVisualStyleBackColor = true;
+			this.button31.Click += new System.EventHandler(this.Button31Click);
+			// 
+			// button32
+			// 
+			this.button32.Image = ((System.Drawing.Image)(resources.GetObject("button32.Image")));
+			this.button32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button32.Location = new System.Drawing.Point(193, 4);
+			this.button32.Name = "button32";
+			this.button32.Size = new System.Drawing.Size(147, 23);
+			this.button32.TabIndex = 11;
+			this.button32.Text = "Сохранить файл как...";
+			this.button32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button32.UseVisualStyleBackColor = true;
+			this.button32.Click += new System.EventHandler(this.Button32Click);
 			// 
 			// button13
 			// 
@@ -1569,11 +1601,11 @@ namespace FastADB
 			// 
 			// openFileDialogBat
 			// 
-			this.openFileDialogBat.FileName = "openFileDialog1";
+			this.openFileDialogBat.Filter = "*.bat|*.bat|*.txt|*.txt";
 			// 
 			// openFileDialogPy
 			// 
-			this.openFileDialogPy.FileName = "openFileDialog1";
+			this.openFileDialogPy.Filter = "*.py|*.py|*.txt|*.txt";
 			// 
 			// MainForm
 			// 
