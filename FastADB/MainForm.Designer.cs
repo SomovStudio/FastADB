@@ -1585,7 +1585,7 @@ namespace FastADB
 			this.groupBox24.Size = new System.Drawing.Size(776, 171);
 			this.groupBox24.TabIndex = 11;
 			this.groupBox24.TabStop = false;
-			this.groupBox24.Text = "Файл: log.bat";
+			this.groupBox24.Text = "Файл: event.bat";
 			// 
 			// textBox19
 			// 
@@ -1624,6 +1624,7 @@ namespace FastADB
 			this.button60.Text = "Открыть файл";
 			this.button60.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button60.UseVisualStyleBackColor = true;
+			this.button60.Click += new System.EventHandler(this.Button60Click);
 			// 
 			// button61
 			// 
@@ -1636,6 +1637,7 @@ namespace FastADB
 			this.button61.Text = "Сохранить файл как...";
 			this.button61.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button61.UseVisualStyleBackColor = true;
+			this.button61.Click += new System.EventHandler(this.Button61Click);
 			// 
 			// button62
 			// 
@@ -1648,6 +1650,7 @@ namespace FastADB
 			this.button62.Text = "Открыть папку";
 			this.button62.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button62.UseVisualStyleBackColor = true;
+			this.button62.Click += new System.EventHandler(this.Button62Click);
 			// 
 			// button63
 			// 
@@ -1661,6 +1664,7 @@ namespace FastADB
 			this.button63.Text = "Выполнить";
 			this.button63.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button63.UseVisualStyleBackColor = true;
+			this.button63.Click += new System.EventHandler(this.Button63Click);
 			// 
 			// splitContainer8
 			// 
@@ -1668,7 +1672,7 @@ namespace FastADB
 			this.splitContainer8.Location = new System.Drawing.Point(0, 0);
 			this.splitContainer8.Name = "splitContainer8";
 			this.splitContainer8.Size = new System.Drawing.Size(776, 282);
-			this.splitContainer8.SplitterDistance = 413;
+			this.splitContainer8.SplitterDistance = 395;
 			this.splitContainer8.TabIndex = 0;
 			// 
 			// label40

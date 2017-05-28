@@ -132,6 +132,7 @@ namespace FastADB
 				"monkeyrunner " + textBoxFolderBuilds.Text + "script.py";
 			textBox4.Text = batCommand;
 			
+			if(textBox3.Text == "") textBox3.Text = textBoxFolderBuilds.Text + "build.apk";
 			
 			String buildPath = textBox3.Text;
 			buildPath = buildPath.Replace("\\","/");
@@ -222,6 +223,17 @@ namespace FastADB
 				"@echo PRESS ANY KEY TO FINISH!" + Environment.NewLine +
 				"@pause";
 			textBox18.Text = batCommand;
+		}
+		
+		void initEvents()
+		{
+			String batCommand = 
+				"adb devices" + Environment.NewLine +
+				"adb shell getevent -t > " + textBoxFolderEvents.Text.Replace("\\","/") + "getevent.txt" + Environment.NewLine +
+				"@echo" + Environment.NewLine +
+				"@echo PRESS ANY KEY TO FINISH!" + Environment.NewLine +
+				"@pause";
+			textBox19.Text = batCommand;
 		}
 		
 		void saveFile(String fileName, String text)
@@ -317,6 +329,7 @@ namespace FastADB
 			initTouche();
 			initJython();
 			initCopyFiles();
+			initEvents();
 		}
 		void ToolStripStatusLabel1Click(object sender, EventArgs e)
 		{
@@ -689,13 +702,37 @@ namespace FastADB
 				textBox16.Text = readFile(openFileDialogPy.FileName);
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
+		void ОткрытьbatФайлToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderJython.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBox17.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
+		void СохранитьbatФайлКакToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderJython.Text;
+			saveFileDialogBat.FileName = "run.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, textBox17.Text);
+			}
+		}
+		void ОткрытьpyФайлToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			openFileDialogPy.InitialDirectory = textBoxFolderJython.Text;
+			if(openFileDialogPy.ShowDialog() == DialogResult.OK){
+				richTextBox1.Text = readFile(openFileDialogPy.FileName);
+			}
+			
+		}
+		void СохранитьpyФайлКакToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			saveFileDialogPy.InitialDirectory = textBoxFolderJython.Text;
+			saveFileDialogPy.FileName = "script.py";
+			if(saveFileDialogPy.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogPy.FileName, richTextBox1.Text);
+			}
+		}
 		void ToolStripButton3Click(object sender, EventArgs e)
 		{
 			if(!File.Exists(textBoxJython.Text)){
@@ -776,42 +813,35 @@ namespace FastADB
 		{
 			if(folderBrowserDialog1.ShowDialog() == DialogResult.OK) textBoxFolderEvents.Text = folderBrowserDialog1.SelectedPath + "\\";
 		}
-		
-		
-		
-		
-		void ОткрытьbatФайлToolStripMenuItemClick(object sender, EventArgs e)
+		void Button62Click(object sender, EventArgs e)
 		{
-			openFileDialogBat.InitialDirectory = textBoxFolderJython.Text;
-			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
-				textBox17.Text = readFile(openFileDialogBat.FileName);
+			try{
+				Process.Start(textBoxFolderEvents.Text);
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
 			}
 		}
-		void СохранитьbatФайлКакToolStripMenuItemClick(object sender, EventArgs e)
+		void Button61Click(object sender, EventArgs e)
 		{
-			saveFileDialogBat.InitialDirectory = textBoxFolderJython.Text;
-			saveFileDialogBat.FileName = "run.bat";
+			saveFileDialogBat.InitialDirectory = textBoxFolderEvents.Text;
+			saveFileDialogBat.FileName = "event.bat";
 			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
-				saveFile(saveFileDialogBat.FileName, textBox17.Text);
+				saveFile(saveFileDialogBat.FileName, textBox19.Text);
 			}
 		}
-		void ОткрытьpyФайлToolStripMenuItemClick(object sender, EventArgs e)
+		void Button60Click(object sender, EventArgs e)
 		{
-			openFileDialogPy.InitialDirectory = textBoxFolderJython.Text;
-			if(openFileDialogPy.ShowDialog() == DialogResult.OK){
-				richTextBox1.Text = readFile(openFileDialogPy.FileName);
+			openFileDialogBat.InitialDirectory = textBoxFolderEvents.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				textBox19.Text = readFile(openFileDialogBat.FileName);
 			}
-			
 		}
-		void СохранитьpyФайлКакToolStripMenuItemClick(object sender, EventArgs e)
+		void Button63Click(object sender, EventArgs e)
 		{
-			saveFileDialogPy.InitialDirectory = textBoxFolderJython.Text;
-			saveFileDialogPy.FileName = "script.py";
-			if(saveFileDialogPy.ShowDialog() == DialogResult.OK){
-				saveFile(saveFileDialogPy.FileName, richTextBox1.Text);
-			}
+			TestingAndroid.ExecuteBat(textBoxFolderEvents.Text, textBoxFolderEvents.Text + "event.bat", textBox19.Text);
 		}
 		
+			
 		
 		
 		
