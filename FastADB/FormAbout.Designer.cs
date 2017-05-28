@@ -25,6 +25,7 @@ namespace FastADB
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.LinkLabel linkLabel1;
 		private System.Windows.Forms.LinkLabel linkLabel2;
+		private System.Windows.Forms.Label label10;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -59,6 +60,7 @@ namespace FastADB
 			this.label9 = new System.Windows.Forms.Label();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
 			this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+			this.label10 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -157,11 +159,20 @@ namespace FastADB
 			this.linkLabel2.Text = "http://somov.hol.es/";
 			this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2LinkClicked);
 			// 
+			// label10
+			// 
+			this.label10.Location = new System.Drawing.Point(12, 190);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(260, 19);
+			this.label10.TabIndex = 12;
+			this.label10.Text = "Адрес: г. Луганск";
+			// 
 			// FormAbout
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 262);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.linkLabel2);
 			this.Controls.Add(this.linkLabel1);
 			this.Controls.Add(this.label9);

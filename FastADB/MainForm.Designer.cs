@@ -261,6 +261,8 @@ namespace FastADB
 		private System.Windows.Forms.RichTextBox richTextBox2;
 		private System.Windows.Forms.RichTextBox richTextBox3;
 		private System.Windows.Forms.OpenFileDialog openFileDialogTxt;
+		private System.Windows.Forms.RichTextBox richTextBox4;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -522,6 +524,7 @@ namespace FastADB
 			this.textBoxFolderResource = new System.Windows.Forms.TextBox();
 			this.label16 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.richTextBox4 = new System.Windows.Forms.RichTextBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.openFileDialogApk = new System.Windows.Forms.OpenFileDialog();
@@ -532,6 +535,7 @@ namespace FastADB
 			this.openFileDialogJython = new System.Windows.Forms.OpenFileDialog();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.openFileDialogTxt = new System.Windows.Forms.OpenFileDialog();
+			this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.statusStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -625,7 +629,8 @@ namespace FastADB
 			// statusStrip1
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.toolStripStatusLabel1});
+			this.toolStripStatusLabel1,
+			this.toolStripStatusLabel2});
 			this.statusStrip1.Location = new System.Drawing.Point(0, 589);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(784, 22);
@@ -727,13 +732,15 @@ namespace FastADB
 			// button45
 			// 
 			this.button45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.button45.Location = new System.Drawing.Point(664, 481);
+			this.button45.Image = ((System.Drawing.Image)(resources.GetObject("button45.Image")));
+			this.button45.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.button45.Location = new System.Drawing.Point(664, 466);
 			this.button45.Name = "button45";
-			this.button45.Size = new System.Drawing.Size(104, 23);
+			this.button45.Size = new System.Drawing.Size(104, 38);
 			this.button45.TabIndex = 15;
 			this.button45.Text = "О программе";
+			this.button45.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.button45.UseVisualStyleBackColor = true;
-			this.button45.Visible = false;
 			this.button45.Click += new System.EventHandler(this.Button45Click);
 			// 
 			// linkLabel3
@@ -769,7 +776,9 @@ namespace FastADB
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(703, 50);
 			this.label11.TabIndex = 11;
-			this.label11.Text = resources.GetString("label11.Text");
+			this.label11.Text = ";C:\\Users\\###\\AppData\\Local\\Android\\sdk;C:\\Users\\###\\AppData\\Local\\Android\\sdk\\bu" +
+	"ild-tools\\24.0.1;C:\\Users\\###\\AppData\\Local\\Android\\sdk\\platform-tools;C:\\Users\\" +
+	"###\\AppData\\Local\\Android\\sdk\\tools;";
 			// 
 			// label10
 			// 
@@ -831,7 +840,7 @@ namespace FastADB
 			this.label4.Size = new System.Drawing.Size(517, 31);
 			this.label4.TabIndex = 4;
 			this.label4.Text = "После того как SDK будет установлено нужно запустить Android SDK Manager по адрес" +
-	"у: C:\\Users\\*****\\AppData\\Local\\Android\\sdk\\SDK Manager.exe";
+	"у: C:\\Users\\###\\AppData\\Local\\Android\\sdk\\SDK Manager.exe";
 			// 
 			// linkLabel2
 			// 
@@ -3433,6 +3442,7 @@ namespace FastADB
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.richTextBox4);
 			this.tabPage2.Controls.Add(this.textBox1);
 			this.tabPage2.Location = new System.Drawing.Point(4, 25);
 			this.tabPage2.Name = "tabPage2";
@@ -3442,15 +3452,24 @@ namespace FastADB
 			this.tabPage2.Text = "Помощь";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
+			// richTextBox4
+			// 
+			this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.richTextBox4.Location = new System.Drawing.Point(3, 3);
+			this.richTextBox4.Name = "richTextBox4";
+			this.richTextBox4.Size = new System.Drawing.Size(770, 504);
+			this.richTextBox4.TabIndex = 1;
+			this.richTextBox4.Text = "";
+			this.richTextBox4.WordWrap = false;
+			// 
 			// textBox1
 			// 
-			this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.textBox1.Location = new System.Drawing.Point(3, 3);
+			this.textBox1.Location = new System.Drawing.Point(343, 357);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
 			this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox1.Size = new System.Drawing.Size(770, 504);
+			this.textBox1.Size = new System.Drawing.Size(368, 109);
 			this.textBox1.TabIndex = 0;
 			this.textBox1.Text = resources.GetString("textBox1.Text");
 			// 
@@ -3483,6 +3502,12 @@ namespace FastADB
 			// openFileDialogTxt
 			// 
 			this.openFileDialogTxt.Filter = "*.txt|*.txt";
+			// 
+			// toolStripStatusLabel2
+			// 
+			this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+			this.toolStripStatusLabel2.Size = new System.Drawing.Size(91, 17);
+			this.toolStripStatusLabel2.Text = "Лицензия: GNU";
 			// 
 			// MainForm
 			// 

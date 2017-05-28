@@ -112,12 +112,12 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlMAAAAoCAMAAADt5Y/xAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAEp/
@@ -134,7 +134,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeF8ggQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAAjOSURBVHhe7Zz7
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAAjOSURBVHhe7Zz7
         XxNXFsBZdx0qZWmpXeqjthVddRetdW8eJIAISAjPQAMJkqUaqrYqtrsIAgETyEN2FSXx0N3uw13yn+45
         996ZuYH4KX4a52Nm5/yQzL1z7uvM93POmRO0BiorL14hlV3ldWZ78eJ1tB3dn2+Bmp8/xVs9AyL+Vu/P
         jpuzO1N2fGZv+5kcpix/Qts7RZKdbctXtmhBhymLDC2X2eY86fKDtYtbtJrDlEWGFsuUEEUNS1e3aDGH
@@ -191,7 +191,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeF8ggQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAAjOSURBVHhe7Zz7
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAAjOSURBVHhe7Zz7
         XxNXFsBZdx0qZWmpXeqjthVddRetdW8eJIAISAjPQAMJkqUaqrYqtrsIAgETyEN2FSXx0N3uw13yn+45
         996ZuYH4KX4a52Nm5/yQzL1z7uvM93POmRO0BiorL14hlV3ldWZ78eJ1tB3dn2+Bmp8/xVs9AyL+Vu/P
         jpuzO1N2fGZv+5kcpix/Qts7RZKdbctXtmhBhymLDC2X2eY86fKDtYtbtJrDlEWGFsuUEEUNS1e3aDGH

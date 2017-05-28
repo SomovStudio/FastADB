@@ -330,6 +330,8 @@ namespace FastADB
 			initJython();
 			initCopyFiles();
 			initEvents();
+			
+			richTextBox4.Rtf = textBox1.Text;
 		}
 		void ToolStripStatusLabel1Click(object sender, EventArgs e)
 		{
