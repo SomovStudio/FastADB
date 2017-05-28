@@ -840,6 +840,66 @@ namespace FastADB
 		{
 			TestingAndroid.ExecuteBat(textBoxFolderEvents.Text, textBoxFolderEvents.Text + "event.bat", textBox19.Text);
 		}
+		void Button67Click(object sender, EventArgs e)
+		{
+			if(!File.Exists(textBoxFolderEvents.Text + "getevent.txt")){
+				if(openFileDialogTxt.ShowDialog() == DialogResult.OK){
+					richTextBox2.LoadFile(openFileDialogTxt.FileName, RichTextBoxStreamType.PlainText);
+				}
+			}else{
+				richTextBox2.LoadFile(textBoxFolderEvents.Text + "getevent.txt", RichTextBoxStreamType.PlainText);
+			}
+		}
+		void Button65Click(object sender, EventArgs e)
+		{
+			String text = "adb devices" + Environment.NewLine;
+			String command = "adb shell sendevent ";
+			String dev = "";
+			String num1 = "";
+			String num2 = "";
+			String num3 = "";
+			
+			String[] words = richTextBox2.Text.Split(new Char[] {' '});
+			int count = words.Length - 1;
+			int length = 0;
+			for(int i = 0; i < count; i++)
+			{
+				length = words[i].Length;
+				if(length == 0) continue;
+				if(words[i][0].ToString() == "/" && words[i][length-1].ToString() == ":"){
+					
+					dev = words[i].Substring(0, length-1);
+					num1 = " " + Convert.ToInt32(words[i+1], 16);
+					num2 = " " + Convert.ToInt32(words[i+2], 16);
+					num3 = " " + Convert.ToInt32(words[i+3], 16);
+					
+					text += command + dev + num1 + num2 + num3 + Environment.NewLine;
+				}
+			}
+			text += "@echo" + Environment.NewLine;
+			text += "@echo PRESS ANY KEY TO FINISH!" + Environment.NewLine;
+			text += "@pause";
+			richTextBox3.Text = text;
+		}
+		void Button68Click(object sender, EventArgs e)
+		{
+			saveFileDialogBat.InitialDirectory = textBoxFolderEvents.Text;
+			saveFileDialogBat.FileName = "play.bat";
+			if(saveFileDialogBat.ShowDialog() == DialogResult.OK){
+				saveFile(saveFileDialogBat.FileName, richTextBox3.Text);
+			}
+		}
+		void Button66Click(object sender, EventArgs e)
+		{
+			openFileDialogBat.InitialDirectory = textBoxFolderEvents.Text;
+			if(openFileDialogBat.ShowDialog() == DialogResult.OK){
+				richTextBox3.Text = readFile(openFileDialogBat.FileName);
+			}
+		}
+		void Button70Click(object sender, EventArgs e)
+		{
+			TestingAndroid.ExecuteBat(textBoxFolderEvents.Text, textBoxFolderEvents.Text + "play.bat", richTextBox3.Text);
+		}
 		
 			
 		

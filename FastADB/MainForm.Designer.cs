@@ -249,6 +249,18 @@ namespace FastADB
 		private System.Windows.Forms.ToolStripMenuItem сохранитьbatФайлКакToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem сохранитьpyФайлКакToolStripMenuItem;
 		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.Panel panel17;
+		private System.Windows.Forms.Button button67;
+		private System.Windows.Forms.Button button65;
+		private System.Windows.Forms.GroupBox groupBox25;
+		private System.Windows.Forms.Panel panel18;
+		private System.Windows.Forms.Button button66;
+		private System.Windows.Forms.Button button68;
+		private System.Windows.Forms.Button button70;
+		private System.Windows.Forms.GroupBox groupBox26;
+		private System.Windows.Forms.RichTextBox richTextBox2;
+		private System.Windows.Forms.RichTextBox richTextBox3;
+		private System.Windows.Forms.OpenFileDialog openFileDialogTxt;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -362,6 +374,17 @@ namespace FastADB
 			this.button62 = new System.Windows.Forms.Button();
 			this.button63 = new System.Windows.Forms.Button();
 			this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+			this.groupBox25 = new System.Windows.Forms.GroupBox();
+			this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+			this.panel17 = new System.Windows.Forms.Panel();
+			this.button65 = new System.Windows.Forms.Button();
+			this.button67 = new System.Windows.Forms.Button();
+			this.groupBox26 = new System.Windows.Forms.GroupBox();
+			this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+			this.panel18 = new System.Windows.Forms.Panel();
+			this.button66 = new System.Windows.Forms.Button();
+			this.button68 = new System.Windows.Forms.Button();
+			this.button70 = new System.Windows.Forms.Button();
 			this.label40 = new System.Windows.Forms.Label();
 			this.tabPage17 = new System.Windows.Forms.TabPage();
 			this.groupBox22 = new System.Windows.Forms.GroupBox();
@@ -508,6 +531,7 @@ namespace FastADB
 			this.openFileDialogPy = new System.Windows.Forms.OpenFileDialog();
 			this.openFileDialogJython = new System.Windows.Forms.OpenFileDialog();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.openFileDialogTxt = new System.Windows.Forms.OpenFileDialog();
 			this.statusStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -543,7 +567,13 @@ namespace FastADB
 			this.splitContainer7.SuspendLayout();
 			this.groupBox24.SuspendLayout();
 			this.panel16.SuspendLayout();
+			this.splitContainer8.Panel1.SuspendLayout();
+			this.splitContainer8.Panel2.SuspendLayout();
 			this.splitContainer8.SuspendLayout();
+			this.groupBox25.SuspendLayout();
+			this.panel17.SuspendLayout();
+			this.groupBox26.SuspendLayout();
+			this.panel18.SuspendLayout();
 			this.tabPage17.SuspendLayout();
 			this.groupBox22.SuspendLayout();
 			this.panel15.SuspendLayout();
@@ -888,7 +918,7 @@ namespace FastADB
 			this.label30.Name = "label30";
 			this.label30.Size = new System.Drawing.Size(770, 23);
 			this.label30.TabIndex = 1;
-			this.label30.Text = "Позволяет снять системный лог с устройства.";
+			this.label30.Text = "Снятие системного лога с устройства.";
 			this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel8
@@ -1109,7 +1139,7 @@ namespace FastADB
 			this.label31.Name = "label31";
 			this.label31.Size = new System.Drawing.Size(770, 23);
 			this.label31.TabIndex = 10;
-			this.label31.Text = "Позволяет снять скриншот с устройства.";
+			this.label31.Text = "Снятие скриншота с устройства.";
 			this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel5
@@ -1237,7 +1267,7 @@ namespace FastADB
 			this.label32.Name = "label32";
 			this.label32.Size = new System.Drawing.Size(776, 23);
 			this.label32.TabIndex = 12;
-			this.label32.Text = "Позволяет записать видео с устройства.";
+			this.label32.Text = "Видео запись с устройства.";
 			this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel14
@@ -1337,7 +1367,7 @@ namespace FastADB
 			this.label33.Name = "label33";
 			this.label33.Size = new System.Drawing.Size(770, 23);
 			this.label33.TabIndex = 13;
-			this.label33.Text = "Выполняет стресс-тестирование выбранного приложения.";
+			this.label33.Text = "Стресс-тестирование выбранного приложения.";
 			this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel7
@@ -1492,7 +1522,7 @@ namespace FastADB
 			this.label34.Name = "label34";
 			this.label34.Size = new System.Drawing.Size(776, 23);
 			this.label34.TabIndex = 14;
-			this.label34.Text = "Выполняет последовательное нажатие на экран устройства.";
+			this.label34.Text = "Последовательное нажатие на экран устройства.";
 			this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel13
@@ -1671,9 +1701,148 @@ namespace FastADB
 			this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.splitContainer8.Location = new System.Drawing.Point(0, 0);
 			this.splitContainer8.Name = "splitContainer8";
+			// 
+			// splitContainer8.Panel1
+			// 
+			this.splitContainer8.Panel1.Controls.Add(this.groupBox25);
+			this.splitContainer8.Panel1.Controls.Add(this.panel17);
+			// 
+			// splitContainer8.Panel2
+			// 
+			this.splitContainer8.Panel2.Controls.Add(this.groupBox26);
+			this.splitContainer8.Panel2.Controls.Add(this.panel18);
 			this.splitContainer8.Size = new System.Drawing.Size(776, 282);
 			this.splitContainer8.SplitterDistance = 395;
 			this.splitContainer8.TabIndex = 0;
+			// 
+			// groupBox25
+			// 
+			this.groupBox25.Controls.Add(this.richTextBox2);
+			this.groupBox25.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBox25.Location = new System.Drawing.Point(0, 0);
+			this.groupBox25.Name = "groupBox25";
+			this.groupBox25.Size = new System.Drawing.Size(395, 252);
+			this.groupBox25.TabIndex = 12;
+			this.groupBox25.TabStop = false;
+			this.groupBox25.Text = "Файл: getevents.txt";
+			// 
+			// richTextBox2
+			// 
+			this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.richTextBox2.Location = new System.Drawing.Point(3, 16);
+			this.richTextBox2.Name = "richTextBox2";
+			this.richTextBox2.Size = new System.Drawing.Size(389, 233);
+			this.richTextBox2.TabIndex = 0;
+			this.richTextBox2.Text = "";
+			// 
+			// panel17
+			// 
+			this.panel17.Controls.Add(this.button65);
+			this.panel17.Controls.Add(this.button67);
+			this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panel17.Location = new System.Drawing.Point(0, 252);
+			this.panel17.Name = "panel17";
+			this.panel17.Size = new System.Drawing.Size(395, 30);
+			this.panel17.TabIndex = 10;
+			// 
+			// button65
+			// 
+			this.button65.Image = ((System.Drawing.Image)(resources.GetObject("button65.Image")));
+			this.button65.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button65.Location = new System.Drawing.Point(177, 4);
+			this.button65.Name = "button65";
+			this.button65.Size = new System.Drawing.Size(120, 23);
+			this.button65.TabIndex = 5;
+			this.button65.Text = "Конвертировать";
+			this.button65.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button65.UseVisualStyleBackColor = true;
+			this.button65.Click += new System.EventHandler(this.Button65Click);
+			// 
+			// button67
+			// 
+			this.button67.Image = ((System.Drawing.Image)(resources.GetObject("button67.Image")));
+			this.button67.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button67.Location = new System.Drawing.Point(5, 4);
+			this.button67.Name = "button67";
+			this.button67.Size = new System.Drawing.Size(166, 23);
+			this.button67.TabIndex = 4;
+			this.button67.Text = "Открыть файл getevent.txt";
+			this.button67.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button67.UseVisualStyleBackColor = true;
+			this.button67.Click += new System.EventHandler(this.Button67Click);
+			// 
+			// groupBox26
+			// 
+			this.groupBox26.Controls.Add(this.richTextBox3);
+			this.groupBox26.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBox26.Location = new System.Drawing.Point(0, 0);
+			this.groupBox26.Name = "groupBox26";
+			this.groupBox26.Size = new System.Drawing.Size(377, 252);
+			this.groupBox26.TabIndex = 13;
+			this.groupBox26.TabStop = false;
+			this.groupBox26.Text = "Файл: play.bat";
+			// 
+			// richTextBox3
+			// 
+			this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.richTextBox3.Font = new System.Drawing.Font("Consolas", 9.75F);
+			this.richTextBox3.Location = new System.Drawing.Point(3, 16);
+			this.richTextBox3.Name = "richTextBox3";
+			this.richTextBox3.Size = new System.Drawing.Size(371, 233);
+			this.richTextBox3.TabIndex = 0;
+			this.richTextBox3.Text = "";
+			this.richTextBox3.WordWrap = false;
+			// 
+			// panel18
+			// 
+			this.panel18.Controls.Add(this.button66);
+			this.panel18.Controls.Add(this.button68);
+			this.panel18.Controls.Add(this.button70);
+			this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panel18.Location = new System.Drawing.Point(0, 252);
+			this.panel18.Name = "panel18";
+			this.panel18.Size = new System.Drawing.Size(377, 30);
+			this.panel18.TabIndex = 10;
+			// 
+			// button66
+			// 
+			this.button66.Image = ((System.Drawing.Image)(resources.GetObject("button66.Image")));
+			this.button66.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button66.Location = new System.Drawing.Point(156, 4);
+			this.button66.Name = "button66";
+			this.button66.Size = new System.Drawing.Size(111, 23);
+			this.button66.TabIndex = 6;
+			this.button66.Text = "Открыть файл";
+			this.button66.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button66.UseVisualStyleBackColor = true;
+			this.button66.Click += new System.EventHandler(this.Button66Click);
+			// 
+			// button68
+			// 
+			this.button68.Image = ((System.Drawing.Image)(resources.GetObject("button68.Image")));
+			this.button68.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button68.Location = new System.Drawing.Point(3, 4);
+			this.button68.Name = "button68";
+			this.button68.Size = new System.Drawing.Size(147, 23);
+			this.button68.TabIndex = 5;
+			this.button68.Text = "Сохранить файл как...";
+			this.button68.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button68.UseVisualStyleBackColor = true;
+			this.button68.Click += new System.EventHandler(this.Button68Click);
+			// 
+			// button70
+			// 
+			this.button70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.button70.Image = ((System.Drawing.Image)(resources.GetObject("button70.Image")));
+			this.button70.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button70.Location = new System.Drawing.Point(284, 4);
+			this.button70.Name = "button70";
+			this.button70.Size = new System.Drawing.Size(90, 23);
+			this.button70.TabIndex = 0;
+			this.button70.Text = "Выполнить";
+			this.button70.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button70.UseVisualStyleBackColor = true;
+			this.button70.Click += new System.EventHandler(this.Button70Click);
 			// 
 			// label40
 			// 
@@ -1684,7 +1853,7 @@ namespace FastADB
 			this.label40.Name = "label40";
 			this.label40.Size = new System.Drawing.Size(776, 23);
 			this.label40.TabIndex = 15;
-			this.label40.Text = "Записать и воспроизведение событий, генерируемых пользователем.";
+			this.label40.Text = "Запись и воспроизведение событий, генерируемых пользователем.";
 			this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tabPage17
@@ -1797,7 +1966,7 @@ namespace FastADB
 			this.label41.Name = "label41";
 			this.label41.Size = new System.Drawing.Size(776, 23);
 			this.label41.TabIndex = 16;
-			this.label41.Text = "Скопировать файлы с устройства на компьютер.";
+			this.label41.Text = "Копирование файлов с устройства на компьютер.";
 			this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// tabPage5
@@ -1956,7 +2125,7 @@ namespace FastADB
 			this.label36.Name = "label36";
 			this.label36.Size = new System.Drawing.Size(770, 23);
 			this.label36.TabIndex = 15;
-			this.label36.Text = "Запускает Dalvik Debug Monitor Server";
+			this.label36.Text = "Запуск Dalvik Debug Monitor Server";
 			this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel3
@@ -2141,7 +2310,7 @@ namespace FastADB
 			this.label37.Name = "label37";
 			this.label37.Size = new System.Drawing.Size(776, 23);
 			this.label37.TabIndex = 16;
-			this.label37.Text = "Устанавливает apk приложение на устройство.";
+			this.label37.Text = "Установка apk файла приложения на устройство.";
 			this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel10
@@ -2283,7 +2452,7 @@ namespace FastADB
 			this.label38.Name = "label38";
 			this.label38.Size = new System.Drawing.Size(776, 23);
 			this.label38.TabIndex = 17;
-			this.label38.Text = "Удаляет ранее установленное apk приложение с устройства.";
+			this.label38.Text = "Удаление ранее установленного apk файла приложения с устройства.";
 			this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel11
@@ -2438,7 +2607,7 @@ namespace FastADB
 			this.label39.Name = "label39";
 			this.label39.Size = new System.Drawing.Size(776, 23);
 			this.label39.TabIndex = 17;
-			this.label39.Text = "Запускает ранее установленное apk приложение на устройстве.";
+			this.label39.Text = "Запуск ранее установленного приложения на устройстве.";
 			this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// panel12
@@ -3311,6 +3480,10 @@ namespace FastADB
 			this.openFileDialogJython.Filter = "*.exe|*.exe";
 			this.openFileDialogJython.InitialDirectory = "C:\\jython2.7.0\\bin\\";
 			// 
+			// openFileDialogTxt
+			// 
+			this.openFileDialogTxt.Filter = "*.txt|*.txt";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3369,7 +3542,13 @@ namespace FastADB
 			this.groupBox24.ResumeLayout(false);
 			this.groupBox24.PerformLayout();
 			this.panel16.ResumeLayout(false);
+			this.splitContainer8.Panel1.ResumeLayout(false);
+			this.splitContainer8.Panel2.ResumeLayout(false);
 			this.splitContainer8.ResumeLayout(false);
+			this.groupBox25.ResumeLayout(false);
+			this.panel17.ResumeLayout(false);
+			this.groupBox26.ResumeLayout(false);
+			this.panel18.ResumeLayout(false);
 			this.tabPage17.ResumeLayout(false);
 			this.groupBox22.ResumeLayout(false);
 			this.groupBox22.PerformLayout();
