@@ -902,6 +902,22 @@ namespace FastADB
 		{
 			TestingAndroid.ExecuteBat(textBoxFolderEvents.Text, textBoxFolderEvents.Text + "play.bat", richTextBox3.Text);
 		}
+		void Button69Click(object sender, EventArgs e)
+		{
+			try{
+				Process.Start("devmgmt.msc");
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		void Button71Click(object sender, EventArgs e)
+		{
+			try{
+				Process.Start(textBoxFolderOtherFiles.Text);
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
 		
 			
 		

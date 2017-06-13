@@ -263,6 +263,8 @@ namespace FastADB
 		private System.Windows.Forms.OpenFileDialog openFileDialogTxt;
 		private System.Windows.Forms.RichTextBox richTextBox4;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+		private System.Windows.Forms.Button button69;
+		private System.Windows.Forms.Button button71;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -289,11 +291,13 @@ namespace FastADB
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.button69 = new System.Windows.Forms.Button();
 			this.button45 = new System.Windows.Forms.Button();
 			this.linkLabel3 = new System.Windows.Forms.LinkLabel();
 			this.label13 = new System.Windows.Forms.Label();
@@ -392,6 +396,7 @@ namespace FastADB
 			this.groupBox22 = new System.Windows.Forms.GroupBox();
 			this.textBox18 = new System.Windows.Forms.TextBox();
 			this.panel15 = new System.Windows.Forms.Panel();
+			this.button71 = new System.Windows.Forms.Button();
 			this.button59 = new System.Windows.Forms.Button();
 			this.button56 = new System.Windows.Forms.Button();
 			this.button57 = new System.Windows.Forms.Button();
@@ -535,7 +540,6 @@ namespace FastADB
 			this.openFileDialogJython = new System.Windows.Forms.OpenFileDialog();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.openFileDialogTxt = new System.Windows.Forms.OpenFileDialog();
-			this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.statusStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -644,6 +648,12 @@ namespace FastADB
 			this.toolStripStatusLabel1.Text = "© Somov Studio 2017";
 			this.toolStripStatusLabel1.Click += new System.EventHandler(this.ToolStripStatusLabel1Click);
 			// 
+			// toolStripStatusLabel2
+			// 
+			this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+			this.toolStripStatusLabel2.Size = new System.Drawing.Size(91, 17);
+			this.toolStripStatusLabel2.Text = "Лицензия: GNU";
+			// 
 			// panel1
 			// 
 			this.panel1.Controls.Add(this.label1);
@@ -705,6 +715,7 @@ namespace FastADB
 			// 
 			// tabPage1
 			// 
+			this.tabPage1.Controls.Add(this.button69);
 			this.tabPage1.Controls.Add(this.button45);
 			this.tabPage1.Controls.Add(this.linkLabel3);
 			this.tabPage1.Controls.Add(this.label13);
@@ -728,6 +739,20 @@ namespace FastADB
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Инструкция";
 			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// button69
+			// 
+			this.button69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.button69.Image = ((System.Drawing.Image)(resources.GetObject("button69.Image")));
+			this.button69.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.button69.Location = new System.Drawing.Point(8, 466);
+			this.button69.Name = "button69";
+			this.button69.Size = new System.Drawing.Size(135, 38);
+			this.button69.TabIndex = 16;
+			this.button69.Text = "Диспетчер устройств";
+			this.button69.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button69.UseVisualStyleBackColor = true;
+			this.button69.Click += new System.EventHandler(this.Button69Click);
 			// 
 			// button45
 			// 
@@ -1903,6 +1928,7 @@ namespace FastADB
 			// 
 			// panel15
 			// 
+			this.panel15.Controls.Add(this.button71);
 			this.panel15.Controls.Add(this.button59);
 			this.panel15.Controls.Add(this.button56);
 			this.panel15.Controls.Add(this.button57);
@@ -1912,6 +1938,19 @@ namespace FastADB
 			this.panel15.Name = "panel15";
 			this.panel15.Size = new System.Drawing.Size(776, 30);
 			this.panel15.TabIndex = 17;
+			// 
+			// button71
+			// 
+			this.button71.Image = ((System.Drawing.Image)(resources.GetObject("button71.Image")));
+			this.button71.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button71.Location = new System.Drawing.Point(431, 4);
+			this.button71.Name = "button71";
+			this.button71.Size = new System.Drawing.Size(112, 23);
+			this.button71.TabIndex = 10;
+			this.button71.Text = "Открыть папку";
+			this.button71.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button71.UseVisualStyleBackColor = true;
+			this.button71.Click += new System.EventHandler(this.Button71Click);
 			// 
 			// button59
 			// 
@@ -3502,12 +3541,6 @@ namespace FastADB
 			// openFileDialogTxt
 			// 
 			this.openFileDialogTxt.Filter = "*.txt|*.txt";
-			// 
-			// toolStripStatusLabel2
-			// 
-			this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-			this.toolStripStatusLabel2.Size = new System.Drawing.Size(91, 17);
-			this.toolStripStatusLabel2.Text = "Лицензия: GNU";
 			// 
 			// MainForm
 			// 
