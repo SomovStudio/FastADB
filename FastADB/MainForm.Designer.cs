@@ -180,7 +180,6 @@ namespace FastADB
 		private System.Windows.Forms.Button button49;
 		private System.Windows.Forms.TextBox textBoxFolderTouch;
 		private System.Windows.Forms.Label label26;
-		private System.Windows.Forms.Button button45;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton toolStripButton3;
@@ -263,8 +262,17 @@ namespace FastADB
 		private System.Windows.Forms.OpenFileDialog openFileDialogTxt;
 		private System.Windows.Forms.RichTextBox richTextBox4;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-		private System.Windows.Forms.Button button69;
 		private System.Windows.Forms.Button button71;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem сервисToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem диспетчерУстройствToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem папкаПрограммыToolStripMenuItem;
+		private System.Windows.Forms.Button button45;
+		private System.Windows.Forms.ToolStripMenuItem системнаяКонсольToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem запуститьJythonToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -297,7 +305,6 @@ namespace FastADB
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.button69 = new System.Windows.Forms.Button();
 			this.button45 = new System.Windows.Forms.Button();
 			this.linkLabel3 = new System.Windows.Forms.LinkLabel();
 			this.label13 = new System.Windows.Forms.Label();
@@ -540,6 +547,15 @@ namespace FastADB
 			this.openFileDialogJython = new System.Windows.Forms.OpenFileDialog();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.openFileDialogTxt = new System.Windows.Forms.OpenFileDialog();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.папкаПрограммыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.сервисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.диспетчерУстройствToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.системнаяКонсольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.запуститьJythonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.statusStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -628,6 +644,7 @@ namespace FastADB
 			this.groupBox21.SuspendLayout();
 			this.groupBox9.SuspendLayout();
 			this.tabPage2.SuspendLayout();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// statusStrip1
@@ -658,9 +675,9 @@ namespace FastADB
 			// 
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Location = new System.Drawing.Point(0, 24);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(784, 50);
+			this.panel1.Size = new System.Drawing.Size(784, 44);
 			this.panel1.TabIndex = 1;
 			// 
 			// label1
@@ -672,7 +689,7 @@ namespace FastADB
 			this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.label1.Location = new System.Drawing.Point(0, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(784, 50);
+			this.label1.Size = new System.Drawing.Size(784, 44);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Tools for Android Debug Bridge             ";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -681,9 +698,9 @@ namespace FastADB
 			// 
 			this.panel2.Controls.Add(this.tabControl1);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel2.Location = new System.Drawing.Point(0, 50);
+			this.panel2.Location = new System.Drawing.Point(0, 68);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(784, 539);
+			this.panel2.Size = new System.Drawing.Size(784, 521);
 			this.panel2.TabIndex = 2;
 			// 
 			// tabControl1
@@ -710,12 +727,11 @@ namespace FastADB
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(784, 539);
+			this.tabControl1.Size = new System.Drawing.Size(784, 521);
 			this.tabControl1.TabIndex = 8;
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.Add(this.button69);
 			this.tabPage1.Controls.Add(this.button45);
 			this.tabPage1.Controls.Add(this.linkLabel3);
 			this.tabPage1.Controls.Add(this.label13);
@@ -735,37 +751,24 @@ namespace FastADB
 			this.tabPage1.Location = new System.Drawing.Point(4, 25);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(776, 510);
+			this.tabPage1.Size = new System.Drawing.Size(776, 492);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Инструкция";
 			this.tabPage1.UseVisualStyleBackColor = true;
-			// 
-			// button69
-			// 
-			this.button69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.button69.Image = ((System.Drawing.Image)(resources.GetObject("button69.Image")));
-			this.button69.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.button69.Location = new System.Drawing.Point(8, 466);
-			this.button69.Name = "button69";
-			this.button69.Size = new System.Drawing.Size(135, 38);
-			this.button69.TabIndex = 16;
-			this.button69.Text = "Диспетчер устройств";
-			this.button69.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.button69.UseVisualStyleBackColor = true;
-			this.button69.Click += new System.EventHandler(this.Button69Click);
 			// 
 			// button45
 			// 
 			this.button45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.button45.Image = ((System.Drawing.Image)(resources.GetObject("button45.Image")));
 			this.button45.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.button45.Location = new System.Drawing.Point(664, 466);
+			this.button45.Location = new System.Drawing.Point(666, 449);
 			this.button45.Name = "button45";
-			this.button45.Size = new System.Drawing.Size(104, 38);
+			this.button45.Size = new System.Drawing.Size(104, 37);
 			this.button45.TabIndex = 15;
 			this.button45.Text = "О программе";
 			this.button45.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.button45.UseVisualStyleBackColor = true;
+			this.button45.Visible = false;
 			this.button45.Click += new System.EventHandler(this.Button45Click);
 			// 
 			// linkLabel3
@@ -913,7 +916,7 @@ namespace FastADB
 			this.tabPage7.Location = new System.Drawing.Point(4, 25);
 			this.tabPage7.Name = "tabPage7";
 			this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage7.Size = new System.Drawing.Size(776, 510);
+			this.tabPage7.Size = new System.Drawing.Size(776, 486);
 			this.tabPage7.TabIndex = 6;
 			this.tabPage7.Text = "ADB: Log";
 			this.tabPage7.UseVisualStyleBackColor = true;
@@ -924,7 +927,7 @@ namespace FastADB
 			this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox7.Location = new System.Drawing.Point(3, 26);
 			this.groupBox7.Name = "groupBox7";
-			this.groupBox7.Size = new System.Drawing.Size(770, 451);
+			this.groupBox7.Size = new System.Drawing.Size(770, 427);
 			this.groupBox7.TabIndex = 10;
 			this.groupBox7.TabStop = false;
 			this.groupBox7.Text = "Файл: log.bat";
@@ -937,7 +940,7 @@ namespace FastADB
 			this.textBox9.Multiline = true;
 			this.textBox9.Name = "textBox9";
 			this.textBox9.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox9.Size = new System.Drawing.Size(764, 432);
+			this.textBox9.Size = new System.Drawing.Size(764, 408);
 			this.textBox9.TabIndex = 0;
 			this.textBox9.Text = "adb devices\r\nadb logcat -d > log.txt\r\n@echo\r\n@echo PRESS ANY KEY TO FINISH!\r\n@pau" +
 	"se";
@@ -962,7 +965,7 @@ namespace FastADB
 			this.panel8.Controls.Add(this.button16);
 			this.panel8.Controls.Add(this.button6);
 			this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel8.Location = new System.Drawing.Point(3, 477);
+			this.panel8.Location = new System.Drawing.Point(3, 453);
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new System.Drawing.Size(770, 30);
 			this.panel8.TabIndex = 8;
@@ -1029,7 +1032,7 @@ namespace FastADB
 			this.tabPage4.Location = new System.Drawing.Point(4, 25);
 			this.tabPage4.Name = "tabPage4";
 			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage4.Size = new System.Drawing.Size(776, 510);
+			this.tabPage4.Size = new System.Drawing.Size(776, 486);
 			this.tabPage4.TabIndex = 3;
 			this.tabPage4.Text = "ADB: Screenshot";
 			this.tabPage4.UseVisualStyleBackColor = true;
@@ -1048,8 +1051,8 @@ namespace FastADB
 			// splitContainer1.Panel2
 			// 
 			this.splitContainer1.Panel2.Controls.Add(this.groupBox3);
-			this.splitContainer1.Size = new System.Drawing.Size(770, 380);
-			this.splitContainer1.SplitterDistance = 149;
+			this.splitContainer1.Size = new System.Drawing.Size(770, 356);
+			this.splitContainer1.SplitterDistance = 139;
 			this.splitContainer1.TabIndex = 9;
 			// 
 			// groupBox2
@@ -1058,7 +1061,7 @@ namespace FastADB
 			this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox2.Location = new System.Drawing.Point(0, 0);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(770, 149);
+			this.groupBox2.Size = new System.Drawing.Size(770, 139);
 			this.groupBox2.TabIndex = 0;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Файл: screenshot.bat";
@@ -1071,7 +1074,7 @@ namespace FastADB
 			this.textBox5.Multiline = true;
 			this.textBox5.Name = "textBox5";
 			this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox5.Size = new System.Drawing.Size(764, 130);
+			this.textBox5.Size = new System.Drawing.Size(764, 120);
 			this.textBox5.TabIndex = 1;
 			this.textBox5.Text = "adb devices\r\nmonkeyrunner C:\\QA\\screenshots\\script.py";
 			this.textBox5.WordWrap = false;
@@ -1082,7 +1085,7 @@ namespace FastADB
 			this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox3.Location = new System.Drawing.Point(0, 0);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(770, 227);
+			this.groupBox3.Size = new System.Drawing.Size(770, 213);
 			this.groupBox3.TabIndex = 1;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Файл: script.py";
@@ -1095,7 +1098,7 @@ namespace FastADB
 			this.textBox6.Multiline = true;
 			this.textBox6.Name = "textBox6";
 			this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox6.Size = new System.Drawing.Size(764, 208);
+			this.textBox6.Size = new System.Drawing.Size(764, 194);
 			this.textBox6.TabIndex = 2;
 			this.textBox6.Text = resources.GetString("textBox6.Text");
 			this.textBox6.WordWrap = false;
@@ -1184,7 +1187,7 @@ namespace FastADB
 			this.panel5.Controls.Add(this.button14);
 			this.panel5.Controls.Add(this.button2);
 			this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel5.Location = new System.Drawing.Point(3, 477);
+			this.panel5.Location = new System.Drawing.Point(3, 453);
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(770, 30);
 			this.panel5.TabIndex = 7;
@@ -1262,7 +1265,7 @@ namespace FastADB
 			this.tabPage16.Controls.Add(this.panel14);
 			this.tabPage16.Location = new System.Drawing.Point(4, 25);
 			this.tabPage16.Name = "tabPage16";
-			this.tabPage16.Size = new System.Drawing.Size(776, 510);
+			this.tabPage16.Size = new System.Drawing.Size(776, 486);
 			this.tabPage16.TabIndex = 15;
 			this.tabPage16.Text = "ADB: Screenrecord";
 			this.tabPage16.UseVisualStyleBackColor = true;
@@ -1273,7 +1276,7 @@ namespace FastADB
 			this.groupBox23.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox23.Location = new System.Drawing.Point(0, 23);
 			this.groupBox23.Name = "groupBox23";
-			this.groupBox23.Size = new System.Drawing.Size(776, 457);
+			this.groupBox23.Size = new System.Drawing.Size(776, 433);
 			this.groupBox23.TabIndex = 11;
 			this.groupBox23.TabStop = false;
 			this.groupBox23.Text = "Файл: screenrecord.bat";
@@ -1286,7 +1289,7 @@ namespace FastADB
 			this.textBox20.Multiline = true;
 			this.textBox20.Name = "textBox20";
 			this.textBox20.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox20.Size = new System.Drawing.Size(770, 438);
+			this.textBox20.Size = new System.Drawing.Size(770, 414);
 			this.textBox20.TabIndex = 0;
 			this.textBox20.Text = "adb devices\r\nadb shell screenrecord /sdcard/demo.mp4\r\n@echo\r\n@echo PRESS ANY KEY " +
 	"TO FINISH!\r\n@pause";
@@ -1310,7 +1313,7 @@ namespace FastADB
 			this.panel14.Controls.Add(this.button52);
 			this.panel14.Controls.Add(this.button55);
 			this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel14.Location = new System.Drawing.Point(0, 480);
+			this.panel14.Location = new System.Drawing.Point(0, 456);
 			this.panel14.Name = "panel14";
 			this.panel14.Size = new System.Drawing.Size(776, 30);
 			this.panel14.TabIndex = 8;
@@ -1363,7 +1366,7 @@ namespace FastADB
 			this.tabPage6.Location = new System.Drawing.Point(4, 25);
 			this.tabPage6.Name = "tabPage6";
 			this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage6.Size = new System.Drawing.Size(776, 510);
+			this.tabPage6.Size = new System.Drawing.Size(776, 486);
 			this.tabPage6.TabIndex = 5;
 			this.tabPage6.Text = "ADB: Stress";
 			this.tabPage6.UseVisualStyleBackColor = true;
@@ -1374,7 +1377,7 @@ namespace FastADB
 			this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox6.Location = new System.Drawing.Point(3, 26);
 			this.groupBox6.Name = "groupBox6";
-			this.groupBox6.Size = new System.Drawing.Size(770, 451);
+			this.groupBox6.Size = new System.Drawing.Size(770, 427);
 			this.groupBox6.TabIndex = 9;
 			this.groupBox6.TabStop = false;
 			this.groupBox6.Text = "Файл: stress.bat";
@@ -1387,7 +1390,7 @@ namespace FastADB
 			this.textBox8.Multiline = true;
 			this.textBox8.Name = "textBox8";
 			this.textBox8.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox8.Size = new System.Drawing.Size(764, 432);
+			this.textBox8.Size = new System.Drawing.Size(764, 408);
 			this.textBox8.TabIndex = 0;
 			this.textBox8.Text = resources.GetString("textBox8.Text");
 			this.textBox8.WordWrap = false;
@@ -1411,7 +1414,7 @@ namespace FastADB
 			this.panel7.Controls.Add(this.button19);
 			this.panel7.Controls.Add(this.button5);
 			this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel7.Location = new System.Drawing.Point(3, 477);
+			this.panel7.Location = new System.Drawing.Point(3, 453);
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new System.Drawing.Size(770, 30);
 			this.panel7.TabIndex = 8;
@@ -1476,7 +1479,7 @@ namespace FastADB
 			this.tabPage14.Controls.Add(this.panel13);
 			this.tabPage14.Location = new System.Drawing.Point(4, 25);
 			this.tabPage14.Name = "tabPage14";
-			this.tabPage14.Size = new System.Drawing.Size(776, 510);
+			this.tabPage14.Size = new System.Drawing.Size(776, 486);
 			this.tabPage14.TabIndex = 13;
 			this.tabPage14.Text = "ADB: Touch";
 			this.tabPage14.UseVisualStyleBackColor = true;
@@ -1495,8 +1498,8 @@ namespace FastADB
 			// splitContainer5.Panel2
 			// 
 			this.splitContainer5.Panel2.Controls.Add(this.groupBox18);
-			this.splitContainer5.Size = new System.Drawing.Size(776, 457);
-			this.splitContainer5.SplitterDistance = 175;
+			this.splitContainer5.Size = new System.Drawing.Size(776, 433);
+			this.splitContainer5.SplitterDistance = 165;
 			this.splitContainer5.TabIndex = 12;
 			// 
 			// groupBox17
@@ -1505,7 +1508,7 @@ namespace FastADB
 			this.groupBox17.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox17.Location = new System.Drawing.Point(0, 0);
 			this.groupBox17.Name = "groupBox17";
-			this.groupBox17.Size = new System.Drawing.Size(776, 175);
+			this.groupBox17.Size = new System.Drawing.Size(776, 165);
 			this.groupBox17.TabIndex = 0;
 			this.groupBox17.TabStop = false;
 			this.groupBox17.Text = "Файл: remove.bat";
@@ -1518,7 +1521,7 @@ namespace FastADB
 			this.textBox15.Multiline = true;
 			this.textBox15.Name = "textBox15";
 			this.textBox15.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox15.Size = new System.Drawing.Size(770, 156);
+			this.textBox15.Size = new System.Drawing.Size(770, 146);
 			this.textBox15.TabIndex = 1;
 			this.textBox15.Text = "adb devices\r\nmonkeyrunner C:\\QA\\builds\\script.py";
 			this.textBox15.WordWrap = false;
@@ -1529,7 +1532,7 @@ namespace FastADB
 			this.groupBox18.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox18.Location = new System.Drawing.Point(0, 0);
 			this.groupBox18.Name = "groupBox18";
-			this.groupBox18.Size = new System.Drawing.Size(776, 278);
+			this.groupBox18.Size = new System.Drawing.Size(776, 264);
 			this.groupBox18.TabIndex = 1;
 			this.groupBox18.TabStop = false;
 			this.groupBox18.Text = "Файл: script.py";
@@ -1542,7 +1545,7 @@ namespace FastADB
 			this.textBox16.Multiline = true;
 			this.textBox16.Name = "textBox16";
 			this.textBox16.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox16.Size = new System.Drawing.Size(770, 259);
+			this.textBox16.Size = new System.Drawing.Size(770, 245);
 			this.textBox16.TabIndex = 2;
 			this.textBox16.Text = resources.GetString("textBox16.Text");
 			this.textBox16.WordWrap = false;
@@ -1565,7 +1568,7 @@ namespace FastADB
 			this.panel13.Controls.Add(this.button47);
 			this.panel13.Controls.Add(this.button48);
 			this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel13.Location = new System.Drawing.Point(0, 480);
+			this.panel13.Location = new System.Drawing.Point(0, 456);
 			this.panel13.Name = "panel13";
 			this.panel13.Size = new System.Drawing.Size(776, 30);
 			this.panel13.TabIndex = 10;
@@ -1616,7 +1619,7 @@ namespace FastADB
 			this.tabPage15.Controls.Add(this.label40);
 			this.tabPage15.Location = new System.Drawing.Point(4, 25);
 			this.tabPage15.Name = "tabPage15";
-			this.tabPage15.Size = new System.Drawing.Size(776, 510);
+			this.tabPage15.Size = new System.Drawing.Size(776, 486);
 			this.tabPage15.TabIndex = 14;
 			this.tabPage15.Text = "ADB: Events";
 			this.tabPage15.UseVisualStyleBackColor = true;
@@ -1636,8 +1639,8 @@ namespace FastADB
 			// splitContainer7.Panel2
 			// 
 			this.splitContainer7.Panel2.Controls.Add(this.splitContainer8);
-			this.splitContainer7.Size = new System.Drawing.Size(776, 487);
-			this.splitContainer7.SplitterDistance = 201;
+			this.splitContainer7.Size = new System.Drawing.Size(776, 463);
+			this.splitContainer7.SplitterDistance = 190;
 			this.splitContainer7.TabIndex = 16;
 			// 
 			// groupBox24
@@ -1646,7 +1649,7 @@ namespace FastADB
 			this.groupBox24.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox24.Location = new System.Drawing.Point(0, 0);
 			this.groupBox24.Name = "groupBox24";
-			this.groupBox24.Size = new System.Drawing.Size(776, 171);
+			this.groupBox24.Size = new System.Drawing.Size(776, 160);
 			this.groupBox24.TabIndex = 11;
 			this.groupBox24.TabStop = false;
 			this.groupBox24.Text = "Файл: event.bat";
@@ -1659,7 +1662,7 @@ namespace FastADB
 			this.textBox19.Multiline = true;
 			this.textBox19.Name = "textBox19";
 			this.textBox19.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox19.Size = new System.Drawing.Size(770, 152);
+			this.textBox19.Size = new System.Drawing.Size(770, 141);
 			this.textBox19.TabIndex = 0;
 			this.textBox19.Text = "adb devices\r\nadb shell getevent -t > C:/TESTING/events/getevent.txt\r\n@echo\r\n@echo" +
 	" PRESS ANY KEY TO FINISH!\r\n@pause";
@@ -1672,7 +1675,7 @@ namespace FastADB
 			this.panel16.Controls.Add(this.button62);
 			this.panel16.Controls.Add(this.button63);
 			this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel16.Location = new System.Drawing.Point(0, 171);
+			this.panel16.Location = new System.Drawing.Point(0, 160);
 			this.panel16.Name = "panel16";
 			this.panel16.Size = new System.Drawing.Size(776, 30);
 			this.panel16.TabIndex = 9;
@@ -1745,7 +1748,7 @@ namespace FastADB
 			// 
 			this.splitContainer8.Panel2.Controls.Add(this.groupBox26);
 			this.splitContainer8.Panel2.Controls.Add(this.panel18);
-			this.splitContainer8.Size = new System.Drawing.Size(776, 282);
+			this.splitContainer8.Size = new System.Drawing.Size(776, 269);
 			this.splitContainer8.SplitterDistance = 395;
 			this.splitContainer8.TabIndex = 0;
 			// 
@@ -1755,7 +1758,7 @@ namespace FastADB
 			this.groupBox25.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox25.Location = new System.Drawing.Point(0, 0);
 			this.groupBox25.Name = "groupBox25";
-			this.groupBox25.Size = new System.Drawing.Size(395, 252);
+			this.groupBox25.Size = new System.Drawing.Size(395, 239);
 			this.groupBox25.TabIndex = 12;
 			this.groupBox25.TabStop = false;
 			this.groupBox25.Text = "Файл: getevents.txt";
@@ -1765,7 +1768,7 @@ namespace FastADB
 			this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox2.Location = new System.Drawing.Point(3, 16);
 			this.richTextBox2.Name = "richTextBox2";
-			this.richTextBox2.Size = new System.Drawing.Size(389, 233);
+			this.richTextBox2.Size = new System.Drawing.Size(389, 220);
 			this.richTextBox2.TabIndex = 0;
 			this.richTextBox2.Text = "";
 			// 
@@ -1774,7 +1777,7 @@ namespace FastADB
 			this.panel17.Controls.Add(this.button65);
 			this.panel17.Controls.Add(this.button67);
 			this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel17.Location = new System.Drawing.Point(0, 252);
+			this.panel17.Location = new System.Drawing.Point(0, 239);
 			this.panel17.Name = "panel17";
 			this.panel17.Size = new System.Drawing.Size(395, 30);
 			this.panel17.TabIndex = 10;
@@ -1811,7 +1814,7 @@ namespace FastADB
 			this.groupBox26.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox26.Location = new System.Drawing.Point(0, 0);
 			this.groupBox26.Name = "groupBox26";
-			this.groupBox26.Size = new System.Drawing.Size(377, 252);
+			this.groupBox26.Size = new System.Drawing.Size(377, 239);
 			this.groupBox26.TabIndex = 13;
 			this.groupBox26.TabStop = false;
 			this.groupBox26.Text = "Файл: play.bat";
@@ -1822,7 +1825,7 @@ namespace FastADB
 			this.richTextBox3.Font = new System.Drawing.Font("Consolas", 9.75F);
 			this.richTextBox3.Location = new System.Drawing.Point(3, 16);
 			this.richTextBox3.Name = "richTextBox3";
-			this.richTextBox3.Size = new System.Drawing.Size(371, 233);
+			this.richTextBox3.Size = new System.Drawing.Size(371, 220);
 			this.richTextBox3.TabIndex = 0;
 			this.richTextBox3.Text = "";
 			this.richTextBox3.WordWrap = false;
@@ -1833,7 +1836,7 @@ namespace FastADB
 			this.panel18.Controls.Add(this.button68);
 			this.panel18.Controls.Add(this.button70);
 			this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel18.Location = new System.Drawing.Point(0, 252);
+			this.panel18.Location = new System.Drawing.Point(0, 239);
 			this.panel18.Name = "panel18";
 			this.panel18.Size = new System.Drawing.Size(377, 30);
 			this.panel18.TabIndex = 10;
@@ -1897,7 +1900,7 @@ namespace FastADB
 			this.tabPage17.Controls.Add(this.label41);
 			this.tabPage17.Location = new System.Drawing.Point(4, 25);
 			this.tabPage17.Name = "tabPage17";
-			this.tabPage17.Size = new System.Drawing.Size(776, 510);
+			this.tabPage17.Size = new System.Drawing.Size(776, 486);
 			this.tabPage17.TabIndex = 16;
 			this.tabPage17.Text = "ADB: Copy Files";
 			this.tabPage17.UseVisualStyleBackColor = true;
@@ -1908,7 +1911,7 @@ namespace FastADB
 			this.groupBox22.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox22.Location = new System.Drawing.Point(0, 23);
 			this.groupBox22.Name = "groupBox22";
-			this.groupBox22.Size = new System.Drawing.Size(776, 457);
+			this.groupBox22.Size = new System.Drawing.Size(776, 433);
 			this.groupBox22.TabIndex = 18;
 			this.groupBox22.TabStop = false;
 			this.groupBox22.Text = "Файл: copy.bat";
@@ -1921,7 +1924,7 @@ namespace FastADB
 			this.textBox18.Multiline = true;
 			this.textBox18.Name = "textBox18";
 			this.textBox18.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox18.Size = new System.Drawing.Size(770, 438);
+			this.textBox18.Size = new System.Drawing.Size(770, 414);
 			this.textBox18.TabIndex = 0;
 			this.textBox18.Text = resources.GetString("textBox18.Text");
 			this.textBox18.WordWrap = false;
@@ -1934,7 +1937,7 @@ namespace FastADB
 			this.panel15.Controls.Add(this.button57);
 			this.panel15.Controls.Add(this.button58);
 			this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel15.Location = new System.Drawing.Point(0, 480);
+			this.panel15.Location = new System.Drawing.Point(0, 456);
 			this.panel15.Name = "panel15";
 			this.panel15.Size = new System.Drawing.Size(776, 30);
 			this.panel15.TabIndex = 17;
@@ -2025,7 +2028,7 @@ namespace FastADB
 			this.tabPage5.Location = new System.Drawing.Point(4, 25);
 			this.tabPage5.Name = "tabPage5";
 			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage5.Size = new System.Drawing.Size(776, 510);
+			this.tabPage5.Size = new System.Drawing.Size(776, 486);
 			this.tabPage5.TabIndex = 4;
 			this.tabPage5.Text = "ADB: Shell";
 			this.tabPage5.UseVisualStyleBackColor = true;
@@ -2036,7 +2039,7 @@ namespace FastADB
 			this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox5.Location = new System.Drawing.Point(3, 26);
 			this.groupBox5.Name = "groupBox5";
-			this.groupBox5.Size = new System.Drawing.Size(770, 451);
+			this.groupBox5.Size = new System.Drawing.Size(770, 427);
 			this.groupBox5.TabIndex = 8;
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Файл: shell.bat";
@@ -2049,7 +2052,7 @@ namespace FastADB
 			this.textBox7.Multiline = true;
 			this.textBox7.Name = "textBox7";
 			this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox7.Size = new System.Drawing.Size(764, 432);
+			this.textBox7.Size = new System.Drawing.Size(764, 408);
 			this.textBox7.TabIndex = 0;
 			this.textBox7.Text = "adb devices\r\nadb shell\r\n@echo Process - complete!\r\n@pause";
 			this.textBox7.WordWrap = false;
@@ -2072,7 +2075,7 @@ namespace FastADB
 			this.panel6.Controls.Add(this.button28);
 			this.panel6.Controls.Add(this.button4);
 			this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel6.Location = new System.Drawing.Point(3, 477);
+			this.panel6.Location = new System.Drawing.Point(3, 453);
 			this.panel6.Name = "panel6";
 			this.panel6.Size = new System.Drawing.Size(770, 30);
 			this.panel6.TabIndex = 7;
@@ -2124,7 +2127,7 @@ namespace FastADB
 			this.tabPage3.Location = new System.Drawing.Point(4, 25);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(776, 510);
+			this.tabPage3.Size = new System.Drawing.Size(776, 486);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "ADB: DDMS";
 			this.tabPage3.UseVisualStyleBackColor = true;
@@ -2136,7 +2139,7 @@ namespace FastADB
 			this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel4.Location = new System.Drawing.Point(3, 3);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(770, 474);
+			this.panel4.Size = new System.Drawing.Size(770, 450);
 			this.panel4.TabIndex = 7;
 			// 
 			// groupBox4
@@ -2145,7 +2148,7 @@ namespace FastADB
 			this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox4.Location = new System.Drawing.Point(0, 23);
 			this.groupBox4.Name = "groupBox4";
-			this.groupBox4.Size = new System.Drawing.Size(770, 451);
+			this.groupBox4.Size = new System.Drawing.Size(770, 427);
 			this.groupBox4.TabIndex = 1;
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "Файл: ddms.bat";
@@ -2158,7 +2161,7 @@ namespace FastADB
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
 			this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox2.Size = new System.Drawing.Size(764, 432);
+			this.textBox2.Size = new System.Drawing.Size(764, 408);
 			this.textBox2.TabIndex = 0;
 			this.textBox2.Text = "adb devices\r\n@echo START DDMS...\r\nddms\r\n@echo\r\n@echo PRESS ANY KEY TO FINISH!\r\n@p" +
 	"ause";
@@ -2182,7 +2185,7 @@ namespace FastADB
 			this.panel3.Controls.Add(this.button30);
 			this.panel3.Controls.Add(this.button1);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel3.Location = new System.Drawing.Point(3, 477);
+			this.panel3.Location = new System.Drawing.Point(3, 453);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(770, 30);
 			this.panel3.TabIndex = 6;
@@ -2235,7 +2238,7 @@ namespace FastADB
 			this.tabPage11.Controls.Add(this.panel10);
 			this.tabPage11.Location = new System.Drawing.Point(4, 25);
 			this.tabPage11.Name = "tabPage11";
-			this.tabPage11.Size = new System.Drawing.Size(776, 510);
+			this.tabPage11.Size = new System.Drawing.Size(776, 486);
 			this.tabPage11.TabIndex = 10;
 			this.tabPage11.Text = "ADB: Install Package";
 			this.tabPage11.UseVisualStyleBackColor = true;
@@ -2254,8 +2257,8 @@ namespace FastADB
 			// splitContainer2.Panel2
 			// 
 			this.splitContainer2.Panel2.Controls.Add(this.groupBox12);
-			this.splitContainer2.Size = new System.Drawing.Size(776, 404);
-			this.splitContainer2.SplitterDistance = 138;
+			this.splitContainer2.Size = new System.Drawing.Size(776, 380);
+			this.splitContainer2.SplitterDistance = 129;
 			this.splitContainer2.TabIndex = 10;
 			// 
 			// groupBox11
@@ -2264,7 +2267,7 @@ namespace FastADB
 			this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox11.Location = new System.Drawing.Point(0, 0);
 			this.groupBox11.Name = "groupBox11";
-			this.groupBox11.Size = new System.Drawing.Size(776, 138);
+			this.groupBox11.Size = new System.Drawing.Size(776, 129);
 			this.groupBox11.TabIndex = 0;
 			this.groupBox11.TabStop = false;
 			this.groupBox11.Text = "Файл: install.bat";
@@ -2277,7 +2280,7 @@ namespace FastADB
 			this.textBox4.Multiline = true;
 			this.textBox4.Name = "textBox4";
 			this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox4.Size = new System.Drawing.Size(770, 119);
+			this.textBox4.Size = new System.Drawing.Size(770, 110);
 			this.textBox4.TabIndex = 1;
 			this.textBox4.Text = "adb devices\r\nmonkeyrunner C:\\QA\\builds\\script.py";
 			this.textBox4.WordWrap = false;
@@ -2288,7 +2291,7 @@ namespace FastADB
 			this.groupBox12.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox12.Location = new System.Drawing.Point(0, 0);
 			this.groupBox12.Name = "groupBox12";
-			this.groupBox12.Size = new System.Drawing.Size(776, 262);
+			this.groupBox12.Size = new System.Drawing.Size(776, 247);
 			this.groupBox12.TabIndex = 1;
 			this.groupBox12.TabStop = false;
 			this.groupBox12.Text = "Файл: script.py";
@@ -2301,7 +2304,7 @@ namespace FastADB
 			this.textBox10.Multiline = true;
 			this.textBox10.Name = "textBox10";
 			this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox10.Size = new System.Drawing.Size(770, 243);
+			this.textBox10.Size = new System.Drawing.Size(770, 228);
 			this.textBox10.TabIndex = 2;
 			this.textBox10.Text = "from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice\r\ndevice = MonkeyR" +
 	"unner.waitForConnection()\r\ndevice.installPackage(\'C:/logs/builds/build.apk\')";
@@ -2367,7 +2370,7 @@ namespace FastADB
 			this.panel10.Controls.Add(this.button34);
 			this.panel10.Controls.Add(this.button37);
 			this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel10.Location = new System.Drawing.Point(0, 480);
+			this.panel10.Location = new System.Drawing.Point(0, 456);
 			this.panel10.Name = "panel10";
 			this.panel10.Size = new System.Drawing.Size(776, 30);
 			this.panel10.TabIndex = 8;
@@ -2419,7 +2422,7 @@ namespace FastADB
 			this.tabPage12.Controls.Add(this.panel11);
 			this.tabPage12.Location = new System.Drawing.Point(4, 25);
 			this.tabPage12.Name = "tabPage12";
-			this.tabPage12.Size = new System.Drawing.Size(776, 510);
+			this.tabPage12.Size = new System.Drawing.Size(776, 486);
 			this.tabPage12.TabIndex = 11;
 			this.tabPage12.Text = "ADB: Remove Package";
 			this.tabPage12.UseVisualStyleBackColor = true;
@@ -2438,8 +2441,8 @@ namespace FastADB
 			// splitContainer3.Panel2
 			// 
 			this.splitContainer3.Panel2.Controls.Add(this.groupBox14);
-			this.splitContainer3.Size = new System.Drawing.Size(776, 457);
-			this.splitContainer3.SplitterDistance = 168;
+			this.splitContainer3.Size = new System.Drawing.Size(776, 433);
+			this.splitContainer3.SplitterDistance = 158;
 			this.splitContainer3.TabIndex = 11;
 			// 
 			// groupBox13
@@ -2448,7 +2451,7 @@ namespace FastADB
 			this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox13.Location = new System.Drawing.Point(0, 0);
 			this.groupBox13.Name = "groupBox13";
-			this.groupBox13.Size = new System.Drawing.Size(776, 168);
+			this.groupBox13.Size = new System.Drawing.Size(776, 158);
 			this.groupBox13.TabIndex = 0;
 			this.groupBox13.TabStop = false;
 			this.groupBox13.Text = "Файл: remove.bat";
@@ -2461,7 +2464,7 @@ namespace FastADB
 			this.textBox11.Multiline = true;
 			this.textBox11.Name = "textBox11";
 			this.textBox11.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox11.Size = new System.Drawing.Size(770, 149);
+			this.textBox11.Size = new System.Drawing.Size(770, 139);
 			this.textBox11.TabIndex = 1;
 			this.textBox11.Text = "adb devices\r\nmonkeyrunner C:\\QA\\builds\\script.py";
 			this.textBox11.WordWrap = false;
@@ -2472,7 +2475,7 @@ namespace FastADB
 			this.groupBox14.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox14.Location = new System.Drawing.Point(0, 0);
 			this.groupBox14.Name = "groupBox14";
-			this.groupBox14.Size = new System.Drawing.Size(776, 285);
+			this.groupBox14.Size = new System.Drawing.Size(776, 271);
 			this.groupBox14.TabIndex = 1;
 			this.groupBox14.TabStop = false;
 			this.groupBox14.Text = "Файл: script.py";
@@ -2485,7 +2488,7 @@ namespace FastADB
 			this.textBox12.Multiline = true;
 			this.textBox12.Name = "textBox12";
 			this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox12.Size = new System.Drawing.Size(770, 266);
+			this.textBox12.Size = new System.Drawing.Size(770, 252);
 			this.textBox12.TabIndex = 2;
 			this.textBox12.Text = "from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice\r\ndevice = MonkeyR" +
 	"unner.waitForConnection()\r\ndevice.removePackage \'com.package.name\'";
@@ -2510,7 +2513,7 @@ namespace FastADB
 			this.panel11.Controls.Add(this.button38);
 			this.panel11.Controls.Add(this.button39);
 			this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel11.Location = new System.Drawing.Point(0, 480);
+			this.panel11.Location = new System.Drawing.Point(0, 456);
 			this.panel11.Name = "panel11";
 			this.panel11.Size = new System.Drawing.Size(776, 30);
 			this.panel11.TabIndex = 9;
@@ -2575,7 +2578,7 @@ namespace FastADB
 			this.tabPage13.Controls.Add(this.panel12);
 			this.tabPage13.Location = new System.Drawing.Point(4, 25);
 			this.tabPage13.Name = "tabPage13";
-			this.tabPage13.Size = new System.Drawing.Size(776, 510);
+			this.tabPage13.Size = new System.Drawing.Size(776, 486);
 			this.tabPage13.TabIndex = 12;
 			this.tabPage13.Text = "ADB: Start Activity";
 			this.tabPage13.UseVisualStyleBackColor = true;
@@ -2594,8 +2597,8 @@ namespace FastADB
 			// splitContainer4.Panel2
 			// 
 			this.splitContainer4.Panel2.Controls.Add(this.groupBox16);
-			this.splitContainer4.Size = new System.Drawing.Size(776, 457);
-			this.splitContainer4.SplitterDistance = 170;
+			this.splitContainer4.Size = new System.Drawing.Size(776, 433);
+			this.splitContainer4.SplitterDistance = 160;
 			this.splitContainer4.TabIndex = 12;
 			// 
 			// groupBox15
@@ -2604,7 +2607,7 @@ namespace FastADB
 			this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox15.Location = new System.Drawing.Point(0, 0);
 			this.groupBox15.Name = "groupBox15";
-			this.groupBox15.Size = new System.Drawing.Size(776, 170);
+			this.groupBox15.Size = new System.Drawing.Size(776, 160);
 			this.groupBox15.TabIndex = 0;
 			this.groupBox15.TabStop = false;
 			this.groupBox15.Text = "Файл: start.bat";
@@ -2617,7 +2620,7 @@ namespace FastADB
 			this.textBox13.Multiline = true;
 			this.textBox13.Name = "textBox13";
 			this.textBox13.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox13.Size = new System.Drawing.Size(770, 151);
+			this.textBox13.Size = new System.Drawing.Size(770, 141);
 			this.textBox13.TabIndex = 1;
 			this.textBox13.Text = "adb devices\r\nmonkeyrunner C:\\QA\\builds\\script.py";
 			this.textBox13.WordWrap = false;
@@ -2628,7 +2631,7 @@ namespace FastADB
 			this.groupBox16.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox16.Location = new System.Drawing.Point(0, 0);
 			this.groupBox16.Name = "groupBox16";
-			this.groupBox16.Size = new System.Drawing.Size(776, 283);
+			this.groupBox16.Size = new System.Drawing.Size(776, 269);
 			this.groupBox16.TabIndex = 1;
 			this.groupBox16.TabStop = false;
 			this.groupBox16.Text = "Файл: script.py";
@@ -2641,7 +2644,7 @@ namespace FastADB
 			this.textBox14.Multiline = true;
 			this.textBox14.Name = "textBox14";
 			this.textBox14.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox14.Size = new System.Drawing.Size(770, 264);
+			this.textBox14.Size = new System.Drawing.Size(770, 250);
 			this.textBox14.TabIndex = 2;
 			this.textBox14.Text = resources.GetString("textBox14.Text");
 			this.textBox14.WordWrap = false;
@@ -2665,7 +2668,7 @@ namespace FastADB
 			this.panel12.Controls.Add(this.button43);
 			this.panel12.Controls.Add(this.button44);
 			this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel12.Location = new System.Drawing.Point(0, 480);
+			this.panel12.Location = new System.Drawing.Point(0, 456);
 			this.panel12.Name = "panel12";
 			this.panel12.Size = new System.Drawing.Size(776, 30);
 			this.panel12.TabIndex = 10;
@@ -2730,7 +2733,7 @@ namespace FastADB
 			this.tabPage9.Location = new System.Drawing.Point(4, 25);
 			this.tabPage9.Name = "tabPage9";
 			this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage9.Size = new System.Drawing.Size(776, 510);
+			this.tabPage9.Size = new System.Drawing.Size(776, 486);
 			this.tabPage9.TabIndex = 8;
 			this.tabPage9.Text = "CMD: Консоль";
 			this.tabPage9.UseVisualStyleBackColor = true;
@@ -2741,7 +2744,7 @@ namespace FastADB
 			this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox8.Location = new System.Drawing.Point(3, 3);
 			this.groupBox8.Name = "groupBox8";
-			this.groupBox8.Size = new System.Drawing.Size(770, 474);
+			this.groupBox8.Size = new System.Drawing.Size(770, 450);
 			this.groupBox8.TabIndex = 11;
 			this.groupBox8.TabStop = false;
 			this.groupBox8.Text = "Файл: console.bat";
@@ -2754,7 +2757,7 @@ namespace FastADB
 			this.textBoxConsole.Multiline = true;
 			this.textBoxConsole.Name = "textBoxConsole";
 			this.textBoxConsole.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBoxConsole.Size = new System.Drawing.Size(764, 455);
+			this.textBoxConsole.Size = new System.Drawing.Size(764, 431);
 			this.textBoxConsole.TabIndex = 0;
 			this.textBoxConsole.Text = "@echo PRESS ANY KEY TO FINISH!\r\n@pause";
 			this.textBoxConsole.WordWrap = false;
@@ -2766,7 +2769,7 @@ namespace FastADB
 			this.panel9.Controls.Add(this.button13);
 			this.panel9.Controls.Add(this.button12);
 			this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel9.Location = new System.Drawing.Point(3, 477);
+			this.panel9.Location = new System.Drawing.Point(3, 453);
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new System.Drawing.Size(770, 30);
 			this.panel9.TabIndex = 12;
@@ -2831,7 +2834,7 @@ namespace FastADB
 			this.tabPage10.Location = new System.Drawing.Point(4, 25);
 			this.tabPage10.Name = "tabPage10";
 			this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage10.Size = new System.Drawing.Size(776, 510);
+			this.tabPage10.Size = new System.Drawing.Size(776, 486);
 			this.tabPage10.TabIndex = 9;
 			this.tabPage10.Text = "Редактор Jython";
 			this.tabPage10.UseVisualStyleBackColor = true;
@@ -2850,8 +2853,8 @@ namespace FastADB
 			// splitContainer6.Panel2
 			// 
 			this.splitContainer6.Panel2.Controls.Add(this.groupBox20);
-			this.splitContainer6.Size = new System.Drawing.Size(770, 479);
-			this.splitContainer6.SplitterDistance = 104;
+			this.splitContainer6.Size = new System.Drawing.Size(770, 455);
+			this.splitContainer6.SplitterDistance = 97;
 			this.splitContainer6.TabIndex = 12;
 			// 
 			// groupBox19
@@ -2860,7 +2863,7 @@ namespace FastADB
 			this.groupBox19.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox19.Location = new System.Drawing.Point(0, 0);
 			this.groupBox19.Name = "groupBox19";
-			this.groupBox19.Size = new System.Drawing.Size(770, 104);
+			this.groupBox19.Size = new System.Drawing.Size(770, 97);
 			this.groupBox19.TabIndex = 0;
 			this.groupBox19.TabStop = false;
 			this.groupBox19.Text = "Файл: run.bat";
@@ -2873,7 +2876,7 @@ namespace FastADB
 			this.textBox17.Multiline = true;
 			this.textBox17.Name = "textBox17";
 			this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox17.Size = new System.Drawing.Size(764, 85);
+			this.textBox17.Size = new System.Drawing.Size(764, 78);
 			this.textBox17.TabIndex = 1;
 			this.textBox17.Text = "C:\\jython2.7.0\\bin\\jython";
 			this.textBox17.WordWrap = false;
@@ -2884,7 +2887,7 @@ namespace FastADB
 			this.groupBox20.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox20.Location = new System.Drawing.Point(0, 0);
 			this.groupBox20.Name = "groupBox20";
-			this.groupBox20.Size = new System.Drawing.Size(770, 371);
+			this.groupBox20.Size = new System.Drawing.Size(770, 354);
 			this.groupBox20.TabIndex = 1;
 			this.groupBox20.TabStop = false;
 			this.groupBox20.Text = "Файл: script.py";
@@ -2895,7 +2898,7 @@ namespace FastADB
 			this.richTextBox1.Font = new System.Drawing.Font("Consolas", 9.75F);
 			this.richTextBox1.Location = new System.Drawing.Point(3, 16);
 			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(764, 352);
+			this.richTextBox1.Size = new System.Drawing.Size(764, 335);
 			this.richTextBox1.TabIndex = 0;
 			this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
 			this.richTextBox1.WordWrap = false;
@@ -3002,7 +3005,7 @@ namespace FastADB
 			this.tabPage8.Location = new System.Drawing.Point(4, 25);
 			this.tabPage8.Name = "tabPage8";
 			this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage8.Size = new System.Drawing.Size(776, 510);
+			this.tabPage8.Size = new System.Drawing.Size(776, 486);
 			this.tabPage8.TabIndex = 7;
 			this.tabPage8.Text = "Настройки";
 			this.tabPage8.UseVisualStyleBackColor = true;
@@ -3486,7 +3489,7 @@ namespace FastADB
 			this.tabPage2.Location = new System.Drawing.Point(4, 25);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(776, 510);
+			this.tabPage2.Size = new System.Drawing.Size(776, 486);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Помощь";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -3496,7 +3499,7 @@ namespace FastADB
 			this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox4.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox4.Name = "richTextBox4";
-			this.richTextBox4.Size = new System.Drawing.Size(770, 504);
+			this.richTextBox4.Size = new System.Drawing.Size(770, 480);
 			this.richTextBox4.TabIndex = 1;
 			this.richTextBox4.Text = "";
 			this.richTextBox4.WordWrap = false;
@@ -3542,6 +3545,85 @@ namespace FastADB
 			// 
 			this.openFileDialogTxt.Filter = "*.txt|*.txt";
 			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.BackColor = System.Drawing.Color.White;
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.файлToolStripMenuItem,
+			this.сервисToolStripMenuItem,
+			this.справкаToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+			this.menuStrip1.TabIndex = 3;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// файлToolStripMenuItem
+			// 
+			this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.папкаПрограммыToolStripMenuItem});
+			this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+			this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+			this.файлToolStripMenuItem.Text = "Файл";
+			// 
+			// папкаПрограммыToolStripMenuItem
+			// 
+			this.папкаПрограммыToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("папкаПрограммыToolStripMenuItem.Image")));
+			this.папкаПрограммыToolStripMenuItem.Name = "папкаПрограммыToolStripMenuItem";
+			this.папкаПрограммыToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+			this.папкаПрограммыToolStripMenuItem.Text = "Открыть папку ресурсов";
+			this.папкаПрограммыToolStripMenuItem.Click += new System.EventHandler(this.ПапкаПрограммыToolStripMenuItemClick);
+			// 
+			// сервисToolStripMenuItem
+			// 
+			this.сервисToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.диспетчерУстройствToolStripMenuItem,
+			this.системнаяКонсольToolStripMenuItem,
+			this.запуститьJythonToolStripMenuItem});
+			this.сервисToolStripMenuItem.Name = "сервисToolStripMenuItem";
+			this.сервисToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+			this.сервисToolStripMenuItem.Text = "Сервис";
+			// 
+			// диспетчерУстройствToolStripMenuItem
+			// 
+			this.диспетчерУстройствToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("диспетчерУстройствToolStripMenuItem.Image")));
+			this.диспетчерУстройствToolStripMenuItem.Name = "диспетчерУстройствToolStripMenuItem";
+			this.диспетчерУстройствToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+			this.диспетчерУстройствToolStripMenuItem.Text = "Диспетчер устройств";
+			this.диспетчерУстройствToolStripMenuItem.Click += new System.EventHandler(this.ДиспетчерУстройствToolStripMenuItemClick);
+			// 
+			// системнаяКонсольToolStripMenuItem
+			// 
+			this.системнаяКонсольToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("системнаяКонсольToolStripMenuItem.Image")));
+			this.системнаяКонсольToolStripMenuItem.Name = "системнаяКонсольToolStripMenuItem";
+			this.системнаяКонсольToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+			this.системнаяКонсольToolStripMenuItem.Text = "Системная консоль";
+			this.системнаяКонсольToolStripMenuItem.Click += new System.EventHandler(this.СистемнаяКонсольToolStripMenuItemClick);
+			// 
+			// запуститьJythonToolStripMenuItem
+			// 
+			this.запуститьJythonToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("запуститьJythonToolStripMenuItem.Image")));
+			this.запуститьJythonToolStripMenuItem.Name = "запуститьJythonToolStripMenuItem";
+			this.запуститьJythonToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+			this.запуститьJythonToolStripMenuItem.Text = "Запустить Jython";
+			this.запуститьJythonToolStripMenuItem.Click += new System.EventHandler(this.ЗапуститьJythonToolStripMenuItemClick);
+			// 
+			// справкаToolStripMenuItem
+			// 
+			this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.оПрограммеToolStripMenuItem});
+			this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+			this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+			this.справкаToolStripMenuItem.Text = "Справка";
+			// 
+			// оПрограммеToolStripMenuItem
+			// 
+			this.оПрограммеToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("оПрограммеToolStripMenuItem.Image")));
+			this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+			this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+			this.оПрограммеToolStripMenuItem.Text = "О программе...";
+			this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.ОПрограммеToolStripMenuItemClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3550,6 +3632,7 @@ namespace FastADB
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.statusStrip1);
+			this.Controls.Add(this.menuStrip1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -3670,6 +3753,8 @@ namespace FastADB
 			this.groupBox9.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

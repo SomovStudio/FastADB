@@ -338,11 +338,6 @@ namespace FastADB
 			FormAbout FAbout = new FormAbout();
 			FAbout.ShowDialog();
 		}
-		void Button45Click(object sender, EventArgs e)
-		{
-			FormAbout FAbout = new FormAbout();
-			FAbout.ShowDialog();
-		}
 		void LinkLabel1LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			try{
@@ -902,7 +897,15 @@ namespace FastADB
 		{
 			TestingAndroid.ExecuteBat(textBoxFolderEvents.Text, textBoxFolderEvents.Text + "play.bat", richTextBox3.Text);
 		}
-		void Button69Click(object sender, EventArgs e)
+		void Button71Click(object sender, EventArgs e)
+		{
+			try{
+				Process.Start(textBoxFolderOtherFiles.Text);
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		void ДиспетчерУстройствToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			try{
 				Process.Start("devmgmt.msc");
@@ -910,10 +913,36 @@ namespace FastADB
 				MessageBox.Show(ex.Message, "Ошибка");
 			}
 		}
-		void Button71Click(object sender, EventArgs e)
+		void ПапкаПрограммыToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			try{
-				Process.Start(textBoxFolderOtherFiles.Text);
+				Process.Start(folderResource);
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		void ОПрограммеToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			FormAbout FAbout = new FormAbout();
+			FAbout.ShowDialog();
+		}
+		void Button45Click(object sender, EventArgs e)
+		{
+			FormAbout FAbout = new FormAbout();
+			FAbout.ShowDialog();
+		}
+		void СистемнаяКонсольToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			try{
+				Process.Start("cmd.exe");
+			}catch(Exception ex){
+				MessageBox.Show(ex.Message, "Ошибка");
+			}
+		}
+		void ЗапуститьJythonToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			try{
+				Process.Start(textBoxJython.Text);
 			}catch(Exception ex){
 				MessageBox.Show(ex.Message, "Ошибка");
 			}
