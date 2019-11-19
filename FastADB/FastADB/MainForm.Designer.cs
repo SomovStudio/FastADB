@@ -42,9 +42,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
             this.label1.Location = new System.Drawing.Point(12, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 15);
+            this.label1.Size = new System.Drawing.Size(140, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "2019 © Somov Evgeniy";
+            this.label1.Text = "2019 © Somov Studio";
             // 
             // timer1
             // 
