@@ -55,6 +55,12 @@
     <Compile Include="client\ConverterForm.Designer.cs">
       <DependentUpon>ConverterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="client\GeteventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\GeteventForm.Designer.cs">
+      <DependentUpon>GeteventForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="client\HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client\ConverterForm.resx">
       <DependentUpon>ConverterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\GeteventForm.resx">
+      <DependentUpon>GeteventForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="client\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
