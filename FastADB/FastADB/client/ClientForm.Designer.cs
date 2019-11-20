@@ -404,6 +404,7 @@
             this.consoleRichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.consoleRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.consoleRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleRichTextBox.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.consoleRichTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.consoleRichTextBox.Location = new System.Drawing.Point(0, 0);
             this.consoleRichTextBox.Name = "consoleRichTextBox";
