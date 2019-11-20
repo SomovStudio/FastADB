@@ -116,5 +116,22 @@ namespace FastADB.client
             DataResources.consoleMessage("Все процессы ADB удалены");
             DataForms.FMain.Close();
         }
+
+        private void открытьПапкуРесурсовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(DataResources.folderResource);
+            }
+            catch (Exception ex)
+            {
+                DataResources.consoleMessage("ОШИБКА: " + ex.Message);
+            }
+        }
+
+        private void закрытьПрограммуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

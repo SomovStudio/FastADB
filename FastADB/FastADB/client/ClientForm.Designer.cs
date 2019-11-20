@@ -134,12 +134,14 @@
             this.открытьПапкуРесурсовToolStripMenuItem.Name = "открытьПапкуРесурсовToolStripMenuItem";
             this.открытьПапкуРесурсовToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.открытьПапкуРесурсовToolStripMenuItem.Text = "Открыть папку ресурсов";
+            this.открытьПапкуРесурсовToolStripMenuItem.Click += new System.EventHandler(this.открытьПапкуРесурсовToolStripMenuItem_Click);
             // 
             // закрытьПрограммуToolStripMenuItem
             // 
             this.закрытьПрограммуToolStripMenuItem.Name = "закрытьПрограммуToolStripMenuItem";
             this.закрытьПрограммуToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.закрытьПрограммуToolStripMenuItem.Text = "Закрыть программу";
+            this.закрытьПрограммуToolStripMenuItem.Click += new System.EventHandler(this.закрытьПрограммуToolStripMenuItem_Click);
             // 
             // командыToolStripMenuItem
             // 

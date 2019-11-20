@@ -10,7 +10,7 @@ namespace FastADB.data
         public static MainForm FMain;
 
         /*Клиент*/
-        //public static ConverterForm FConverter;
+        public static ConverterForm FConverter;
         public static ClientForm FClient;
         //public static SettingsForm FSettings;
         public static HelpForm FHelp;

@@ -49,6 +49,12 @@
     <Compile Include="client\ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="client\ConverterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\ConverterForm.Designer.cs">
+      <DependentUpon>ConverterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="client\HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="client\ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\ConverterForm.resx">
+      <DependentUpon>ConverterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="client\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
