@@ -67,6 +67,12 @@
     <Compile Include="client\HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="client\InstallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\InstallForm.Designer.cs">
+      <DependentUpon>InstallForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="data\DataConfig.cs" />
     <Compile Include="data\DataForms.cs" />
     <Compile Include="data\DataResources.cs" />
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\InstallForm.resx">
+      <DependentUpon>InstallForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

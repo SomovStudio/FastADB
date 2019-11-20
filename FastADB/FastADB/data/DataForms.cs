@@ -11,16 +11,15 @@ namespace FastADB.data
 
         /*Клиент*/
         public static ClientForm FClient;
+        //public static SettingsForm FSettings;
         public static HelpForm FHelp;
         public static ConverterForm FConverter;
-        //public static SettingsForm FSettings;
+        public static GeteventForm FGetevent;
+        public static InstallForm FInstall;
         //public static LogForm FLog;
         //public static ScreenshotForm FScreenhot;
         //public static ScreenrecordForm FScreenrecord;
         //public static PullForm FPull;
-        //public static InstallForm FInstall;
         //public static MonkeyForm FMonkey;
-        public static GeteventForm FGetevent;
-
     }
 }
