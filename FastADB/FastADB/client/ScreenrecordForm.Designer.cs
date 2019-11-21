@@ -1,6 +1,6 @@
 ﻿namespace FastADB.client
 {
-    partial class PullForm
+    partial class ScreenrecordForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PullForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenrecordForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pathLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -94,7 +94,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(624, 411);
             this.splitContainer1.SplitterDistance = 446;
-            this.splitContainer1.TabIndex = 1;
+            this.splitContainer1.TabIndex = 2;
             // 
             // pathLabel
             // 
@@ -286,9 +286,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label5.Location = new System.Drawing.Point(3, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.Size = new System.Drawing.Size(100, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Имя файла:";
+            this.label5.Text = "Имя видео файла:";
             // 
             // label1
             // 
@@ -411,7 +411,7 @@
             this.linkLabel4.Size = new System.Drawing.Size(168, 20);
             this.linkLabel4.TabIndex = 5;
             this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Открыть папку с файлом";
+            this.linkLabel4.Text = "Открыть папку с видео";
             this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
@@ -433,7 +433,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(168, 30);
             this.label10.TabIndex = 7;
-            this.label10.Text = "Откроется папка с файлами.";
+            this.label10.Text = "Откроется папка с видео файлами.";
             // 
             // linkLabel7
             // 
@@ -444,7 +444,7 @@
             this.linkLabel7.Size = new System.Drawing.Size(168, 20);
             this.linkLabel7.TabIndex = 14;
             this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "Удалить копируемый файл";
+            this.linkLabel7.Text = "Перенести видео на пк";
             this.linkLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
@@ -455,7 +455,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(168, 30);
             this.label12.TabIndex = 16;
-            this.label12.Text = "Добавляет команду удаляющую исходный файл.";
+            this.label12.Text = "Переносит видео файл с устройства на компьютер.";
             // 
             // panel5
             // 
@@ -520,7 +520,7 @@
             // 
             this.openFileDialog1.Filter = "*.bat|*.bat";
             // 
-            // PullForm
+            // ScreenrecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -529,10 +529,10 @@
             this.Controls.Add(this.splitContainer1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PullForm";
-            this.Text = "ADB: Pull - копирование файла с устройства на компьютер";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PullForm_FormClosed);
-            this.Load += new System.EventHandler(this.PullForm_Load);
+            this.Name = "ScreenrecordForm";
+            this.Text = "ADB: Screenrecord - записать видео с экрана устройства.";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ScreenrecordForm_FormClosed);
+            this.Load += new System.EventHandler(this.ScreenrecordForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
@@ -558,6 +558,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox folderDeviceTextBox;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox folderPcTextBox;
         private System.Windows.Forms.Label label6;
@@ -574,14 +576,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.LinkLabel linkLabel7;
-        private System.Windows.Forms.LinkLabel linkLabel6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.LinkLabel linkLabel5;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox folderDeviceTextBox;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
