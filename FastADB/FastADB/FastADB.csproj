@@ -79,6 +79,12 @@
     <Compile Include="client\LogForm.Designer.cs">
       <DependentUpon>LogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="client\MonkeyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\MonkeyForm.Designer.cs">
+      <DependentUpon>MonkeyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="data\DataConfig.cs" />
     <Compile Include="data\DataForms.cs" />
     <Compile Include="data\DataResources.cs" />
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client\LogForm.resx">
       <DependentUpon>LogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\MonkeyForm.resx">
+      <DependentUpon>MonkeyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
