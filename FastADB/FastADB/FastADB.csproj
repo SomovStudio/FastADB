@@ -103,6 +103,12 @@
     <Compile Include="client\ScreenshotForm.Designer.cs">
       <DependentUpon>ScreenshotForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="client\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="data\DataConfig.cs" />
     <Compile Include="data\DataForms.cs" />
     <Compile Include="data\DataResources.cs" />
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client\ScreenshotForm.resx">
       <DependentUpon>ScreenshotForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -11,7 +11,7 @@ namespace FastADB.data
 
         /*Клиент*/
         public static ClientForm FClient;
-        //public static SettingsForm FSettings;
+        public static SettingsForm FSettings;
         public static HelpForm FHelp;
         public static ConverterForm FConverter;
         public static GeteventForm FGetevent;
