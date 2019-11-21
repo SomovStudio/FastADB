@@ -19,7 +19,7 @@ namespace FastADB.data
         public static LogForm FLog;
         //public static ScreenshotForm FScreenhot;
         //public static ScreenrecordForm FScreenrecord;
-        //public static PullForm FPull;
+        public static PullForm FPull;
         public static MonkeyForm FMonkey;
     }
 }

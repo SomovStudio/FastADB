@@ -1,6 +1,6 @@
 ﻿namespace FastADB.client
 {
-    partial class GeteventForm
+    partial class PullForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeteventForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PullForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pathLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -46,7 +46,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -57,11 +56,13 @@
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.folderDeviceTextBox = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -93,7 +94,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(624, 411);
             this.splitContainer1.SplitterDistance = 446;
-            this.splitContainer1.TabIndex = 0;
+            this.splitContainer1.TabIndex = 1;
             // 
             // pathLabel
             // 
@@ -114,9 +115,9 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(12, 111);
+            this.panel3.Location = new System.Drawing.Point(12, 138);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(431, 274);
+            this.panel3.Size = new System.Drawing.Size(431, 247);
             this.panel3.TabIndex = 2;
             // 
             // label3
@@ -138,7 +139,7 @@
             this.panel4.Controls.Add(this.scriptTextBox);
             this.panel4.Location = new System.Drawing.Point(0, 16);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(431, 255);
+            this.panel4.Size = new System.Drawing.Size(431, 228);
             this.panel4.TabIndex = 4;
             // 
             // scriptTextBox
@@ -149,7 +150,7 @@
             this.scriptTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.scriptTextBox.Location = new System.Drawing.Point(0, 0);
             this.scriptTextBox.Name = "scriptTextBox";
-            this.scriptTextBox.Size = new System.Drawing.Size(429, 253);
+            this.scriptTextBox.Size = new System.Drawing.Size(429, 226);
             this.scriptTextBox.TabIndex = 0;
             this.scriptTextBox.Text = "";
             // 
@@ -175,7 +176,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 93);
+            this.panel1.Size = new System.Drawing.Size(431, 120);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -194,6 +195,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.folderDeviceTextBox);
+            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.folderPcTextBox);
             this.panel2.Controls.Add(this.label6);
@@ -201,7 +204,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(0, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(431, 74);
+            this.panel2.Size = new System.Drawing.Size(431, 101);
             this.panel2.TabIndex = 4;
             // 
             // button1
@@ -209,7 +212,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(396, 40);
+            this.button1.Location = new System.Drawing.Point(396, 68);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 23);
             this.button1.TabIndex = 4;
@@ -224,20 +227,20 @@
             this.folderPcTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(55)))));
             this.folderPcTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.folderPcTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.folderPcTextBox.Location = new System.Drawing.Point(96, 41);
+            this.folderPcTextBox.Location = new System.Drawing.Point(158, 69);
             this.folderPcTextBox.Name = "folderPcTextBox";
-            this.folderPcTextBox.Size = new System.Drawing.Size(294, 20);
+            this.folderPcTextBox.Size = new System.Drawing.Size(232, 20);
             this.folderPcTextBox.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(14, 43);
+            this.label6.Location = new System.Drawing.Point(3, 71);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.Size = new System.Drawing.Size(157, 13);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Путь к папке:";
+            this.label6.Text = "Путь к папке на компьютере:";
             // 
             // filenameTextBox
             // 
@@ -246,22 +249,22 @@
             this.filenameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(55)))));
             this.filenameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.filenameTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.filenameTextBox.Location = new System.Drawing.Point(96, 8);
+            this.filenameTextBox.Location = new System.Drawing.Point(158, 8);
             this.filenameTextBox.Name = "filenameTextBox";
-            this.filenameTextBox.Size = new System.Drawing.Size(330, 20);
+            this.filenameTextBox.Size = new System.Drawing.Size(268, 20);
             this.filenameTextBox.TabIndex = 1;
-            this.filenameTextBox.Text = "getevents.txt";
+            this.filenameTextBox.Text = "video.mp4";
             this.filenameTextBox.TextChanged += new System.EventHandler(this.filenameTextBox_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(14, 11);
+            this.label5.Location = new System.Drawing.Point(3, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.Size = new System.Drawing.Size(100, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Имя файла:";
+            this.label5.Text = "Имя видео файла:";
             // 
             // label1
             // 
@@ -279,9 +282,6 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 15);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel5, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.linkLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.linkLabel2, 0, 2);
@@ -290,15 +290,17 @@
             this.tableLayoutPanel1.Controls.Add(this.linkLabel4, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel6, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel7, 0, 14);
+            this.tableLayoutPanel1.Controls.Add(this.linkLabel7, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.linkLabel5, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.linkLabel6, 0, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 14);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 16;
+            this.tableLayoutPanel1.RowCount = 15;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -308,31 +310,20 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(174, 411);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // label13
-            // 
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label13.Location = new System.Drawing.Point(3, 360);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(168, 30);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Выполнить полученные события на устройстве.";
-            // 
             // label11
             // 
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label11.Location = new System.Drawing.Point(3, 240);
+            this.label11.Location = new System.Drawing.Point(3, 310);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(168, 30);
             this.label11.TabIndex = 11;
@@ -342,7 +333,7 @@
             // 
             this.linkLabel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkLabel5.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
-            this.linkLabel5.Location = new System.Drawing.Point(3, 220);
+            this.linkLabel5.Location = new System.Drawing.Point(3, 290);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(168, 20);
             this.linkLabel5.TabIndex = 9;
@@ -419,7 +410,7 @@
             this.linkLabel4.Size = new System.Drawing.Size(168, 20);
             this.linkLabel4.TabIndex = 5;
             this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Конвертер событий";
+            this.linkLabel4.Text = "Открыть папку с файлом";
             this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
@@ -441,22 +432,13 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(168, 30);
             this.label10.TabIndex = 7;
-            this.label10.Text = "Конвертирует полученные события.";
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(3, 216);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(168, 1);
-            this.panel5.TabIndex = 8;
+            this.label10.Text = "Откроется папка с файлами.";
             // 
             // linkLabel6
             // 
             this.linkLabel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkLabel6.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
-            this.linkLabel6.Location = new System.Drawing.Point(3, 270);
+            this.linkLabel6.Location = new System.Drawing.Point(3, 340);
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.Size = new System.Drawing.Size(168, 20);
             this.linkLabel6.TabIndex = 10;
@@ -465,37 +447,70 @@
             this.linkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(3, 290);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(168, 30);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Остановить выполнение текущего скрипта.";
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(3, 336);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(168, 1);
-            this.panel6.TabIndex = 13;
-            // 
             // linkLabel7
             // 
             this.linkLabel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkLabel7.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
-            this.linkLabel7.Location = new System.Drawing.Point(3, 340);
+            this.linkLabel7.Location = new System.Drawing.Point(3, 200);
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.Size = new System.Drawing.Size(168, 20);
             this.linkLabel7.TabIndex = 14;
             this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "Воспроизвести события";
+            this.linkLabel7.Text = "Удалить копируемый файл";
             this.linkLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
+            // 
+            // label13
+            // 
+            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label13.Location = new System.Drawing.Point(3, 360);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(168, 30);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Остановить выполнение текущего скрипта.";
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label12.Location = new System.Drawing.Point(3, 220);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(168, 30);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Добавляет команду удаляющую исходный файл.";
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(3, 286);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(168, 1);
+            this.panel5.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label14.Location = new System.Drawing.Point(3, 41);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(151, 13);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Путь к папке на устройстве:";
+            // 
+            // folderDeviceTextBox
+            // 
+            this.folderDeviceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.folderDeviceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(55)))));
+            this.folderDeviceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.folderDeviceTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.folderDeviceTextBox.Location = new System.Drawing.Point(158, 39);
+            this.folderDeviceTextBox.Name = "folderDeviceTextBox";
+            this.folderDeviceTextBox.Size = new System.Drawing.Size(268, 20);
+            this.folderDeviceTextBox.TabIndex = 6;
+            this.folderDeviceTextBox.Text = "/sdcard/";
+            this.folderDeviceTextBox.TextChanged += new System.EventHandler(this.folderDeviceTextBox_TextChanged);
             // 
             // saveFileDialog1
             // 
@@ -505,7 +520,7 @@
             // 
             this.openFileDialog1.Filter = "*.bat|*.bat";
             // 
-            // GeteventForm
+            // PullForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -514,10 +529,10 @@
             this.Controls.Add(this.splitContainer1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "GeteventForm";
-            this.Text = "ADB: getevent - Запись и воспроизведение событий, генерируемых пользователем.";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GeteventForm_FormClosed);
-            this.Load += new System.EventHandler(this.GeteventForm_Load);
+            this.Name = "PullForm";
+            this.Text = "ADB: Pull - копирование файла с устройства на компьютер";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PullForm_FormClosed);
+            this.Load += new System.EventHandler(this.PullForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
@@ -534,21 +549,21 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label pathLabel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RichTextBox scriptTextBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox folderPcTextBox;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox filenameTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox folderPcTextBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label pathLabel;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label7;
@@ -558,14 +573,15 @@
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.LinkLabel linkLabel7;
+        private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.LinkLabel linkLabel5;
-        private System.Windows.Forms.LinkLabel linkLabel6;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.LinkLabel linkLabel7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox folderDeviceTextBox;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
