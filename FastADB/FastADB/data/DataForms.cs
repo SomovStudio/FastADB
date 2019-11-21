@@ -16,7 +16,7 @@ namespace FastADB.data
         public static ConverterForm FConverter;
         public static GeteventForm FGetevent;
         public static InstallForm FInstall;
-        //public static LogForm FLog;
+        public static LogForm FLog;
         //public static ScreenshotForm FScreenhot;
         //public static ScreenrecordForm FScreenrecord;
         //public static PullForm FPull;
