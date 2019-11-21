@@ -97,6 +97,12 @@
     <Compile Include="client\ScreenrecordForm.Designer.cs">
       <DependentUpon>ScreenrecordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="client\ScreenshotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\ScreenshotForm.Designer.cs">
+      <DependentUpon>ScreenshotForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="data\DataConfig.cs" />
     <Compile Include="data\DataForms.cs" />
     <Compile Include="data\DataResources.cs" />
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client\ScreenrecordForm.resx">
       <DependentUpon>ScreenrecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\ScreenshotForm.resx">
+      <DependentUpon>ScreenshotForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
