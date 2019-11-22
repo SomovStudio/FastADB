@@ -111,7 +111,7 @@ namespace FastADB.client
                 DataForms.FHelp.Show();
             }
 
-            DataResources.consoleMessage("FastADB версия 1.1 (последнее обновление: 20.11.2019)");
+            DataResources.consoleMessage("FastADB версия 1.1 (последнее обновление: 22.11.2019)");
             DataResources.consoleMessage("Проверка подключения устройства...");
             checkDeviceConnect();
         }
@@ -421,8 +421,8 @@ namespace FastADB.client
                             "Разработчик: Сомов Евгений Павлович" + Environment.NewLine +
                             "Лицензия: GNU" + Environment.NewLine +
                             "Версия 1.1" + Environment.NewLine +
-                            "Дата последнего обновления: 08.11.2018" + Environment.NewLine +
-                            "Сайт разработчика: https://somov-qa.github.io/",
+                            "Дата последнего обновления: 22.11.2018" + Environment.NewLine +
+                            "Сайт разработчика: https://somovstudio.github.io",
                             "О программе", MessageBoxButtons.OK);
         }
     }

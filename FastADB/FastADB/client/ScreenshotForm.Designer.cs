@@ -530,7 +530,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ScreenshotForm";
-            this.Text = "ADB: Screenshot - снять скриншот с устройства.";
+            this.Text = "ADB: Screencap - снять скриншот с устройства.";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ScreenshotForm_FormClosed);
             this.Load += new System.EventHandler(this.ScreenshotForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
