@@ -91,6 +91,7 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -166,12 +167,14 @@
             this.проверитьПодключениеУстройствToolStripMenuItem.Name = "проверитьПодключениеУстройствToolStripMenuItem";
             this.проверитьПодключениеУстройствToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.проверитьПодключениеУстройствToolStripMenuItem.Text = "Проверить подключение устройств";
+            this.проверитьПодключениеУстройствToolStripMenuItem.Click += new System.EventHandler(this.проверитьПодключениеУстройствToolStripMenuItem_Click);
             // 
             // удалитьВсеПроцессыAdbToolStripMenuItem
             // 
             this.удалитьВсеПроцессыAdbToolStripMenuItem.Name = "удалитьВсеПроцессыAdbToolStripMenuItem";
             this.удалитьВсеПроцессыAdbToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.удалитьВсеПроцессыAdbToolStripMenuItem.Text = "Удалить все процессы adb";
+            this.удалитьВсеПроцессыAdbToolStripMenuItem.Click += new System.EventHandler(this.удалитьВсеПроцессыAdbToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -183,42 +186,49 @@
             this.aDBLogcatполучитьЛогСУстройстваToolStripMenuItem.Name = "aDBLogcatполучитьЛогСУстройстваToolStripMenuItem";
             this.aDBLogcatполучитьЛогСУстройстваToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.aDBLogcatполучитьЛогСУстройстваToolStripMenuItem.Text = "ADB: logcat (получить лог с устройства)";
+            this.aDBLogcatполучитьЛогСУстройстваToolStripMenuItem.Click += new System.EventHandler(this.aDBLogcatполучитьЛогСУстройстваToolStripMenuItem_Click);
             // 
             // aDBScreencapснятьСкринСЭкранаУстройстваToolStripMenuItem
             // 
             this.aDBScreencapснятьСкринСЭкранаУстройстваToolStripMenuItem.Name = "aDBScreencapснятьСкринСЭкранаУстройстваToolStripMenuItem";
             this.aDBScreencapснятьСкринСЭкранаУстройстваToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.aDBScreencapснятьСкринСЭкранаУстройстваToolStripMenuItem.Text = "ADB: screencap (снять скрин с экрана устройства)";
+            this.aDBScreencapснятьСкринСЭкранаУстройстваToolStripMenuItem.Click += new System.EventHandler(this.aDBScreencapснятьСкринСЭкранаУстройстваToolStripMenuItem_Click);
             // 
             // aDBScreenrecordзаписатьВидеоСЭкранаУстройстваToolStripMenuItem
             // 
             this.aDBScreenrecordзаписатьВидеоСЭкранаУстройстваToolStripMenuItem.Name = "aDBScreenrecordзаписатьВидеоСЭкранаУстройстваToolStripMenuItem";
             this.aDBScreenrecordзаписатьВидеоСЭкранаУстройстваToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.aDBScreenrecordзаписатьВидеоСЭкранаУстройстваToolStripMenuItem.Text = "ADB: screenrecord (записать видео с экрана устройства)";
+            this.aDBScreenrecordзаписатьВидеоСЭкранаУстройстваToolStripMenuItem.Click += new System.EventHandler(this.aDBScreenrecordзаписатьВидеоСЭкранаУстройстваToolStripMenuItem_Click);
             // 
             // aDBPullкопированиеФайлаСУстройстваНаКомпьютерToolStripMenuItem
             // 
             this.aDBPullкопированиеФайлаСУстройстваНаКомпьютерToolStripMenuItem.Name = "aDBPullкопированиеФайлаСУстройстваНаКомпьютерToolStripMenuItem";
             this.aDBPullкопированиеФайлаСУстройстваНаКомпьютерToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.aDBPullкопированиеФайлаСУстройстваНаКомпьютерToolStripMenuItem.Text = "ADB: pull (копирование файла с устройства на компьютер)";
+            this.aDBPullкопированиеФайлаСУстройстваНаКомпьютерToolStripMenuItem.Click += new System.EventHandler(this.aDBPullкопированиеФайлаСУстройстваНаКомпьютерToolStripMenuItem_Click);
             // 
             // aDBInstallустановкаApkПакетовНаУстройствоToolStripMenuItem
             // 
             this.aDBInstallустановкаApkПакетовНаУстройствоToolStripMenuItem.Name = "aDBInstallустановкаApkПакетовНаУстройствоToolStripMenuItem";
             this.aDBInstallустановкаApkПакетовНаУстройствоToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.aDBInstallустановкаApkПакетовНаУстройствоToolStripMenuItem.Text = "ADB: install (установка apk пакетов на устройство)";
+            this.aDBInstallустановкаApkПакетовНаУстройствоToolStripMenuItem.Click += new System.EventHandler(this.aDBInstallустановкаApkПакетовНаУстройствоToolStripMenuItem_Click);
             // 
             // aDBMonkeyстресстестированиеПриложенияНаУстройствеToolStripMenuItem
             // 
             this.aDBMonkeyстресстестированиеПриложенияНаУстройствеToolStripMenuItem.Name = "aDBMonkeyстресстестированиеПриложенияНаУстройствеToolStripMenuItem";
             this.aDBMonkeyстресстестированиеПриложенияНаУстройствеToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.aDBMonkeyстресстестированиеПриложенияНаУстройствеToolStripMenuItem.Text = "ADB: monkey (стресс-тестирование приложения на устройстве)";
+            this.aDBMonkeyстресстестированиеПриложенияНаУстройствеToolStripMenuItem.Click += new System.EventHandler(this.aDBMonkeyстресстестированиеПриложенияНаУстройствеToolStripMenuItem_Click);
             // 
             // aDBGeteventзаписатьИВоспроизведениеСобытийСУстройстваToolStripMenuItem
             // 
             this.aDBGeteventзаписатьИВоспроизведениеСобытийСУстройстваToolStripMenuItem.Name = "aDBGeteventзаписатьИВоспроизведениеСобытийСУстройстваToolStripMenuItem";
             this.aDBGeteventзаписатьИВоспроизведениеСобытийСУстройстваToolStripMenuItem.Size = new System.Drawing.Size(441, 22);
             this.aDBGeteventзаписатьИВоспроизведениеСобытийСУстройстваToolStripMenuItem.Text = "ADB: getevent (записать и воспроизведение событий с устройства)";
+            this.aDBGeteventзаписатьИВоспроизведениеСобытийСУстройстваToolStripMenuItem.Click += new System.EventHandler(this.aDBGeteventзаписатьИВоспроизведениеСобытийСУстройстваToolStripMenuItem_Click);
             // 
             // утилитыToolStripMenuItem
             // 
@@ -237,12 +247,14 @@
             this.aAPTDumpBadgingToolStripMenuItem.Name = "aAPTDumpBadgingToolStripMenuItem";
             this.aAPTDumpBadgingToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.aAPTDumpBadgingToolStripMenuItem.Text = "AAPT: dump badging";
+            this.aAPTDumpBadgingToolStripMenuItem.Click += new System.EventHandler(this.aAPTDumpBadgingToolStripMenuItem_Click);
             // 
             // dDMSDalvikDebugMonitorServerToolStripMenuItem
             // 
             this.dDMSDalvikDebugMonitorServerToolStripMenuItem.Name = "dDMSDalvikDebugMonitorServerToolStripMenuItem";
             this.dDMSDalvikDebugMonitorServerToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.dDMSDalvikDebugMonitorServerToolStripMenuItem.Text = "DDMS (Dalvik Debug Monitor Server)";
+            this.dDMSDalvikDebugMonitorServerToolStripMenuItem.Click += new System.EventHandler(this.dDMSDalvikDebugMonitorServerToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -254,6 +266,7 @@
             this.конвертерСобытийgeteventsToolStripMenuItem.Name = "конвертерСобытийgeteventsToolStripMenuItem";
             this.конвертерСобытийgeteventsToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.конвертерСобытийgeteventsToolStripMenuItem.Text = "Конвертер событий (getevents)";
+            this.конвертерСобытийgeteventsToolStripMenuItem.Click += new System.EventHandler(this.конвертерСобытийgeteventsToolStripMenuItem_Click);
             // 
             // сервисToolStripMenuItem
             // 
@@ -271,6 +284,7 @@
             this.диспетчерУстройствToolStripMenuItem.Name = "диспетчерУстройствToolStripMenuItem";
             this.диспетчерУстройствToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.диспетчерУстройствToolStripMenuItem.Text = "Диспетчер устройств";
+            this.диспетчерУстройствToolStripMenuItem.Click += new System.EventHandler(this.диспетчерУстройствToolStripMenuItem_Click);
             // 
             // системнаяКонсольToolStripMenuItem
             // 
@@ -278,6 +292,7 @@
             this.системнаяКонсольToolStripMenuItem.Name = "системнаяКонсольToolStripMenuItem";
             this.системнаяКонсольToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.системнаяКонсольToolStripMenuItem.Text = "Системная консоль";
+            this.системнаяКонсольToolStripMenuItem.Click += new System.EventHandler(this.системнаяКонсольToolStripMenuItem_Click);
             // 
             // настройкиToolStripMenuItem
             // 
@@ -285,6 +300,7 @@
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.настройкиToolStripMenuItem.Text = "Настройки";
+            this.настройкиToolStripMenuItem.Click += new System.EventHandler(this.настройкиToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -300,20 +316,23 @@
             // помощьToolStripMenuItem
             // 
             this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
-            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.помощьToolStripMenuItem.Text = "Помощь";
+            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click);
             // 
             // руководствоToolStripMenuItem
             // 
             this.руководствоToolStripMenuItem.Name = "руководствоToolStripMenuItem";
-            this.руководствоToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.руководствоToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.руководствоToolStripMenuItem.Text = "Руководство";
+            this.руководствоToolStripMenuItem.Visible = false;
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе...";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -560,6 +579,7 @@
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "ADB: Logcat";
             this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -572,6 +592,7 @@
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "ADB: Screencap";
             this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -584,6 +605,7 @@
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "ADB: Screenrecord";
             this.linkLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel7
             // 
@@ -596,6 +618,7 @@
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Text = "ADB: Monkey ";
             this.linkLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
             // linkLabel8
             // 
@@ -608,6 +631,7 @@
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "ADB: Get/Set events";
             this.linkLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
             // 
             // linkLabel9
             // 
@@ -620,6 +644,7 @@
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "ADB: Pull";
             this.linkLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
             // 
             // linkLabel6
             // 
@@ -632,6 +657,7 @@
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "ADB: Install";
             this.linkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // label8
             // 
@@ -682,6 +708,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "ADB: Devices";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label6
             // 
@@ -704,6 +731,7 @@
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Removed all adb processes";
             this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label7
             // 
@@ -727,6 +755,10 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Консоль:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.Filter = "*.bat|*.bat";
             // 
             // ClientForm
             // 
@@ -825,5 +857,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
