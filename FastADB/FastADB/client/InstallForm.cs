@@ -176,5 +176,10 @@ namespace FastADB.client
         {
             scriptTextBox.Text = DataResources.initInstall(filenameTextBox.Text, cdcardCheckBox.Checked);
         }
+
+        private void filenameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            scriptTextBox.Text = DataResources.initInstall(filenameTextBox.Text, cdcardCheckBox.Checked);
+        }
     }
 }

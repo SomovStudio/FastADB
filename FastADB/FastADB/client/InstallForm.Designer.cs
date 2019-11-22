@@ -33,20 +33,20 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.filenameTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pathLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.scriptTextBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pathLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.cdcardCheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.filenameTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
@@ -64,10 +64,10 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,8 +96,78 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(624, 411);
-            this.splitContainer1.SplitterDistance = 442;
+            this.splitContainer1.SplitterDistance = 441;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // pathLabel
+            // 
+            this.pathLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pathLabel.ForeColor = System.Drawing.Color.Gray;
+            this.pathLabel.Location = new System.Drawing.Point(12, 388);
+            this.pathLabel.Name = "pathLabel";
+            this.pathLabel.Size = new System.Drawing.Size(423, 14);
+            this.pathLabel.TabIndex = 4;
+            this.pathLabel.Text = "Адрес:";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(12, 111);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(426, 274);
+            this.panel3.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label3.Location = new System.Drawing.Point(0, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(426, 2);
+            this.label3.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.scriptTextBox);
+            this.panel4.Location = new System.Drawing.Point(0, 16);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(426, 255);
+            this.panel4.TabIndex = 4;
+            // 
+            // scriptTextBox
+            // 
+            this.scriptTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(55)))));
+            this.scriptTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.scriptTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scriptTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.scriptTextBox.Location = new System.Drawing.Point(0, 0);
+            this.scriptTextBox.Name = "scriptTextBox";
+            this.scriptTextBox.Size = new System.Drawing.Size(424, 253);
+            this.scriptTextBox.TabIndex = 0;
+            this.scriptTextBox.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 15);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Скрипт:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -109,7 +179,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(427, 93);
+            this.panel1.Size = new System.Drawing.Size(426, 93);
             this.panel1.TabIndex = 2;
             // 
             // label2
@@ -119,7 +189,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label2.Location = new System.Drawing.Point(0, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(427, 2);
+            this.label2.Size = new System.Drawing.Size(426, 2);
             this.label2.TabIndex = 3;
             // 
             // panel2
@@ -134,8 +204,34 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(0, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(427, 74);
+            this.panel2.Size = new System.Drawing.Size(426, 74);
             this.panel2.TabIndex = 4;
+            // 
+            // cdcardCheckBox
+            // 
+            this.cdcardCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cdcardCheckBox.AutoSize = true;
+            this.cdcardCheckBox.Location = new System.Drawing.Point(96, 43);
+            this.cdcardCheckBox.Name = "cdcardCheckBox";
+            this.cdcardCheckBox.Size = new System.Drawing.Size(171, 17);
+            this.cdcardCheckBox.TabIndex = 5;
+            this.cdcardCheckBox.Text = "Установить пакет на sd-card";
+            this.cdcardCheckBox.UseVisualStyleBackColor = true;
+            this.cdcardCheckBox.CheckedChanged += new System.EventHandler(this.cdcardCheckBox_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Gray;
+            this.button1.Location = new System.Drawing.Point(391, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // filenameTextBox
             // 
@@ -146,8 +242,9 @@
             this.filenameTextBox.ForeColor = System.Drawing.Color.Silver;
             this.filenameTextBox.Location = new System.Drawing.Point(96, 8);
             this.filenameTextBox.Name = "filenameTextBox";
-            this.filenameTextBox.Size = new System.Drawing.Size(290, 20);
+            this.filenameTextBox.Size = new System.Drawing.Size(289, 20);
             this.filenameTextBox.TabIndex = 1;
+            this.filenameTextBox.TextChanged += new System.EventHandler(this.filenameTextBox_TextChanged);
             // 
             // label5
             // 
@@ -170,102 +267,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Настройки:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(12, 111);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(427, 274);
-            this.panel3.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label3.Location = new System.Drawing.Point(0, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(427, 2);
-            this.label3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.scriptTextBox);
-            this.panel4.Location = new System.Drawing.Point(0, 16);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(427, 255);
-            this.panel4.TabIndex = 4;
-            // 
-            // scriptTextBox
-            // 
-            this.scriptTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(55)))));
-            this.scriptTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.scriptTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scriptTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.scriptTextBox.Location = new System.Drawing.Point(0, 0);
-            this.scriptTextBox.Name = "scriptTextBox";
-            this.scriptTextBox.Size = new System.Drawing.Size(425, 253);
-            this.scriptTextBox.TabIndex = 0;
-            this.scriptTextBox.Text = "";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Скрипт:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pathLabel
-            // 
-            this.pathLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pathLabel.ForeColor = System.Drawing.Color.Gray;
-            this.pathLabel.Location = new System.Drawing.Point(12, 388);
-            this.pathLabel.Name = "pathLabel";
-            this.pathLabel.Size = new System.Drawing.Size(424, 14);
-            this.pathLabel.TabIndex = 4;
-            this.pathLabel.Text = "Адрес:";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(392, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cdcardCheckBox
-            // 
-            this.cdcardCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cdcardCheckBox.AutoSize = true;
-            this.cdcardCheckBox.Location = new System.Drawing.Point(96, 43);
-            this.cdcardCheckBox.Name = "cdcardCheckBox";
-            this.cdcardCheckBox.Size = new System.Drawing.Size(171, 17);
-            this.cdcardCheckBox.TabIndex = 5;
-            this.cdcardCheckBox.Text = "Установить пакет на sd-card";
-            this.cdcardCheckBox.UseVisualStyleBackColor = true;
-            this.cdcardCheckBox.CheckedChanged += new System.EventHandler(this.cdcardCheckBox_CheckedChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -301,7 +302,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(178, 411);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(179, 411);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // label11
@@ -310,7 +311,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label11.Location = new System.Drawing.Point(3, 300);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(172, 30);
+            this.label11.Size = new System.Drawing.Size(173, 30);
             this.label11.TabIndex = 11;
             this.label11.Text = "Выполнить текущий открытый скрипт.";
             // 
@@ -320,7 +321,7 @@
             this.linkLabel5.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
             this.linkLabel5.Location = new System.Drawing.Point(3, 280);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(172, 20);
+            this.linkLabel5.Size = new System.Drawing.Size(173, 20);
             this.linkLabel5.TabIndex = 9;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Выполнить";
@@ -333,7 +334,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
             this.linkLabel1.Location = new System.Drawing.Point(3, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(172, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(173, 20);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Открыть скрипт";
@@ -346,7 +347,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label7.Location = new System.Drawing.Point(3, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(172, 30);
+            this.label7.Size = new System.Drawing.Size(173, 30);
             this.label7.TabIndex = 1;
             this.label7.Text = "Открыть внешний файл скрипта.";
             // 
@@ -356,7 +357,7 @@
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
             this.linkLabel2.Location = new System.Drawing.Point(3, 50);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(172, 20);
+            this.linkLabel2.Size = new System.Drawing.Size(173, 20);
             this.linkLabel2.TabIndex = 2;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Сохранить файл";
@@ -369,7 +370,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label8.Location = new System.Drawing.Point(3, 70);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 30);
+            this.label8.Size = new System.Drawing.Size(173, 30);
             this.label8.TabIndex = 3;
             this.label8.Text = "Перезаписать текущий файл скрипта.";
             // 
@@ -379,7 +380,7 @@
             this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
             this.linkLabel3.Location = new System.Drawing.Point(3, 100);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(172, 20);
+            this.linkLabel3.Size = new System.Drawing.Size(173, 20);
             this.linkLabel3.TabIndex = 4;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Сохранить файл как...";
@@ -392,7 +393,7 @@
             this.linkLabel4.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
             this.linkLabel4.Location = new System.Drawing.Point(3, 150);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(172, 20);
+            this.linkLabel4.Size = new System.Drawing.Size(173, 20);
             this.linkLabel4.TabIndex = 5;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Открыть папку с билдами";
@@ -405,7 +406,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label9.Location = new System.Drawing.Point(3, 120);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 30);
+            this.label9.Size = new System.Drawing.Size(173, 30);
             this.label9.TabIndex = 6;
             this.label9.Text = "Сохранить текущий файл скрипта с выбором пути.";
             // 
@@ -415,7 +416,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label10.Location = new System.Drawing.Point(3, 170);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(172, 30);
+            this.label10.Size = new System.Drawing.Size(173, 30);
             this.label10.TabIndex = 7;
             this.label10.Text = "Откроется папка содержащую apk файлы.";
             // 
@@ -425,7 +426,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(3, 276);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(172, 1);
+            this.panel5.Size = new System.Drawing.Size(173, 1);
             this.panel5.TabIndex = 8;
             // 
             // linkLabel6
@@ -434,7 +435,7 @@
             this.linkLabel6.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
             this.linkLabel6.Location = new System.Drawing.Point(3, 330);
             this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(172, 20);
+            this.linkLabel6.Size = new System.Drawing.Size(173, 20);
             this.linkLabel6.TabIndex = 10;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Остановить";
@@ -447,7 +448,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label12.Location = new System.Drawing.Point(3, 350);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(172, 30);
+            this.label12.Size = new System.Drawing.Size(173, 30);
             this.label12.TabIndex = 12;
             this.label12.Text = "Остановить выполнение текущего скрипта.";
             // 
@@ -467,11 +468,11 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
