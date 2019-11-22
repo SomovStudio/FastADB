@@ -246,7 +246,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(200, 15);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Входные данные: getevents.txt";
+            this.label4.Text = "Результат конвертации: *.bat";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel2
